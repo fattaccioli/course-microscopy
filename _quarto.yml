@@ -26,26 +26,25 @@ book:
         - tutorials/single-molecule-microscopy.qmd
 
 
-#format:
-#  html:
-#    theme: flatly #cosmo
-#    toc: true
-#    toc-depth: 3
-#    number-sections: true
-#    math: mathjax
-#    css: styles.css
-#    code-fold: true
-#    fig-align: center
+format:
+  html:
+    theme: flatly #cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    math: mathjax
+    css: styles.css
+    code-fold: true
+    fig-align: center
+    css: styles.css
+    grid:
+      sidebar-width: 400px
+      body-width: 1600px
+      margin-width: 200px
+      gutter-width: 2rem
 
 
 bibliography: references.bib
 
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    grid:
-      sidebar-width: 250px
-      body-width: 1600px
-      margin-width: 200px
-      gutter-width: 2rem
+

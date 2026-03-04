@@ -25,6 +25,6 @@ figcaption {
 
 /* Fluid width up to a maximum */
 .quarto-container {
-  max-width: min(95vw, 2600px) !important;
+  max-width: min(95vw, 1600) !important;
   width: 95vw !important;
 }
