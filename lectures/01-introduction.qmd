@@ -1,0 +1,78 @@
+---
+title: "Introduction to Optical Microscopy"
+---
+
+## Why Microscopy?
+
+The cell is the fundamental unit of life, and its inner workings operate at spatial scales — nanometers to hundreds of microns — that are entirely inaccessible to the naked eye. Optical microscopy is the primary tool by which we observe living systems in real time, with molecular specificity. It sits at the intersection of physics, chemistry, and biology, and its continued development directly drives biological discovery.
+
+## A Brief History
+
+The compound microscope was developed in the late 16th century; the first serious scientific instruments were built in the 17th century. Robert Hooke's microscope (~1670) already had the essential architecture of objective, barrel, and eyepiece:
+
+![Hooke's compound microscope (circa 1670): objective at the bottom, focusing screw, barrel, and eyepiece at the top. Illumination was provided by an oil lamp and water flask condenser.](../images/p011_00.png){fig-align="center" width="55%"}
+
+Early biological microscopy revealed the previously invisible: intestinal villi, diatoms, microorganisms. The 20th century brought electronic detectors, laser sources, and computational image analysis, transforming microscopy from a qualitative observation tool into a quantitative measurement instrument.
+
+![Light microscopy reveals tissue architecture at the cellular level. Hematoxylin and eosin (H&E) stained section of intestinal mucosa showing villi (1) and crypts (2) — a classic histological preparation illustrating the scale of cellular organization.](../images/p006_00.png){fig-align="center" width="60%"}
+
+![A living diatom (*Pinnularia* sp.) imaged by brightfield transmitted-light microscopy, showing the intricate silica frustule structure resolvable with a modern objective.](../images/p006_01.png){fig-align="center" width="65%"}
+
+## The Modern Microscopy System
+
+Modern videomicroscopy integrates a research microscope with motorized stages, scientific cameras, illumination controllers, and image acquisition/analysis software into a single computer-controlled system:
+
+![A complete videomicroscopy workstation (Leica): inverted microscope, CCD camera, illumination controller, acquisition computer, and dual monitors for image display and analysis. Motorization enables automated time-lapse, multiposition, and $z$-stack experiments.](../images/p008_00.png){fig-align="center" width="65%"}
+
+## The Optical Path
+
+The compound microscope is a two-lens system: the objective forms a real magnified intermediate image; the eyepiece (or tube lens + camera) re-images this onto the detector. Understanding the conjugate planes — specimen plane, objective rear focal plane, eyepiece, camera — is essential for correct Köhler illumination and optimal image quality.
+
+![Ray diagram of the compound microscope: the objective maps the specimen to a real inverted intermediate image; the eyepiece re-images this to infinity (or to the retina/camera). The conjugate image planes and illumination planes must be kept distinct for Köhler illumination.](../images/p017_00.png){fig-align="center" width="70%"}
+
+![Complete optical layout of a modern research microscope showing the two sets of conjugate planes: image-forming planes (camera image plane, specimen plane, eyepiece fixed diaphragm, retina) and aperture/illuminating planes (lamp filament, condenser aperture diaphragm, objective rear focal plane, exit pupil).](../images/p012_00.png){fig-align="center" width="70%"}
+
+## Contrast Modes
+
+Most biological specimens are essentially transparent — they produce negligible amplitude contrast in simple brightfield transmission. Several modes address this:
+
+**Brightfield** is the baseline — amplitude contrast only, requiring staining for most specimens.
+
+**Phase contrast** (Zernike, Nobel Prize 1953) converts phase shifts introduced by the specimen's refractive index into intensity contrast, enabling imaging of living, unstained cells.
+
+**DIC** (Differential Interference Contrast) uses a Nomarski prism to produce a pseudo-3D relief appearance sensitive to optical path length gradients.
+
+**Fluorescence** uses specific labeling to achieve molecular contrast — the dominant mode in modern cell biology, and the subject of this course.
+
+![Living HeLa cells imaged in brightfield: the cells are nearly transparent and produce very low intrinsic contrast, illustrating the need for either staining, phase contrast, or fluorescence labeling for quantitative biological imaging.](../images/p018_00.png){fig-align="center" width="45%"}
+
+## Frontiers: Miniaturization and Field Microscopy
+
+The Foldscope (Prakash lab, Stanford) illustrates how the core optical principles of microscopy can be implemented at minimal cost (~\$0.50) using printed paper optics and a single polymer microlens:
+
+![Foldscope bill of materials and optical layout: printed polymer micro-optics, paper apertures, condenser lens, and LED illumination — total cost ~50 cents. The device is assembled by folding the printed sheet, with paper flexures providing $z$-focus and $xy$-panning.](../images/p009_00.png){fig-align="center" width="75%"}
+
+![Foldscope images: (A) brightfield image of a microstructured surface (bee eye); (B) fluorescence image showing individual fluorescent beads (scale bar 5 µm). The optical performance is surprisingly competitive for a disposable device.](../images/p009_01.png){fig-align="center" width="55%"}
+
+Lensless on-chip microscopy eliminates the objective entirely, recording holographic diffraction patterns directly on a CMOS sensor for computational reconstruction — enabling very large fields of view at low cost:
+
+![On-chip lensless microscopy: (a) a microfluidic PDMS chip placed directly on a CMOS sensor illuminated from above; (b) the chip-sensor assembly compared to a coin (5 mm scale bar); (c) SEM image of the PDMS microchannel network (1 mm scale bar). Holographic reconstruction yields wide-field images without any lens.](../images/p010_00.png){fig-align="center" width="70%"}
+
+## The Super-Resolution Revolution
+
+The period 2006–2014 saw a dramatic expansion of what optical microscopy can resolve, through approaches that exploit fluorophore photophysics to circumvent the diffraction limit:
+
+![Historical timeline of microscopy milestones: from 16th century light microscopy through electron microscopy (1933), fluorescence microscopy (1990s), to today's super-resolution methods. Each advance opened new scales of biological organization.](../images/p014_00.png){fig-align="center" width="75%"}
+
+**STED** (Stimulated Emission Depletion, Hell) uses a depletion laser to shrink the effective PSF. **PALM/STORM** (Betzig, Moerner) use stochastic single-molecule localization. Both achieve lateral resolutions of 20–60 nm:
+
+![STED vs. confocal comparison: the same fluorescent bead imaged by confocal (261 nm FWHM, blue) and STED (62 nm FWHM, red). STED achieves a >4× improvement in lateral resolution using the same fluorophore and objective.](../images/p015_00.png){fig-align="center" width="55%"}
+
+The 2014 Nobel Prize in Chemistry was awarded to Eric Betzig, Stefan W. Hell, and William E. Moerner for the development of super-resolved fluorescence microscopy:
+
+![2014 Nobel Prize in Chemistry: Eric Betzig (PALM/single-molecule localization), Stefan W. Hell (STED/RESOLFT), and William E. Moerner (single-molecule detection and optical control of fluorescence).](../images/p015_01.png){fig-align="center" width="65%"}
+
+::: {.callout-note}
+## Course overview
+This course covers the full chain from photons to biological insight: fluorescence principles and fluorophore photophysics → labeling strategies → the microscope optical path → digital detection → advanced techniques (confocal, TIRF, super-resolution, FRAP, FRET, RICM) → two-photon microscopy. The unifying theme throughout is understanding what each measurement actually measures, and what its fundamental limits are.
+:::

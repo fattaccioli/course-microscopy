@@ -1,0 +1,70 @@
+---
+title: "Two-Photon Microscopy"
+---
+
+## Principle: Nonlinear Excitation
+
+Two-photon excitation (2PE) is a nonlinear optical process in which a fluorophore absorbs two photons simultaneously, each carrying half the energy required for the $S_0 \to S_1$ transition. The probability of two-photon absorption scales as the **square** of the instantaneous intensity:
+
+$$F_{2PE} \propto \sigma_2 \cdot I^2(t)$$
+
+where $\sigma_2$ is the two-photon absorption cross-section (measured in Göppert-Mayer units, $1\,\mathrm{GM} = 10^{-50}\,\mathrm{cm^4\,s\,photon^{-1}}$) and $I$ is the instantaneous photon flux. This quadratic dependence is the fundamental origin of the technique's most important properties.
+
+To achieve measurable two-photon absorption rates without damaging the sample, it is essential to concentrate the excitation in both space (tight focusing) and time (ultrashort pulses). A mode-locked Ti:sapphire laser delivers pulses of $\sim$100–150 fs duration at ~80 MHz repetition rate — concentrating photons into brief bursts while maintaining a modest average power ($<100$ mW at the sample):
+
+![Pulsed excitation strategy for two-photon microscopy: a CW laser (top) distributes photons uniformly in time, giving a low instantaneous flux. A pulsed laser (bottom) compresses the same average power into very short pulses of duration $\tau$, dramatically increasing the peak intensity and hence the two-photon excitation probability, while keeping average power (and therefore thermal load) low.](../images/p172_00.png){fig-align="center" width="60%"}
+
+## Intrinsic Optical Sectioning
+
+Because 2PE scales as $I^2$, excitation is confined to the focal volume where the intensity is highest. Out-of-focus planes contribute negligibly — even though light passes through them. This gives **intrinsic optical sectioning without a pinhole**.
+
+The consequence is dramatically visible: in a cuvette of fluorescent dye, one-photon excitation (visible laser) illuminates the entire beam path, while two-photon excitation (near-IR, $\sim 900$ nm) produces fluorescence only at the focus:
+
+![One-photon vs. two-photon excitation in a fluorescent dye cuvette under a 4× objective. Left: visible laser excitation — the entire beam path fluoresces. Right: near-IR pulsed excitation at the same objective — fluorescence is confined to the focal point, demonstrating intrinsic 3D confinement from the $I^2$ dependence.](../images/p173_00.png){fig-align="center" width="60%"}
+
+## Why Near-Infrared?
+
+Two-photon excitation uses wavelengths roughly twice those used for one-photon excitation — typically 700–1000 nm (near-IR). This has three major practical consequences:
+
+**Reduced scattering**: biological tissue scatters light with a wavelength dependence of approximately $\lambda^{-4}$ (Rayleigh) to $\lambda^{-1}$ (Mie). Near-IR light penetrates far deeper than visible light — enabling imaging hundreds of microns into tissue, compared to $<$50 µm for confocal.
+
+**Reduced phototoxicity**: near-IR photons are not absorbed by most endogenous chromophores (hemoglobin, flavins, NADH), reducing out-of-focus photodamage.
+
+**No pinhole needed**: all collected fluorescence comes from the focal volume, so non-descanned detection with large-area photomultipliers maximizes signal collection even after scattering.
+
+## Imaging Deep into Tissue
+
+The combination of near-IR excitation and intrinsic sectioning makes two-photon microscopy the method of choice for imaging intact tissue, *in vivo* preparations, and thick specimens where confocal fails:
+
+![Two-photon fluorescence image of a neuronal axon labeled with a red fluorophore in a thick tissue preparation. The long-range axonal projection and fine axon terminals are resolved deep in the tissue — a preparation inaccessible to one-photon confocal microscopy due to scattering.](../images/p174_00.png){fig-align="center" width="75%"}
+
+![Three-color two-photon image of a dense cell population in a thick tissue section, showing simultaneous imaging of three spectrally distinct fluorescent labels (magenta, green, cyan) deep in a scattering specimen.](../images/p175_00.png){fig-align="center" width="45%"}
+
+## Instrument Configuration
+
+Two-photon microscopy uses a laser-scanning architecture similar to confocal, but with key differences: no pinhole, non-descanned detection preferred, and a Ti:sapphire (or fiber) pulsed laser source. Fast mechanical shutters control laser exposure and protect live samples:
+
+![Shutter systems for live-cell imaging: (a) illumination source shutter (Uniblitz electronic); (b) large-aperture rotary shutter with drive arm, aperture, and anodized housing; (c) filter wheel shutter. Shutters are essential for minimizing photobleaching and phototoxicity in time-lapse experiments.](../images/p177_00.png){fig-align="center" width="65%"}
+
+A complete laser-scanning confocal/two-photon system integrates the scan head, microscope body, laser sources, and acquisition computers into a controlled workstation:
+
+![Complete Nikon laser scanning confocal microscope configuration (PCM 2000 scan head on a Nikon E1000 body): argon ion and helium-neon laser sources, DXM 1200 digital camera, confocal scanning head, halogen illuminator, filter cubes, and dual monitors for specimen image and software control.](../images/p179_00.png){fig-align="center" width="65%"}
+
+## Two-Photon vs. Confocal: When to Choose
+
+| | Confocal | Two-photon |
+|---|---|---|
+| Excitation wavelength | Visible (405–647 nm) | Near-IR (700–1000 nm) |
+| Depth penetration | $< 100\,\mu$m in tissue | $> 500\,\mu$m in tissue |
+| Sectioning mechanism | Pinhole | $I^2$ nonlinearity |
+| Out-of-focus bleaching | Yes | Minimal |
+| Phototoxicity | Moderate | Low (out-of-focus) |
+| Signal at depth | Drops quickly | Much more robust |
+| Cost | Lower | Higher (Ti:Sa laser) |
+
+Two-photon excitation is the method of choice whenever depth penetration, reduced phototoxicity, or intrinsic third-harmonic generation (THG) for label-free structural imaging are needed. Confocal is generally preferable for thin specimens and multicolor experiments where near-IR two-photon cross-sections are limiting.
+
+::: {.callout-note}
+## Relation to SHG and THG imaging
+Two-photon setups naturally enable **second harmonic generation** (SHG) and **third harmonic generation** (THG) imaging of non-centrosymmetric structures (collagen fibers, myosin filaments, lipid droplet interfaces) — entirely label-free. These coherent nonlinear signals appear at exactly $\lambda/2$ or $\lambda/3$ and are spectrally separable from two-photon fluorescence.
+:::

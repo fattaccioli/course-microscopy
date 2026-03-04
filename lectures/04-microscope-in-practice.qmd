@@ -1,0 +1,56 @@
+---
+title: "The Fluorescence Microscope in Practice"
+---
+
+## Operating Principle of Epifluorescence
+
+In epifluorescence microscopy, the same objective serves both to illuminate the specimen and to collect the emitted fluorescence. The excitation light and fluorescence travel in opposite directions along the same optical axis, separated by a dichroic mirror and optical filters.
+
+![Schematic of an epifluorescence microscope: broadband light from the source passes through an excitation filter, reflects off a dichroic mirror down through the objective onto the specimen. Fluorescence emitted upward passes through the dichroic mirror and an emission filter before reaching the detector.](../images/p059_00.png){fig-align="center" width="55%"}
+
+The three key optical elements are:
+
+- **Excitation filter**: bandpass filter that selects the excitation wavelength from the broadband source
+- **Dichroic mirror**: reflects the excitation wavelength toward the sample, transmits the (red-shifted) emission wavelength toward the detector
+- **Emission filter** (barrier filter): rejects any residual excitation light, transmits only the fluorescence
+
+![Principle of excitation/emission separation: the exciter filter selects UV/visible excitation light; the barrier filter transmits only the emitted fluorescence. The Stokes shift is what makes this separation physically possible.](../images/p058_00.png){fig-align="center" width="55%"}
+
+The efficiency of this separation depends critically on the Stokes shift of the fluorophore — a large Stokes shift allows steeper filter cut-offs and lower background.
+
+## Widefield vs. Laser Scanning
+
+Two fundamental illumination geometries exist in fluorescence microscopy:
+
+![Comparison of widefield (left) and laser scanning (right) microscopy geometries. In widefield, the entire field is illuminated simultaneously and imaged onto a camera. In laser scanning, a focused spot is raster-scanned across the sample and detected point by point.](../images/p096_00.png){fig-align="center" width="65%"}
+
+Widefield illumination is faster (full-frame acquisition) but collects out-of-focus fluorescence, degrading contrast in thick samples. Laser scanning trades speed for optical sectioning capability.
+
+## Light Sources
+
+### Mercury and Xenon Arc Lamps
+
+The traditional light source for widefield epifluorescence is a high-pressure mercury (HBO) or xenon arc lamp. Mercury lamps have strong emission lines at 365, 405, 436, 546, and 579 nm — these happen to match common fluorophore excitation bands reasonably well, but are not tunable. Xenon lamps provide a flatter, more continuous spectrum across the visible range, better for quantitative spectroscopy.
+
+### Monochromatic Sources: Lasers and LEDs
+
+Modern systems increasingly use monochromatic sources:
+
+![Emission spectra of krypton (top) and argon (bottom) ion lasers, showing the discrete laser lines available for fluorescence excitation. Argon lasers provide strong lines at 488 nm (FITC/GFP) and 514 nm; krypton adds lines at 568 nm and 647 nm.](../images/p062_00.png){fig-align="center" width="65%"}
+
+LEDs have largely replaced arc lamps in many applications — they offer fast electronic switching (no mechanical shutters needed), long lifetime, stable output, and narrow enough spectra to reduce the need for excitation filters.
+
+## Filter Cubes and Filter Sets
+
+A **filter cube** (or filter block) integrates the excitation filter, dichroic mirror, and emission filter into a single interchangeable unit. Most microscopes have a turret carrying 4–6 cubes, allowing rapid switching between fluorescence channels.
+
+![Fluorescence filter set configurations: (a) filter block turret with excitation interference filters, dichroic mirror, and emission filter; (b) individual filter components; (c) multiband excitation filter slider and multiband emission filter slider for simultaneous multi-color imaging.](../images/p064_00.png){fig-align="center" width="75%"}
+
+Filter specifications are characterized by their center wavelength and bandwidth (e.g., "525/50" means centered at 525 nm with a 50 nm bandpass). Longpass emission filters (e.g., "LP515") transmit all wavelengths above the cut-on wavelength.
+
+![Transmission spectra of three longpass emission filters (Semrock), showing the steep cut-on edges achievable with modern interference filter technology. The sharp transitions ($<5$ nm) are critical for rejecting excitation light while passing fluorescence with minimal loss.](../images/p060_00.png){fig-align="center" width="80%"}
+
+::: {.callout-note}
+## Why so many filters?
+Each fluorophore requires a matched set of excitation filter, dichroic, and emission filter optimized for its specific excitation and emission peaks. Multicolor experiments require either multiple cubes (sequential acquisition) or multiband dichroics and emission filters (simultaneous acquisition, but with some spectral crosstalk trade-offs).
+:::

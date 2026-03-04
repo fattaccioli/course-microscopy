@@ -1,0 +1,31 @@
+# Fluorescence Microscopy {.unnumbered}
+
+Welcome to the online course materials for **Microscopie de Fluorescence**, part of the M2 Microscopies program at Sorbonne Université / ENS.
+
+## Course Overview
+
+This course covers the principles and practice of fluorescence microscopy, from basic photophysics to state-of-the-art super-resolution techniques. It is designed for graduate students in chemistry, physics, and biology with a working knowledge of optics and quantum mechanics.
+
+## Contents
+
+**Lectures** cover the following topics:
+
+1. Introduction to optical microscopy and its modern scope
+2. Principles of fluorescence: energy levels, Stokes shift, quantum yield
+3. Fluorophores: molecular dyes, GFP, labeling strategies
+4. The fluorescence microscope in practice: light sources, filters, objectives
+5. Digital imaging: CCD, sCMOS, noise, resolution
+6. Advanced techniques: confocal, TIRF, FRAP, FRET, super-resolution (STORM/PALM), SPIM
+7. RICM: Reflection Interference Contrast Microscopy
+8. Two-photon microscopy
+
+**Tutorials** provide hands-on problem sets:
+
+- Single-molecule fluorescence with mercury lamp illumination (based on Unger *et al.*, 1999)
+
+## Contact
+
+Jacques Fattaccioli  
+Maître de Conférences, Sorbonne Université / ENS  
+Institut Pierre-Gilles de Gennes  
+[jacques.fattaccioli\@ens.fr](mailto:jacques.fattaccioli@ens.fr)

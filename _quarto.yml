@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: _site
+
+book:
+  title: "Fluorescence Microscopy"
+  subtitle: "M2 Microscopies — Sorbonne Université / ENS"
+  author: "Jacques Fattaccioli"
+  date: "2025"
+  repo-url: https://github.com/fattaccioli-teaching/microscopy
+  repo-actions: [issue]
+  chapters:
+    - index.qmd
+    - part: "Lectures"
+      chapters:
+        - lectures/01-introduction.qmd
+        - lectures/02-fluorescence-principles.qmd
+        - lectures/03-fluorophores.qmd
+        - lectures/04-microscope-in-practice.qmd
+        - lectures/05-digital-imaging.qmd
+        - lectures/06-advanced-techniques.qmd
+        - lectures/07-ricm.qmd
+        - lectures/08-two-photon.qmd
+    - part: "Tutorials"
+      chapters:
+        - tutorials/single-molecule-microscopy.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    math: mathjax
+    css: styles.css
+    code-fold: true
+    fig-align: center
+
+bibliography: references.bib

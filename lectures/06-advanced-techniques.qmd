@@ -1,0 +1,128 @@
+---
+title: "Advanced Fluorescence Techniques"
+---
+
+## Limits of Epifluorescence
+
+Standard widefield epifluorescence illuminates the entire sample volume — including out-of-focus planes. In thick specimens ($> 5\,\mu$m), this generates strong background fluorescence that degrades contrast and signal-to-noise. Three strategies address this: **confocal microscopy** (optical sectioning by spatial filtering), **TIRF microscopy** (evanescent field illumination confined to $\sim 100$ nm), and **light-sheet microscopy** (orthogonal illumination).
+
+## Confocal Microscopy
+
+### Principle
+
+Confocal microscopy achieves optical sectioning by placing a pinhole at the image plane conjugate to the focal point. Out-of-focus fluorescence, which would otherwise reach the detector in widefield, is geometrically rejected by this pinhole:
+
+![Confocal microscopy principle: (A) a laser focused to a point illuminates the specimen; in-focus emission (B) converges at the detector pinhole and passes to the PMT; out-of-focus emission (C) is defocused at the pinhole plane and largely rejected.](../images/p095_00.png){fig-align="center" width="75%"}
+
+![Light path in a confocal microscope: laser excitation passes through a source pinhole, reflects off a dichroic mirror, and is focused by the objective. In-focus fluorescence is re-collimated, passes through the dichroic, and focuses at the detector aperture (pinhole) before reaching the photomultiplier. Out-of-focus light is defocused at the pinhole and blocked.](../images/p098_00.png){fig-align="center" width="55%"}
+
+The key consequences of confocal detection:
+
+- **Optical sectioning**: $z$-resolution $\approx 500$–$800$ nm (vs. no $z$-selectivity in widefield)
+- **Improved contrast** in thick specimens
+- **3D reconstruction** by $z$-stack acquisition
+- **Slower** than widefield — point-by-point scanning requires $\sim 1$–$30$ s per frame
+
+### FLIM: Fluorescence Lifetime Imaging Microscopy
+
+Confocal systems can measure not only fluorescence intensity but also the **fluorescence lifetime** $\tau$ at each pixel. Since $\tau$ is sensitive to the local molecular environment (viscosity, pH, FRET, protein-protein interactions) independently of fluorophore concentration, FLIM provides information inaccessible from intensity images alone.
+
+![FLIM decay curves: (a) fluorescence lifetime measurements as a function of quencher concentration (Cl$^-$), showing the shortening of $\tau$ with increasing [Q]. (b) Equivalent data showing the concentration-dependent decay. The lifetime is extracted by fitting the exponential decay $I(t) = I_0 e^{-t/\tau}$ at each pixel.](../images/p099_00.png){fig-align="center" width="75%"}
+
+## Evanescent Wave Microscopy (TIRF)
+
+### Snell-Descartes Law and the Critical Angle
+
+When light travels from a dense medium ($n_1$, e.g. glass, $n = 1.518$) to a less dense medium ($n_2$, e.g. water, $n = 1.33$), beyond the critical angle $\theta_c$ defined by:
+
+$$\sin\theta_c = \frac{n_2}{n_1}$$
+
+total internal reflection (TIR) occurs. Rather than propagating into medium 2, the electromagnetic field decays exponentially as an **evanescent wave** with a characteristic penetration depth:
+
+$$d = \frac{\lambda}{4\pi\sqrt{n_1^2\sin^2\theta - n_2^2}}$$
+
+For typical parameters ($\lambda = 488$ nm, $\theta = 68°$), $d \approx 100$–$200$ nm — confining excitation to a thin layer at the glass-water interface.
+
+### TIRF in Practice: High-NA Objectives
+
+Objective-based TIRF uses a high-NA oil-immersion objective (NA $> 1.38$) to launch the laser at angles beyond $\theta_c$:
+
+![Objective-based TIRF: laser light entering the periphery of a high-NA objective (NA $> 1.38$) at angles exceeding the critical angle undergoes TIR at the coverslip/medium interface, generating an evanescent field. Light at lower angles (NA $< 1.38$) is transmitted into the sample.](../images/p104_00.png){fig-align="center" width="55%"}
+
+![TIRF principle: the evanescent wave excites only fluorophores within $\sim 100$–$200$ nm of the coverslip surface (cell membrane, adhesion contacts), while fluorophores deeper in the cell are not excited.](../images/p103_00.png){fig-align="center" width="65%"}
+
+### Image Quality
+
+The contrast improvement over widefield is dramatic:
+
+![Comparison of the same fluorescent bead sample imaged by TIRF (left) and widefield fluorescence (right). TIRF shows sharp, isolated single fluorophore spots against a dark background; widefield shows a bright, diffuse background that obscures individual molecules.](../images/p105_00.png){fig-align="center" width="65%"}
+
+### Application: Measuring Ligand-Receptor Binding Kinetics
+
+TIRF is ideally suited to measure interactions at the membrane. The following example illustrates the use of TIRF to measure the binding kinetics between fluorescent liposomes carrying the glycosphingolipid Le$^x$ and a supported lipid bilayer (SLB) presenting the cognate receptor:
+
+![TIRF-based $K_d$ measurement: (a) fluorescent liposomes docking on an SLB under TIRF illumination; (b) lipid and fluorophore composition of the system; (c) TIRF image showing individual surface-bound liposomes (left) and a single-liposome intensity kymograph showing discrete on/off docking events used to extract residence times and binding rates.](../images/p107_00.png){fig-align="center" width="85%"}
+
+## Super-Resolution Microscopy
+
+### Breaking the Diffraction Limit
+
+The Rayleigh criterion ($d \approx 200$–$300$ nm for visible light) is a fundamental limit for conventional microscopy. Super-resolution methods circumvent it not by improving optics, but by exploiting the **photophysics of individual fluorophores** to separate their emission temporally.
+
+### Localization-Based Super-Resolution (STORM/PALM)
+
+The key idea: if only a sparse subset of fluorophores are emitting at any one time, each can be localized with precision far better than the diffraction limit by fitting a Gaussian to its point spread function:
+
+$$\sigma_{\text{loc}} \approx \frac{\sigma_{\text{PSF}}}{\sqrt{N}}$$
+
+where $N$ is the number of detected photons. With $N \approx 1000$ photons, localization precision of $\sim 10$–$20$ nm is achievable.
+
+![dSTORM/PALM principle: (1) photoswitchable fluorophores stochastically switch between dark and bright states ($k_{\text{on}}$, $k_{\text{off}}$); (2) each active emitter is localized by Gaussian fitting to its diffraction-limited spot; (3) temporal separation ensures that at each frame only a sparse, resolvable subset is active. After thousands of frames, the accumulated localizations build a super-resolved image.](../images/p117_00.png){fig-align="center" width="75%"}
+
+The reconstruction process is analogous to determining positions from a blurred ensemble image:
+
+![Illustration of the reconstruction principle using the Eiffel Tower as an analogy: (left) original blurred image; (center) detected particle positions from individual frames; (right) reconstructed super-resolved image from accumulated localizations.](../images/p119_00.png){fig-align="center" width="70%"}
+
+### Example 1: Microtubules
+
+![Comparison of widefield (top) and dSTORM (bottom) images of immunolabeled microtubules, with intensity profiles across a single filament. The widefield FWHM is $\sim 350$ nm (diffraction-limited); dSTORM resolves the hollow microtubule structure with a measured width below 50 nm.](../images/p120_00.png){fig-align="center" width="80%"}
+
+### Example 2: Nuclear Pore Proteins
+
+![dSTORM imaging of nuclear pore complexes (NPCs) in *Xenopus* oocyte nuclei: widefield (top-left) vs. dSTORM (bottom-left) reveal the 8-fold symmetry of individual NPCs (center, scale bar 200 nm). Two-color dSTORM (right) resolves the central pore (WGA-Alexa 488, green) from the periphery (gp210-Alexa 647, red).](../images/p121_00.png){fig-align="center" width="80%"}
+
+## SPIM: Single Plane Illumination Microscopy
+
+SPIM (also called light-sheet microscopy) illuminates the sample with a thin sheet of light oriented perpendicular to the detection axis, exciting fluorescence only in the focal plane of the objective.
+
+![SPIM geometry: the illumination axis and imaging axis are orthogonal. A thin light sheet confined to the $xy$ plane illuminates only the focal plane being imaged, eliminating out-of-focus excitation entirely.](../images/p123_00.png){fig-align="center" width="55%"}
+
+Key advantages: very low photobleaching and phototoxicity (only the imaged plane is illuminated), fast 3D imaging (no scanning needed), and suitability for large transparent specimens (embryos, organoids).
+
+## FRAP: Fluorescence Recovery After Photobleaching
+
+FRAP measures the lateral diffusion coefficient $D$ of membrane or cytosolic components. A focused high-power laser pulse irreversibly bleaches fluorophores in a small region of interest. Fluorescence recovers as unbleached molecules from the surrounding area diffuse in.
+
+![FRAP on a supported lipid bilayer: (A) uniform fluorescence before bleaching; (B) a circular bleach spot is created; (C-D) fluorescence recovers as unbleached lipids diffuse laterally into the bleached region. The recovery kinetics yield $D$ and the mobile fraction.](../images/p129_00.png){fig-align="center" width="55%"}
+
+For a circular bleach spot of radius $r$, the diffusion coefficient is:
+
+$$D = \frac{r^2}{4 t_{1/2}}$$
+
+where $t_{1/2}$ is the half-time of fluorescence recovery.
+
+![FRAP applied to a cell: the bleached region (dark) recovers fluorescence as labeled molecules diffuse from the surrounding unbleached area. The mobile fraction is determined from the plateau recovery level relative to the pre-bleach intensity.](../images/p130_00.png){fig-align="center" width="45%"}
+
+## FRET in Practice
+
+Recall from the fluorophores lecture that FRET efficiency depends on $r^{-6}$. In a biological context, FRET serves as a **nanometer-scale proximity sensor**: FRET occurs only when donor and acceptor are within $\sim R_0 \approx 5$–$10$ nm.
+
+The complete FRET framework — spectral overlap, distance dependence, and dipole orientation:
+
+![FRET in practice: (A) spectral overlap between donor emission and acceptor excitation spectra (shaded area = overlap integral $J$); (B) FRET efficiency $E = R^{-6}/(R^{-6} + R_0^{-6})$ as a function of distance, with $E = 0.5$ at $r = R_0$; (C) dipole orientation dependence — FRET is maximal when the transition dipoles are parallel and zero when perpendicular.](../images/p135_00.png){fig-align="center" width="70%"}
+
+### Biological Application: Mechanosensing with FRET
+
+FRET biosensors are increasingly used to report on intracellular forces. In the example below, an integrin-based tension sensor uses a TFP-Venus FRET pair connected by an elastic linker. When force is applied, the linker extends, increasing the TFP-Venus distance and reducing FRET efficiency:
+
+![Integrin tension sensor: (A) $\alpha_v\beta_3$ integrins in adhesion complexes under tension; (B) the sensor construct — TFP and Venus flanking an elastic linker; FRET decreases when force extends the linker; (C) TFP, Venus, and FRET channel images of a cell, with the FRET index map (right) revealing spatial distribution of integrin-transmitted forces.](../images/p138_00.png){fig-align="center" width="85%"}

@@ -1,0 +1,100 @@
+---
+title: "RICM: Reflection Interference Contrast Microscopy"
+---
+
+## Principle
+
+RICM (Reflection Interference Contrast Microscopy) is a label-free technique that images the distance $h(x)$ between a particle or cell membrane and a flat glass substrate, with nanometer axial sensitivity. It exploits the interference between light reflected at the glass-water interface (beam $I_0$) and light reflected at the bottom surface of the object (beam $I_1$, $I_2$):
+
+![RICM geometry: light reflected at the glass surface ($I_0$) and at the bottom of the particle ($I_1$, $I_2$) interfere, producing an intensity pattern that encodes the local gap $h(x)$ between the particle and the substrate. The image is formed by the objective below.](../images/p147_00.png){fig-align="center" width="55%"}
+
+The reflected intensity varies as:
+
+$$I(x) \propto I_0 + I_1 - 2\sqrt{I_0 I_1}\cos\left(\frac{4\pi n\, h(x)}{\lambda} + \phi_0\right)$$
+
+where $n$ is the refractive index of the medium, $\lambda$ the illumination wavelength, and $\phi_0$ an offset phase that depends on the Fresnel reflection coefficients. Bright fringes correspond to constructive interference, dark fringes to destructive interference.
+
+## Newton's Rings: The Ideal Case
+
+For a perfect sphere of radius $R$ resting at height $h_0$ above the substrate, $h(x) = h_0 + x^2/2R$, giving concentric circular fringes — **Newton's rings**:
+
+![Ideal Newton's rings pattern from a sphere close to a flat surface: the fringe spacing encodes the local curvature and hence the sphere radius $R$; the central dark spot indicates the region of minimum separation.](../images/p149_00.png){fig-align="center" width="45%"}
+
+## Reading the Fringes
+
+The fringe pattern maps $h(x)$ through the phase of the cosine. Between two consecutive fringes (dark-to-dark or bright-to-bright), $h$ increases by $\lambda/2n \approx 180$–$200$ nm for green light in water. Lateral resolution is limited by the Rayleigh criterion ($\sim 200$–$300$ nm), setting the minimum resolvable $\Delta x$.
+
+![Fringe reading: each fringe order $N$ corresponds to a specific $h$ value, allowing $h(x)$ to be read off from the fringe positions. The inset shows the local geometry for extracting the height between two consecutive fringe positions $x_{N-1}$ and $x_N$.](../images/p150_00.png){fig-align="center" width="70%"}
+
+## Microscope Setup
+
+RICM uses reflected-light illumination with a monochromatic source (interference filter on an HBO lamp) and a standard reflected-light microscope with an antiflex objective (with crossed polarizers to suppress specular reflections from the lens surfaces):
+
+![RICM microscope setup: monochromatic light from an HBO lamp passes through a field diaphragm and interference filter, reflects off a beam splitter toward the objective, illuminates the sample (particle on a coverslip), and the reflected light is collected by the same objective and directed to the CCD camera.](../images/p151_00.png){fig-align="center" width="55%"}
+
+## Glass Bead on Glass: A Reference Experiment
+
+A glass bead ($n \approx 1.52$) sedimenting on a glass coverslip in water generates a clean Newton's ring pattern that can be quantitatively modeled:
+
+![(a) Cross-section geometry of a glass bead of radius $R$ at height $h$ above the substrate. (b) Experimental RICM image showing Newton's rings from the glass bead, with clearly resolved fringes (scale bar 10 $\mu$m).](../images/p152_00.png){fig-align="center" width="65%"}
+
+## Effect of Numerical Aperture
+
+A key experimental limitation of RICM is that increasing NA increases the range of illumination angles, which averages out the fringe contrast. Higher-order fringes (large $h$) are more sensitive to this averaging than the central fringes. This sets a practical upper limit on the measurable $h$ — typically $\sim 500$–$1000$ nm for standard antiflex objectives.
+
+## Wetting and Contact Angles
+
+RICM can directly image the contact line and contact angle of droplets or vesicles on surfaces, giving access to solid-liquid-air surface energies:
+
+![RICM image of a sessile droplet showing the contact angle $\theta_C$ and the solid-liquid interfacial tension $\gamma_{SL}$ at the contact line. The fringe pattern in the thin film region near the contact line directly encodes the film profile.](../images/p155_00.png){fig-align="center" width="70%"}
+
+## Absolute Height Measurement: The Dual Wavelength Solution
+
+Single-wavelength RICM measures $h$ modulo $\lambda/2n$ — i.e., fringe order ambiguity prevents absolute height determination beyond the first fringe. The dual-wavelength solution uses two illumination wavelengths $\lambda_\alpha$ and $\lambda_\beta$ simultaneously; the beat period $\Lambda = \lambda_\alpha\lambda_\beta / |2n(\lambda_\alpha - \lambda_\beta)|$ is much larger, extending the unambiguous range to several micrometers.
+
+![Dual-wavelength RICM setup: an HBO lamp illuminates the sample simultaneously at $\lambda_\alpha$ and $\lambda_\beta$ (selected by an interference filter); the two wavelengths are separated by a dichroic mirror and detected on two synchronized CCD cameras. The height map $h(x)$ is extracted from the two phase maps.](../images/p158_00.png){fig-align="center" width="70%"}
+
+## Colloidal Interactions: Measuring the Interaction Potential
+
+For a colloidal particle near a surface, the equilibrium height distribution $P(h)$ is related to the interaction potential $V(h)$ via Boltzmann:
+
+$$P(h) \propto \exp\left(-\frac{V(h)}{k_BT}\right)$$
+
+RICM measures the instantaneous $h(x,t)$ from the fringe pattern; recording many frames gives $P(h)$ and hence $V(h)$ with $k_BT$ resolution.
+
+![Particle-surface interaction geometry: a charged colloidal particle ($-$) near a charged glass surface ($-$) in water experiences electrostatic repulsion, van der Waals attraction, and gravity. The mean height $\langle h \rangle$ is set by the balance of these forces.](../images/p161_00.png){fig-align="center" width="50%"}
+
+![Radial intensity profile of the RICM fringe pattern from a single colloidal particle (data points) and theoretical fit (line). The fit yields the particle radius, height, and the amplitude of the interaction potential.](../images/p162_00.png){fig-align="center" width="60%"}
+
+## Cell Adhesion
+
+RICM was originally developed to study cell adhesion. It directly images the contact zone between a cell and the substrate, without fluorescent labels. Close contact regions appear dark (small $h$, destructive interference for appropriate parameters); non-adherent regions appear bright.
+
+### Modeling Cell Adhesion
+
+The classic Bell-Evans-Dembo model describes cell adhesion as a competition between specific receptor-ligand bonds in the contact zone and repulsive interactions (glycocalyx, membrane tension) at the periphery:
+
+![Bell-Evans-Dembo model of cell-cell adhesion: in the contact region, specific cell-cell bonds (filled circles) bridge the two membranes; free receptors and glycocalyx molecules are excluded laterally. The separation distance in the contact zone is set by the bond length.](../images/p164_00.png){fig-align="center" width="60%"}
+
+### Liposomes on Glass
+
+Tense liposomes on glass provide a model system with well-defined mechanics. Their RICM image shows a flat central contact zone surrounded by fringes from the curved membrane:
+
+![RICM image of a tense liposome on glass (left) and corresponding radial intensity profile with fit (right). The flat central dark region indicates close contact; the fringe pattern gives the membrane profile and the contact angle, from which the adhesion energy can be extracted.](../images/p166_00.png){fig-align="center" width="75%"}
+
+### Ligand-Receptor Interactions
+
+Functionalizing the substrate and the liposome/cell membrane with complementary ligand-receptor pairs allows direct quantification of specific adhesion energies:
+
+![Schematic of a liposome or cell bearing receptors (blue) adhering to a substrate functionalized with ligands (orange triangles). Specific bonds form in the contact zone, bending the membrane inward; RICM images the contact geometry.](../images/p167_00.png){fig-align="center" width="65%"}
+
+### Using Membrane Fluctuations
+
+For weakly adhered membranes, thermal fluctuations modulate $h(x,t)$. The amplitude of fluctuations $\langle u^2\rangle^{1/2}$ is suppressed in the contact zone (bonds restrict membrane motion) and recovers outside it — providing a spatially resolved map of bond density:
+
+![RICM image of a weakly adhered liposome (left) and the fluctuation amplitude profile $\langle u^2\rangle^{1/2}$ along a transect (right). Fluctuations are suppressed in the contact zone where bonds are present and enhanced at the free membrane periphery.](../images/p168_00.png){fig-align="center" width="75%"}
+
+::: {.callout-note}
+## RICM in practice
+RICM requires no fluorescent labels and gives nanometer-scale axial information in real time. Its main limitations are: (1) fringe order ambiguity (resolved by dual-wavelength or simulation); (2) sensitivity to refractive index inhomogeneities in the sample; (3) restricted to objects close to the substrate ($h < 1$–$2\,\mu$m for reliable fringe counting). It is most powerful when combined with fluorescence for multi-modal imaging.
+:::

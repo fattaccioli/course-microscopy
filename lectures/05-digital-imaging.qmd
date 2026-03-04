@@ -1,0 +1,139 @@
+---
+title: "Digital Imaging"
+---
+
+## From Photons to Pixels: The Detection Chain
+
+A fluorescence microscope is a photon counting instrument. Understanding the detection chain — from photon arrival at the sensor to the final pixel value — is essential for interpreting images quantitatively and designing experiments correctly.
+
+## CCD Cameras
+
+A scientific CCD (charge-coupled device) camera consists of a photodiode array, thermoelectric cooling (Peltier), and readout electronics. Cooling reduces **dark current** (thermal electron generation), which is a major noise source in long exposures.
+
+![Cross-section of a cooled scientific CCD camera, showing the CCD sensor, thermoelectric cooler (TEC), vacuum seal, and precision readout electronics. Scientific CCDs are monochrome (no Bayer mosaic) to maximize quantum efficiency.](../images/p072_00.png){fig-align="center" width="80%"}
+
+![Micrograph of a CCD photodiode array integrated circuit, with an inset showing enlarged pixel elements with a Bayer color mosaic filter (used in consumer cameras but not in scientific monochrome CCDs).](../images/p073_00.png){fig-align="center" width="60%"}
+
+### Charge Transfer Principle
+
+In a CCD, photoelectrons generated in each pixel are shifted along the sensor column by column to a single readout amplifier, using a sequence of clocked voltage gates on a p-Si substrate:
+
+![Schematic of CCD charge transfer: a positive voltage on one gate (red, +V) accumulates photoelectrons in the potential well beneath it. Sequential clocking of the gates shifts the charge packet laterally toward the readout amplifier.](../images/p074_00.png){fig-align="center" width="60%"}
+
+The key consequence: **all pixels share a single amplifier**, so read noise is added only once per frame. This gives CCDs an excellent read noise floor ($\sim 2$–$5\,e^-$ for scientific CCDs), critical for low-light fluorescence imaging.
+
+## sCMOS Cameras
+
+Scientific CMOS (complementary metal-oxide-semiconductor) sensors have largely replaced CCDs in modern fluorescence microscopy. Each pixel has its own amplifier, enabling parallel readout of all pixels simultaneously:
+
+![Architecture of a CMOS sensor: each pixel contains a photodiode and an individual amplifier (photon-to-electron and electron-to-voltage conversion per pixel). Column amplifiers and analog-to-digital conversion deliver the digital image output.](../images/p075_00.png){fig-align="center" width="70%"}
+
+## CCD vs. sCMOS
+
+![Comparison of CCD (left) and CMOS (right) readout architectures. In CCD, charge is shifted sequentially through transfer registers to a single amplifier. In CMOS, each pixel has its own amplifier and is read independently via metal wire interconnects.](../images/p076_00.png){fig-align="center" width="75%"}
+
+The key trade-offs:
+
+| | CCD | sCMOS |
+|---|---|---|
+| Read noise | $\sim 2$–$5\,e^-$ | $\sim 1$–$2\,e^-$ |
+| Frame rate | Moderate | Very high |
+| Field of view | Moderate | Large |
+| Dynamic range | High | High |
+| Cost | Higher | Decreasing |
+
+sCMOS cameras now offer superior performance for most applications, with per-pixel noise maps allowing correction of pixel-to-pixel amplifier variation.
+
+## Digital Image: Bit Depth and Dynamic Range
+
+The analog signal from the amplifier is digitized by an ADC (analog-to-digital converter). The **bit depth** determines how many gray levels are available:
+
+![Illustration of bit depth and gray levels: from 2-bit (4 gray levels) to 10-bit (1024 gray levels). Scientific cameras typically use 12–16 bits (4096–65536 gray levels), essential for quantitative fluorescence measurements.](../images/p078_00.png){fig-align="center" width="65%"}
+
+**Dynamic range** is the ratio of the maximum signal (full-well capacity) to the minimum detectable signal (noise floor). For quantitative imaging, you need sufficient bit depth to sample this range without losing information at either end.
+
+## Noise Sources
+
+The total noise in a fluorescence image has three main contributions:
+
+**Photon shot noise** ($\sigma_{\text{shot}} = \sqrt{N}$): fundamental, follows Poisson statistics. Unavoidable — it arises from the quantum nature of light. Signal-to-noise ratio scales as $\sqrt{N}$, so collecting more photons always helps.
+
+**Read noise** ($\sigma_{\text{read}}$): added by the amplifier during readout. Fixed per pixel per frame — reduced by cooling and by sCMOS architecture.
+
+**Dark current** ($i_d$): thermally generated electrons accumulated during exposure. Proportional to exposure time; dramatically reduced by Peltier cooling ($\sim 2\times$ reduction per 7°C decrease in temperature).
+
+The total noise in quadrature:
+$$\sigma_{\text{total}}^2 = N_{\text{signal}} + N_{\text{background}} + \sigma_{\text{read}}^2 + i_d \cdot t$$
+
+## Objectives and Numerical Aperture
+
+The objective is the most critical optical element in the microscope. Its **numerical aperture** (NA) determines both light collection efficiency and lateral resolution:
+
+$$\mathrm{NA} = n \sin\mu$$
+
+where $n$ is the refractive index of the immersion medium and $\mu$ is the half-angle of the acceptance cone.
+
+![Effect of numerical aperture on light collection and Airy disc size: (a) $\mu = 7°$, NA = 0.12; (b) $\mu = 20°$, NA = 0.34; (c) $\mu = 60°$, NA = 0.87. Higher NA collects more light and produces a smaller Airy disc.](../images/p083_00.png){fig-align="center" width="65%"}
+
+Light collection scales as $\mathrm{NA}^2$, so going from NA 0.5 to NA 1.4 gives nearly $8\times$ more photons per pixel — a massive practical advantage.
+
+## Resolution: The Airy Disc and Rayleigh Criterion
+
+A point source imaged through a circular aperture produces an **Airy diffraction pattern** — a bright central disc surrounded by concentric rings. Two point sources are considered resolved (Rayleigh criterion) when the central maximum of one coincides with the first minimum of the other:
+
+![The Airy disc intensity distributions for two point sources: (a) clearly resolved, (b) at the Rayleigh limit, (c) unresolved. The 3D profiles show the intensity distributions and the corresponding top-view Airy patterns.](../images/p085_00.png){fig-align="center" width="65%"}
+
+The lateral resolution (Rayleigh criterion) is:
+
+$$R_{xy} = \frac{1.22\,\lambda}{2\,\mathrm{NA}} = \frac{0.61\,\lambda}{\mathrm{NA}}$$
+
+For a typical oil-immersion objective (NA = 1.4) at $\lambda = 500\,\mathrm{nm}$:
+$$R_{xy} \approx \frac{0.61 \times 500\,\mathrm{nm}}{1.4} \approx 218\,\mathrm{nm}$$
+
+The Airy intensity pattern is formally:
+$$I(P) = I_{\max}\left[\frac{J_1(ka\sin\theta)}{ka\sin\theta}\right]^2$$
+
+where $J_1$ is the first-order Bessel function, $k = 2\pi/\lambda$, and $a$ is the aperture radius.
+
+## Reading an Objective
+
+All key specifications are encoded on the objective barrel:
+
+![Annotated diagram of an Olympus Plan Apo 60×/1.40 Oil objective, showing the manufacturer, aberration correction class (Plan Apo), magnification (60×), numerical aperture (1.40), immersion medium (oil), tube length ($\infty$), cover slip thickness (0.17 mm), and working distance (0.21 mm).](../images/p092_00.png){fig-align="center" width="55%"}
+
+**Aberration correction classes** (in increasing order of correction):
+- **Achromat**: corrected for chromatic aberration at 2 wavelengths
+- **Plan**: flat-field correction (no field curvature)
+- **Apochromat (Apo)**: corrected at 3–4 wavelengths, highest chromatic correction
+- **Plan Apo**: both flat-field and full chromatic correction — the gold standard for fluorescence
+
+## Aberrations
+
+### Chromatic Aberration
+
+Different wavelengths focus at different axial positions due to the wavelength dependence of the refractive index. This causes color fringing and z-offset between channels in multicolor imaging.
+
+![Axial chromatic aberration: a single lens focuses blue (450 nm), green (550 nm), and red (650 nm) light at different positions (blur $\approx 0.30$ mm). An achromat doublet corrects this to a residual blur of $\sim 0.01$ mm by combining positive and negative elements of different glass types.](../images/p088_00.png){fig-align="center" width="65%"}
+
+### Coma
+
+Coma affects off-axis point sources, which appear comet-shaped due to the different contributions of lens zones at different radial distances from the optical axis.
+
+![Off-axis comatic aberration: rays from different lens zones (1–4) converge at different lateral positions, producing a characteristic comet-shaped blur for off-axis point sources.](../images/p089_00.png){fig-align="center" width="70%"}
+
+### Astigmatism
+
+Astigmatism arises when the lens focuses rays in the sagittal and tangential planes at different axial positions. Between the two focal planes lies a "circle of least confusion."
+
+![Astigmatism aberration: the sagittal and tangential focal planes are separated axially, producing characteristic elongated Airy patterns that rotate 90° between the two foci. The circle of least confusion lies between them.](../images/p090_00.png){fig-align="center" width="65%"}
+
+### Field Curvature
+
+A flat specimen is imaged onto a curved (Petzval) surface, so the center and edges of the field cannot be simultaneously in focus with a simple lens. "Plan" objectives correct this.
+
+![Curvature of field: a flat object is imaged onto the curved Petzval surface by a simple lens. Flat-field ("Plan") objectives introduce corrective elements to flatten this surface.](../images/p091_00.png){fig-align="center" width="60%"}
+
+::: {.callout-note}
+## Practical implications for quantitative imaging
+Chromatic aberration causes channel-dependent z-offsets — critical to correct for colocalization analyses. Field curvature means intensity is not uniform across the field — always flat-field correct before quantitative measurements. Both are dramatically reduced in Plan Apo objectives.
+:::

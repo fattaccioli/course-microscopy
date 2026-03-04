@@ -1,0 +1,24 @@
+/* Fluorescence Microscopy Course - Custom Styles */
+
+/* Slightly wider content area */
+.quarto-container {
+  max-width: 900px;
+}
+
+/* Style correction callouts distinctively */
+.callout-tip {
+  border-left-color: #2e86ab;
+}
+
+/* Better figure captions */
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+
+/* Equation spacing */
+.math.display {
+  margin: 1.5em 0;
+}

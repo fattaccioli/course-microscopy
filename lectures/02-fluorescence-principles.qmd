@@ -1,0 +1,98 @@
+---
+title: "Principles of Fluorescence"
+---
+
+## Electronic Energy Levels
+
+The optical properties of fluorescent molecules are rooted in their electronic structure. In polyatomic molecules, each electronic state ($S_0$, $S_1$, $S_2$, ...) is described by a potential energy surface as a function of nuclear coordinates. The ground state $S_0$ and first excited singlet $S_1$ each support a ladder of vibrational sub-levels.
+
+![Potential energy curves for the ground ($X^1\Sigma_g^+$) and excited ($B'\Sigma_u^+$) states of a diatomic molecule, illustrating the vibrational quantization within each electronic manifold.](../images/p019_00.png){fig-align="center" width="65%"}
+
+The Franck-Condon principle governs which vibrational transitions are favored upon absorption: electronic transitions are fast ($\sim 10^{-15}$ s) compared to nuclear motion, so the nuclear geometry is frozen during the transition. The most probable transitions are those with maximum overlap between the vibrational wavefunctions of the initial and final states.
+
+![Franck-Condon diagram showing the vibrational structure of $S_0$ and $S_1$ states, with absorption (blue) and emission (red) transitions. The displacement between the two potential minima leads to a Stokes shift.](../images/p022_00.png){fig-align="center" width="70%"}
+
+## The First Fluorophore: Quinine
+
+Quinine, present in tonic water, is a classic example of a naturally fluorescent molecule. Under UV illumination it emits strongly in the blue, making it one of the first fluorescent substances to be systematically studied.
+
+![Tonic water (Canada Dry) under white light (left) and UV illumination (right), demonstrating the blue fluorescence of quinine.](../images/p020_00.png){fig-align="center" width="60%"}
+
+## The Fluorescence Phenomenon
+
+The full photophysical picture of an organic fluorophore involves several competing pathways from the excited state:
+
+![Jablonski diagram showing the main photophysical pathways: absorption to $S_2$/$S_1$, rapid internal conversion to $S_1$ ($10^{-12}$ s), fluorescence emission ($h\nu_F$), intersystem crossing to $T_1$, and phosphorescence ($h\nu_P$).](../images/p021_00.png){fig-align="center" width="80%"}
+
+The key processes and their characteristic timescales are:
+
+- **Absorption**: $\sim 10^{-15}$ s
+- **Internal conversion** ($S_2 \to S_1$, vibrational relaxation): $\sim 10^{-12}$ s  
+- **Fluorescence** ($S_1 \to S_0$): $\sim 10^{-8}$ s
+- **Intersystem crossing** ($S_1 \to T_1$): $\sim 10^{-8}$ s
+- **Phosphorescence** ($T_1 \to S_0$): $10^{-4}$ to $10^{-2}$ s
+
+## Molecular Spectra and Energy Quantization
+
+The vibrational structure of both $S_0$ and $S_1$ determines the shape of the absorption and emission spectra. Each vibronic transition ($0\to n$ in absorption, $n\to 0$ in emission) contributes a band to the spectrum.
+
+![Jablonski diagram with explicit vibrational sub-levels and characteristic timescales for each transition pathway.](../images/p023_00.png){fig-align="center" width="70%"}
+
+## A Case Study: Anthracene
+
+Anthracene is a canonical example because its vibrational structure is clearly resolved in both absorption and emission spectra at room temperature. The mirror symmetry between the two spectra reflects the similarity of the $S_0$ and $S_1$ potential energy surfaces.
+
+![Absorption and fluorescence emission spectra of anthracene showing the vibronic progression (0-0, 0-1, 0-2 bands), with the corresponding Jablonski diagram. The mirror symmetry between absorption and emission is characteristic of a rigid aromatic fluorophore.](../images/p024_00.png){fig-align="center" width="85%"}
+
+## Stokes Shift
+
+A fundamental consequence of vibrational relaxation within $S_1$ before emission is that the fluorescence spectrum is always red-shifted relative to the absorption spectrum. This is the **Stokes shift**.
+
+$$\Delta\nu_{\text{Stokes}} = \tilde{\nu}_{\text{abs,max}} - \tilde{\nu}_{\text{em,max}}$$
+
+![Absorption (purple) and emission (green) spectra illustrating the Stokes shift — the spectral gap between the excitation and emission maxima.](../images/p026_00.png){fig-align="center" width="65%"}
+
+The Stokes shift is critical for fluorescence microscopy: it allows the excitation light to be efficiently separated from the fluorescence signal using optical filters, since they occur at different wavelengths.
+
+## Two-Level System Description
+
+The kinetics of $S_1$ depopulation can be modeled as a pseudo-first-order process, treating the excited state as species $A$ and the ground state (or non-fluorescent products) as species $B$:
+
+$$A \underset{k_-}{\overset{k_+}{\rightleftharpoons}} B$$
+
+The excited-state population decays exponentially:
+
+$$x(t) = x(0)\, e^{-(k_+ + k_-)t}$$
+
+This is exactly first-order relaxation kinetics. The fluorescence lifetime $\tau$ is defined as:
+
+$$\tau = \frac{1}{k_r + k_{nr}}$$
+
+where $k_r$ is the radiative rate constant and $k_{nr}$ is the sum of all non-radiative rates.
+
+![First-order relaxation kinetics of the two-level model. The displacement from equilibrium decays as a single exponential, with rate $k_+ + k_-$.](../images/p028_00.png){fig-align="center" width="70%"}
+
+The simplified two-level Jablonski diagram makes explicit the competition between radiative ($\Gamma = k_r$) and non-radiative ($k_{nr}$) decay pathways from $S_1$:
+
+![Simplified two-level Jablonski diagram: absorption ($h\nu_A$) promotes the molecule to the upper vibrational levels of $S_1$; after rapid relaxation ($10^{-12}$ s) the molecule decays either by emitting fluorescence ($h\nu_F$, rate $\Gamma$) or via non-radiative pathways ($k_{nr}$).](../images/p029_00.png){fig-align="center" width="65%"}
+
+## Fluorophore Efficiency: Brightness
+
+The **quantum yield** $\phi$ quantifies the fraction of absorbed photons that are re-emitted as fluorescence:
+
+$$\phi = \frac{k_r}{k_r + k_{nr}} = \frac{\Gamma}{\Gamma + k_{nr}}$$
+
+The **brightness** $B$ of a fluorophore combines the quantum yield with the absorption cross-section $\sigma$ (or molar extinction coefficient $\varepsilon$):
+
+$$B = \varepsilon \cdot \phi$$
+
+A high brightness requires both efficient light absorption ($\varepsilon$) and efficient emission ($\phi$). Rhodamine B (shown below), for example, has $\varepsilon \approx 10^5\,\mathrm{M^{-1}cm^{-1}}$ and $\phi \approx 0.7$ in ethanol, making it one of the brightest common fluorophores.
+
+![Structural formula of Rhodamine B, a xanthene dye widely used as a reference fluorophore for its high brightness.](../images/p030_00.png){fig-align="center" width="45%"}
+
+::: {.callout-note}
+## Key relationships
+$$\tau = \frac{1}{k_r + k_{nr}} \qquad \phi = k_r \cdot \tau \qquad B = \varepsilon \cdot \phi$$
+
+These three parameters fully characterize the photophysical performance of a fluorophore. Note that a long lifetime does not necessarily imply high quantum yield — what matters is the ratio $k_r / (k_r + k_{nr})$.
+:::
