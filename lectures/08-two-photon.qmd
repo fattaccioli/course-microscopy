@@ -10,7 +10,9 @@ $$F_{2PE} \propto \sigma_2 \cdot I^2(t)$$
 
 where $\sigma_2$ is the two-photon absorption cross-section (measured in Göppert-Mayer units, $1\,\mathrm{GM} = 10^{-50}\,\mathrm{cm^4\,s\,photon^{-1}}$) and $I$ is the instantaneous photon flux. This quadratic dependence is the fundamental origin of the technique's most important properties.
 
-To achieve measurable two-photon absorption rates without damaging the sample, it is essential to concentrate the excitation in both space (tight focusing) and time (ultrashort pulses). A mode-locked Ti:sapphire laser delivers pulses of $\sim$100–150 fs duration at ~80 MHz repetition rate — concentrating photons into brief bursts while maintaining a modest average power ($<100$ mW at the sample):
+To achieve measurable two-photon absorption rates without damaging the sample, it is essential to concentrate the excitation in both space (tight focusing) and time (ultrashort pulses). 
+
+A mode-locked Ti:sapphire laser delivers pulses of $\sim $ 100–150 fs duration at ~80 MHz repetition rate — concentrating photons into brief bursts while maintaining a modest average power ($<100$ mW at the sample):
 
 ![Pulsed excitation strategy for two-photon microscopy: a CW laser (top) distributes photons uniformly in time, giving a low instantaneous flux. A pulsed laser (bottom) compresses the same average power into very short pulses of duration $\tau$, dramatically increasing the peak intensity and hence the two-photon excitation probability, while keeping average power (and therefore thermal load) low.](../images/p172_00.png){fig-align="center" width="60%"}
 
