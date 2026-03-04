@@ -7,7 +7,7 @@ book:
   subtitle: "M2 Microscopies — Sorbonne Université / ENS"
   author: "Jacques Fattaccioli"
   date: "2025"
-  repo-url: https://github.com/fattaccioli-teaching/microscopy
+  repo-url: https://github.com/fattaccioli/course-microscopy
   repo-actions: [issue]
   chapters:
     - index.qmd
