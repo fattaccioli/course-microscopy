@@ -22,3 +22,9 @@ figcaption {
 .math.display {
   margin: 1.5em 0;
 }
+
+/* Fluid width up to a maximum */
+.quarto-container {
+  max-width: min(95vw, 1600px) !important;
+  width: 95vw !important;
+}
