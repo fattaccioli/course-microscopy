@@ -27,7 +27,7 @@ book:
 
 format:
   html:
-    theme: cosmo
+    theme: flatly #cosmo
     toc: true
     toc-depth: 3
     number-sections: true
