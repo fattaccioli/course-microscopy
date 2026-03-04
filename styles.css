@@ -1,5 +1,12 @@
 /* Fluorescence Microscopy Course - Custom Styles */
 
+/* Text justification*/
+
+p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 /* Slightly wider content area */
 .quarto-container {
   max-width: 900px;
