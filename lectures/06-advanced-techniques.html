@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Advanced Fluorescence Techniques – Fluorescence Microscopy</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lectures/07-ricm.html" rel="next">
+<link href="../lectures/05-digital-imaging.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-49e51e44f424ea8c7044b429bdbbbfe2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-introduction.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/06-advanced-techniques.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Advanced Fluorescence Techniques</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Fluorescence Microscopy</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fattaccioli-teaching/microscopy" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluorescence Microscopy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Optical Microscopy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/02-fluorescence-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Principles of Fluorescence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/03-fluorophores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fluorophores and Labeling Strategies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/04-microscope-in-practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Fluorescence Microscope in Practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/05-digital-imaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Digital Imaging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/06-advanced-techniques.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Advanced Fluorescence Techniques</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/07-ricm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">RICM: Reflection Interference Contrast Microscopy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/08-two-photon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Two-Photon Microscopy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/single-molecule-microscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Single-Molecule Fluorescence with Mercury Lamp Illumination</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#limits-of-epifluorescence" id="toc-limits-of-epifluorescence" class="nav-link active" data-scroll-target="#limits-of-epifluorescence"><span class="header-section-number">6.1</span> Limits of Epifluorescence</a></li>
+  <li><a href="#confocal-microscopy" id="toc-confocal-microscopy" class="nav-link" data-scroll-target="#confocal-microscopy"><span class="header-section-number">6.2</span> Confocal Microscopy</a>
+  <ul class="collapse">
+  <li><a href="#principle" id="toc-principle" class="nav-link" data-scroll-target="#principle"><span class="header-section-number">6.2.1</span> Principle</a></li>
+  <li><a href="#flim-fluorescence-lifetime-imaging-microscopy" id="toc-flim-fluorescence-lifetime-imaging-microscopy" class="nav-link" data-scroll-target="#flim-fluorescence-lifetime-imaging-microscopy"><span class="header-section-number">6.2.2</span> FLIM: Fluorescence Lifetime Imaging Microscopy</a></li>
+  </ul></li>
+  <li><a href="#evanescent-wave-microscopy-tirf" id="toc-evanescent-wave-microscopy-tirf" class="nav-link" data-scroll-target="#evanescent-wave-microscopy-tirf"><span class="header-section-number">6.3</span> Evanescent Wave Microscopy (TIRF)</a>
+  <ul class="collapse">
+  <li><a href="#snell-descartes-law-and-the-critical-angle" id="toc-snell-descartes-law-and-the-critical-angle" class="nav-link" data-scroll-target="#snell-descartes-law-and-the-critical-angle"><span class="header-section-number">6.3.1</span> Snell-Descartes Law and the Critical Angle</a></li>
+  <li><a href="#tirf-in-practice-high-na-objectives" id="toc-tirf-in-practice-high-na-objectives" class="nav-link" data-scroll-target="#tirf-in-practice-high-na-objectives"><span class="header-section-number">6.3.2</span> TIRF in Practice: High-NA Objectives</a></li>
+  <li><a href="#image-quality" id="toc-image-quality" class="nav-link" data-scroll-target="#image-quality"><span class="header-section-number">6.3.3</span> Image Quality</a></li>
+  <li><a href="#application-measuring-ligand-receptor-binding-kinetics" id="toc-application-measuring-ligand-receptor-binding-kinetics" class="nav-link" data-scroll-target="#application-measuring-ligand-receptor-binding-kinetics"><span class="header-section-number">6.3.4</span> Application: Measuring Ligand-Receptor Binding Kinetics</a></li>
+  </ul></li>
+  <li><a href="#super-resolution-microscopy" id="toc-super-resolution-microscopy" class="nav-link" data-scroll-target="#super-resolution-microscopy"><span class="header-section-number">6.4</span> Super-Resolution Microscopy</a>
+  <ul class="collapse">
+  <li><a href="#breaking-the-diffraction-limit" id="toc-breaking-the-diffraction-limit" class="nav-link" data-scroll-target="#breaking-the-diffraction-limit"><span class="header-section-number">6.4.1</span> Breaking the Diffraction Limit</a></li>
+  <li><a href="#localization-based-super-resolution-stormpalm" id="toc-localization-based-super-resolution-stormpalm" class="nav-link" data-scroll-target="#localization-based-super-resolution-stormpalm"><span class="header-section-number">6.4.2</span> Localization-Based Super-Resolution (STORM/PALM)</a></li>
+  <li><a href="#example-1-microtubules" id="toc-example-1-microtubules" class="nav-link" data-scroll-target="#example-1-microtubules"><span class="header-section-number">6.4.3</span> Example 1: Microtubules</a></li>
+  <li><a href="#example-2-nuclear-pore-proteins" id="toc-example-2-nuclear-pore-proteins" class="nav-link" data-scroll-target="#example-2-nuclear-pore-proteins"><span class="header-section-number">6.4.4</span> Example 2: Nuclear Pore Proteins</a></li>
+  </ul></li>
+  <li><a href="#spim-single-plane-illumination-microscopy" id="toc-spim-single-plane-illumination-microscopy" class="nav-link" data-scroll-target="#spim-single-plane-illumination-microscopy"><span class="header-section-number">6.5</span> SPIM: Single Plane Illumination Microscopy</a></li>
+  <li><a href="#frap-fluorescence-recovery-after-photobleaching" id="toc-frap-fluorescence-recovery-after-photobleaching" class="nav-link" data-scroll-target="#frap-fluorescence-recovery-after-photobleaching"><span class="header-section-number">6.6</span> FRAP: Fluorescence Recovery After Photobleaching</a></li>
+  <li><a href="#fret-in-practice" id="toc-fret-in-practice" class="nav-link" data-scroll-target="#fret-in-practice"><span class="header-section-number">6.7</span> FRET in Practice</a>
+  <ul class="collapse">
+  <li><a href="#biological-application-mechanosensing-with-fret" id="toc-biological-application-mechanosensing-with-fret" class="nav-link" data-scroll-target="#biological-application-mechanosensing-with-fret"><span class="header-section-number">6.7.1</span> Biological Application: Mechanosensing with FRET</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fattaccioli-teaching/microscopy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-introduction.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/06-advanced-techniques.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Advanced Fluorescence Techniques</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Advanced Fluorescence Techniques</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="limits-of-epifluorescence" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="limits-of-epifluorescence"><span class="header-section-number">6.1</span> Limits of Epifluorescence</h2>
+<p>Standard widefield epifluorescence illuminates the entire sample volume — including out-of-focus planes. In thick specimens (<span class="math inline">\(&gt; 5\,\mu\)</span>m), this generates strong background fluorescence that degrades contrast and signal-to-noise. Three strategies address this: <strong>confocal microscopy</strong> (optical sectioning by spatial filtering), <strong>TIRF microscopy</strong> (evanescent field illumination confined to <span class="math inline">\(\sim 100\)</span> nm), and <strong>light-sheet microscopy</strong> (orthogonal illumination).</p>
+</section>
+<section id="confocal-microscopy" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="confocal-microscopy"><span class="header-section-number">6.2</span> Confocal Microscopy</h2>
+<section id="principle" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="principle"><span class="header-section-number">6.2.1</span> Principle</h3>
+<p>Confocal microscopy achieves optical sectioning by placing a pinhole at the image plane conjugate to the focal point. Out-of-focus fluorescence, which would otherwise reach the detector in widefield, is geometrically rejected by this pinhole:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p095_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Confocal microscopy principle: (A) a laser focused to a point illuminates the specimen; in-focus emission (B) converges at the detector pinhole and passes to the PMT; out-of-focus emission (C) is defocused at the pinhole plane and largely rejected.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p098_00.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>Light path in a confocal microscope: laser excitation passes through a source pinhole, reflects off a dichroic mirror, and is focused by the objective. In-focus fluorescence is re-collimated, passes through the dichroic, and focuses at the detector aperture (pinhole) before reaching the photomultiplier. Out-of-focus light is defocused at the pinhole and blocked.</figcaption>
+</figure>
+</div>
+<p>The key consequences of confocal detection:</p>
+<ul>
+<li><strong>Optical sectioning</strong>: <span class="math inline">\(z\)</span>-resolution <span class="math inline">\(\approx 500\)</span>–<span class="math inline">\(800\)</span> nm (vs.&nbsp;no <span class="math inline">\(z\)</span>-selectivity in widefield)</li>
+<li><strong>Improved contrast</strong> in thick specimens</li>
+<li><strong>3D reconstruction</strong> by <span class="math inline">\(z\)</span>-stack acquisition</li>
+<li><strong>Slower</strong> than widefield — point-by-point scanning requires <span class="math inline">\(\sim 1\)</span>–<span class="math inline">\(30\)</span> s per frame</li>
+</ul>
+</section>
+<section id="flim-fluorescence-lifetime-imaging-microscopy" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="flim-fluorescence-lifetime-imaging-microscopy"><span class="header-section-number">6.2.2</span> FLIM: Fluorescence Lifetime Imaging Microscopy</h3>
+<p>Confocal systems can measure not only fluorescence intensity but also the <strong>fluorescence lifetime</strong> <span class="math inline">\(\tau\)</span> at each pixel. Since <span class="math inline">\(\tau\)</span> is sensitive to the local molecular environment (viscosity, pH, FRET, protein-protein interactions) independently of fluorophore concentration, FLIM provides information inaccessible from intensity images alone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p099_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>FLIM decay curves: (a) fluorescence lifetime measurements as a function of quencher concentration (Cl<span class="math inline">\(^-\)</span>), showing the shortening of <span class="math inline">\(\tau\)</span> with increasing [Q]. (b) Equivalent data showing the concentration-dependent decay. The lifetime is extracted by fitting the exponential decay <span class="math inline">\(I(t) = I_0 e^{-t/\tau}\)</span> at each pixel.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="evanescent-wave-microscopy-tirf" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="evanescent-wave-microscopy-tirf"><span class="header-section-number">6.3</span> Evanescent Wave Microscopy (TIRF)</h2>
+<section id="snell-descartes-law-and-the-critical-angle" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="snell-descartes-law-and-the-critical-angle"><span class="header-section-number">6.3.1</span> Snell-Descartes Law and the Critical Angle</h3>
+<p>When light travels from a dense medium (<span class="math inline">\(n_1\)</span>, e.g.&nbsp;glass, <span class="math inline">\(n = 1.518\)</span>) to a less dense medium (<span class="math inline">\(n_2\)</span>, e.g.&nbsp;water, <span class="math inline">\(n = 1.33\)</span>), beyond the critical angle <span class="math inline">\(\theta_c\)</span> defined by:</p>
+<p><span class="math display">\[\sin\theta_c = \frac{n_2}{n_1}\]</span></p>
+<p>total internal reflection (TIR) occurs. Rather than propagating into medium 2, the electromagnetic field decays exponentially as an <strong>evanescent wave</strong> with a characteristic penetration depth:</p>
+<p><span class="math display">\[d = \frac{\lambda}{4\pi\sqrt{n_1^2\sin^2\theta - n_2^2}}\]</span></p>
+<p>For typical parameters (<span class="math inline">\(\lambda = 488\)</span> nm, <span class="math inline">\(\theta = 68°\)</span>), <span class="math inline">\(d \approx 100\)</span>–<span class="math inline">\(200\)</span> nm — confining excitation to a thin layer at the glass-water interface.</p>
+</section>
+<section id="tirf-in-practice-high-na-objectives" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="tirf-in-practice-high-na-objectives"><span class="header-section-number">6.3.2</span> TIRF in Practice: High-NA Objectives</h3>
+<p>Objective-based TIRF uses a high-NA oil-immersion objective (NA <span class="math inline">\(&gt; 1.38\)</span>) to launch the laser at angles beyond <span class="math inline">\(\theta_c\)</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p104_00.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>Objective-based TIRF: laser light entering the periphery of a high-NA objective (NA <span class="math inline">\(&gt; 1.38\)</span>) at angles exceeding the critical angle undergoes TIR at the coverslip/medium interface, generating an evanescent field. Light at lower angles (NA <span class="math inline">\(&lt; 1.38\)</span>) is transmitted into the sample.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p103_00.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>TIRF principle: the evanescent wave excites only fluorophores within <span class="math inline">\(\sim 100\)</span>–<span class="math inline">\(200\)</span> nm of the coverslip surface (cell membrane, adhesion contacts), while fluorophores deeper in the cell are not excited.</figcaption>
+</figure>
+</div>
+</section>
+<section id="image-quality" class="level3" data-number="6.3.3">
+<h3 data-number="6.3.3" class="anchored" data-anchor-id="image-quality"><span class="header-section-number">6.3.3</span> Image Quality</h3>
+<p>The contrast improvement over widefield is dramatic:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p105_00.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Comparison of the same fluorescent bead sample imaged by TIRF (left) and widefield fluorescence (right). TIRF shows sharp, isolated single fluorophore spots against a dark background; widefield shows a bright, diffuse background that obscures individual molecules.</figcaption>
+</figure>
+</div>
+</section>
+<section id="application-measuring-ligand-receptor-binding-kinetics" class="level3" data-number="6.3.4">
+<h3 data-number="6.3.4" class="anchored" data-anchor-id="application-measuring-ligand-receptor-binding-kinetics"><span class="header-section-number">6.3.4</span> Application: Measuring Ligand-Receptor Binding Kinetics</h3>
+<p>TIRF is ideally suited to measure interactions at the membrane. The following example illustrates the use of TIRF to measure the binding kinetics between fluorescent liposomes carrying the glycosphingolipid Le<span class="math inline">\(^x\)</span> and a supported lipid bilayer (SLB) presenting the cognate receptor:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p107_00.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>TIRF-based <span class="math inline">\(K_d\)</span> measurement: (a) fluorescent liposomes docking on an SLB under TIRF illumination; (b) lipid and fluorophore composition of the system; (c) TIRF image showing individual surface-bound liposomes (left) and a single-liposome intensity kymograph showing discrete on/off docking events used to extract residence times and binding rates.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="super-resolution-microscopy" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="super-resolution-microscopy"><span class="header-section-number">6.4</span> Super-Resolution Microscopy</h2>
+<section id="breaking-the-diffraction-limit" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="breaking-the-diffraction-limit"><span class="header-section-number">6.4.1</span> Breaking the Diffraction Limit</h3>
+<p>The Rayleigh criterion (<span class="math inline">\(d \approx 200\)</span>–<span class="math inline">\(300\)</span> nm for visible light) is a fundamental limit for conventional microscopy. Super-resolution methods circumvent it not by improving optics, but by exploiting the <strong>photophysics of individual fluorophores</strong> to separate their emission temporally.</p>
+</section>
+<section id="localization-based-super-resolution-stormpalm" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="localization-based-super-resolution-stormpalm"><span class="header-section-number">6.4.2</span> Localization-Based Super-Resolution (STORM/PALM)</h3>
+<p>The key idea: if only a sparse subset of fluorophores are emitting at any one time, each can be localized with precision far better than the diffraction limit by fitting a Gaussian to its point spread function:</p>
+<p><span class="math display">\[\sigma_{\text{loc}} \approx \frac{\sigma_{\text{PSF}}}{\sqrt{N}}\]</span></p>
+<p>where <span class="math inline">\(N\)</span> is the number of detected photons. With <span class="math inline">\(N \approx 1000\)</span> photons, localization precision of <span class="math inline">\(\sim 10\)</span>–<span class="math inline">\(20\)</span> nm is achievable.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p117_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>dSTORM/PALM principle: (1) photoswitchable fluorophores stochastically switch between dark and bright states (<span class="math inline">\(k_{\text{on}}\)</span>, <span class="math inline">\(k_{\text{off}}\)</span>); (2) each active emitter is localized by Gaussian fitting to its diffraction-limited spot; (3) temporal separation ensures that at each frame only a sparse, resolvable subset is active. After thousands of frames, the accumulated localizations build a super-resolved image.</figcaption>
+</figure>
+</div>
+<p>The reconstruction process is analogous to determining positions from a blurred ensemble image:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p119_00.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Illustration of the reconstruction principle using the Eiffel Tower as an analogy: (left) original blurred image; (center) detected particle positions from individual frames; (right) reconstructed super-resolved image from accumulated localizations.</figcaption>
+</figure>
+</div>
+</section>
+<section id="example-1-microtubules" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="example-1-microtubules"><span class="header-section-number">6.4.3</span> Example 1: Microtubules</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p120_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Comparison of widefield (top) and dSTORM (bottom) images of immunolabeled microtubules, with intensity profiles across a single filament. The widefield FWHM is <span class="math inline">\(\sim 350\)</span> nm (diffraction-limited); dSTORM resolves the hollow microtubule structure with a measured width below 50 nm.</figcaption>
+</figure>
+</div>
+</section>
+<section id="example-2-nuclear-pore-proteins" class="level3" data-number="6.4.4">
+<h3 data-number="6.4.4" class="anchored" data-anchor-id="example-2-nuclear-pore-proteins"><span class="header-section-number">6.4.4</span> Example 2: Nuclear Pore Proteins</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p121_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>dSTORM imaging of nuclear pore complexes (NPCs) in <em>Xenopus</em> oocyte nuclei: widefield (top-left) vs.&nbsp;dSTORM (bottom-left) reveal the 8-fold symmetry of individual NPCs (center, scale bar 200 nm). Two-color dSTORM (right) resolves the central pore (WGA-Alexa 488, green) from the periphery (gp210-Alexa 647, red).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="spim-single-plane-illumination-microscopy" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="spim-single-plane-illumination-microscopy"><span class="header-section-number">6.5</span> SPIM: Single Plane Illumination Microscopy</h2>
+<p>SPIM (also called light-sheet microscopy) illuminates the sample with a thin sheet of light oriented perpendicular to the detection axis, exciting fluorescence only in the focal plane of the objective.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p123_00.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>SPIM geometry: the illumination axis and imaging axis are orthogonal. A thin light sheet confined to the <span class="math inline">\(xy\)</span> plane illuminates only the focal plane being imaged, eliminating out-of-focus excitation entirely.</figcaption>
+</figure>
+</div>
+<p>Key advantages: very low photobleaching and phototoxicity (only the imaged plane is illuminated), fast 3D imaging (no scanning needed), and suitability for large transparent specimens (embryos, organoids).</p>
+</section>
+<section id="frap-fluorescence-recovery-after-photobleaching" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="frap-fluorescence-recovery-after-photobleaching"><span class="header-section-number">6.6</span> FRAP: Fluorescence Recovery After Photobleaching</h2>
+<p>FRAP measures the lateral diffusion coefficient <span class="math inline">\(D\)</span> of membrane or cytosolic components. A focused high-power laser pulse irreversibly bleaches fluorophores in a small region of interest. Fluorescence recovers as unbleached molecules from the surrounding area diffuse in.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p129_00.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>FRAP on a supported lipid bilayer: (A) uniform fluorescence before bleaching; (B) a circular bleach spot is created; (C-D) fluorescence recovers as unbleached lipids diffuse laterally into the bleached region. The recovery kinetics yield <span class="math inline">\(D\)</span> and the mobile fraction.</figcaption>
+</figure>
+</div>
+<p>For a circular bleach spot of radius <span class="math inline">\(r\)</span>, the diffusion coefficient is:</p>
+<p><span class="math display">\[D = \frac{r^2}{4 t_{1/2}}\]</span></p>
+<p>where <span class="math inline">\(t_{1/2}\)</span> is the half-time of fluorescence recovery.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p130_00.png" class="img-fluid figure-img" style="width:45.0%"></p>
+<figcaption>FRAP applied to a cell: the bleached region (dark) recovers fluorescence as labeled molecules diffuse from the surrounding unbleached area. The mobile fraction is determined from the plateau recovery level relative to the pre-bleach intensity.</figcaption>
+</figure>
+</div>
+</section>
+<section id="fret-in-practice" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="fret-in-practice"><span class="header-section-number">6.7</span> FRET in Practice</h2>
+<p>Recall from the fluorophores lecture that FRET efficiency depends on <span class="math inline">\(r^{-6}\)</span>. In a biological context, FRET serves as a <strong>nanometer-scale proximity sensor</strong>: FRET occurs only when donor and acceptor are within <span class="math inline">\(\sim R_0 \approx 5\)</span>–<span class="math inline">\(10\)</span> nm.</p>
+<p>The complete FRET framework — spectral overlap, distance dependence, and dipole orientation:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p135_00.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>FRET in practice: (A) spectral overlap between donor emission and acceptor excitation spectra (shaded area = overlap integral <span class="math inline">\(J\)</span>); (B) FRET efficiency <span class="math inline">\(E = R^{-6}/(R^{-6} + R_0^{-6})\)</span> as a function of distance, with <span class="math inline">\(E = 0.5\)</span> at <span class="math inline">\(r = R_0\)</span>; (C) dipole orientation dependence — FRET is maximal when the transition dipoles are parallel and zero when perpendicular.</figcaption>
+</figure>
+</div>
+<section id="biological-application-mechanosensing-with-fret" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="biological-application-mechanosensing-with-fret"><span class="header-section-number">6.7.1</span> Biological Application: Mechanosensing with FRET</h3>
+<p>FRET biosensors are increasingly used to report on intracellular forces. In the example below, an integrin-based tension sensor uses a TFP-Venus FRET pair connected by an elastic linker. When force is applied, the linker extends, increasing the TFP-Venus distance and reducing FRET efficiency:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p138_00.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Integrin tension sensor: (A) <span class="math inline">\(\alpha_v\beta_3\)</span> integrins in adhesion complexes under tension; (B) the sensor construct — TFP and Venus flanking an elastic linker; FRET decreases when force extends the linker; (C) TFP, Venus, and FRET channel images of a cell, with the FRET index map (right) revealing spatial distribution of integrin-transmitted forces.</figcaption>
+</figure>
+</div>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lectures/05-digital-imaging.html" class="pagination-link" aria-label="Digital Imaging">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Digital Imaging</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lectures/07-ricm.html" class="pagination-link" aria-label="RICM: Reflection Interference Contrast Microscopy">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">RICM: Reflection Interference Contrast Microscopy</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fattaccioli-teaching/microscopy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

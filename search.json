@@ -1,0 +1,867 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fluorescence Microscopy",
+    "section": "",
+    "text": "Fluorescence Microscopy\nWelcome to the online course materials for Microscopie de Fluorescence, part of the M2 Microscopies program at Sorbonne Université / ENS.",
+    "crumbs": [
+      "Fluorescence Microscopy"
+    ]
+  },
+  {
+    "objectID": "index.html#course-overview",
+    "href": "index.html#course-overview",
+    "title": "Fluorescence Microscopy",
+    "section": "Course Overview",
+    "text": "Course Overview\nThis course covers the principles and practice of fluorescence microscopy, from basic photophysics to state-of-the-art super-resolution techniques. It is designed for graduate students in chemistry, physics, and biology with a working knowledge of optics and quantum mechanics.",
+    "crumbs": [
+      "Fluorescence Microscopy"
+    ]
+  },
+  {
+    "objectID": "index.html#contents",
+    "href": "index.html#contents",
+    "title": "Fluorescence Microscopy",
+    "section": "Contents",
+    "text": "Contents\nLectures cover the following topics:\n\nIntroduction to optical microscopy and its modern scope\nPrinciples of fluorescence: energy levels, Stokes shift, quantum yield\nFluorophores: molecular dyes, GFP, labeling strategies\nThe fluorescence microscope in practice: light sources, filters, objectives\nDigital imaging: CCD, sCMOS, noise, resolution\nAdvanced techniques: confocal, TIRF, FRAP, FRET, super-resolution (STORM/PALM), SPIM\nRICM: Reflection Interference Contrast Microscopy\nTwo-photon microscopy\n\nTutorials provide hands-on problem sets:\n\nSingle-molecule fluorescence with mercury lamp illumination (based on Unger et al., 1999)",
+    "crumbs": [
+      "Fluorescence Microscopy"
+    ]
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Fluorescence Microscopy",
+    "section": "Contact",
+    "text": "Contact\nJacques Fattaccioli\nMaître de Conférences, Sorbonne Université / ENS\nInstitut Pierre-Gilles de Gennes\njacques.fattaccioli@ens.fr",
+    "crumbs": [
+      "Fluorescence Microscopy"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html",
+    "href": "lectures/01-introduction.html",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "",
+    "text": "1.1 Why Microscopy?\nThe cell is the fundamental unit of life, and its inner workings operate at spatial scales — nanometers to hundreds of microns — that are entirely inaccessible to the naked eye. Optical microscopy is the primary tool by which we observe living systems in real time, with molecular specificity. It sits at the intersection of physics, chemistry, and biology, and its continued development directly drives biological discovery.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#a-brief-history",
+    "href": "lectures/01-introduction.html#a-brief-history",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.2 A Brief History",
+    "text": "1.2 A Brief History\nThe compound microscope was developed in the late 16th century; the first serious scientific instruments were built in the 17th century. Robert Hooke’s microscope (~1670) already had the essential architecture of objective, barrel, and eyepiece:\n\n\n\nHooke’s compound microscope (circa 1670): objective at the bottom, focusing screw, barrel, and eyepiece at the top. Illumination was provided by an oil lamp and water flask condenser.\n\n\nEarly biological microscopy revealed the previously invisible: intestinal villi, diatoms, microorganisms. The 20th century brought electronic detectors, laser sources, and computational image analysis, transforming microscopy from a qualitative observation tool into a quantitative measurement instrument.\n\n\n\nLight microscopy reveals tissue architecture at the cellular level. Hematoxylin and eosin (H&E) stained section of intestinal mucosa showing villi (1) and crypts (2) — a classic histological preparation illustrating the scale of cellular organization.\n\n\n\n\n\nA living diatom (Pinnularia sp.) imaged by brightfield transmitted-light microscopy, showing the intricate silica frustule structure resolvable with a modern objective.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#the-modern-microscopy-system",
+    "href": "lectures/01-introduction.html#the-modern-microscopy-system",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.3 The Modern Microscopy System",
+    "text": "1.3 The Modern Microscopy System\nModern videomicroscopy integrates a research microscope with motorized stages, scientific cameras, illumination controllers, and image acquisition/analysis software into a single computer-controlled system:\n\n\n\nA complete videomicroscopy workstation (Leica): inverted microscope, CCD camera, illumination controller, acquisition computer, and dual monitors for image display and analysis. Motorization enables automated time-lapse, multiposition, and \\(z\\)-stack experiments.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#the-optical-path",
+    "href": "lectures/01-introduction.html#the-optical-path",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.4 The Optical Path",
+    "text": "1.4 The Optical Path\nThe compound microscope is a two-lens system: the objective forms a real magnified intermediate image; the eyepiece (or tube lens + camera) re-images this onto the detector. Understanding the conjugate planes — specimen plane, objective rear focal plane, eyepiece, camera — is essential for correct Köhler illumination and optimal image quality.\n\n\n\nRay diagram of the compound microscope: the objective maps the specimen to a real inverted intermediate image; the eyepiece re-images this to infinity (or to the retina/camera). The conjugate image planes and illumination planes must be kept distinct for Köhler illumination.\n\n\n\n\n\nComplete optical layout of a modern research microscope showing the two sets of conjugate planes: image-forming planes (camera image plane, specimen plane, eyepiece fixed diaphragm, retina) and aperture/illuminating planes (lamp filament, condenser aperture diaphragm, objective rear focal plane, exit pupil).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#contrast-modes",
+    "href": "lectures/01-introduction.html#contrast-modes",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.5 Contrast Modes",
+    "text": "1.5 Contrast Modes\nMost biological specimens are essentially transparent — they produce negligible amplitude contrast in simple brightfield transmission. Several modes address this:\nBrightfield is the baseline — amplitude contrast only, requiring staining for most specimens.\nPhase contrast (Zernike, Nobel Prize 1953) converts phase shifts introduced by the specimen’s refractive index into intensity contrast, enabling imaging of living, unstained cells.\nDIC (Differential Interference Contrast) uses a Nomarski prism to produce a pseudo-3D relief appearance sensitive to optical path length gradients.\nFluorescence uses specific labeling to achieve molecular contrast — the dominant mode in modern cell biology, and the subject of this course.\n\n\n\nLiving HeLa cells imaged in brightfield: the cells are nearly transparent and produce very low intrinsic contrast, illustrating the need for either staining, phase contrast, or fluorescence labeling for quantitative biological imaging.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#frontiers-miniaturization-and-field-microscopy",
+    "href": "lectures/01-introduction.html#frontiers-miniaturization-and-field-microscopy",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.6 Frontiers: Miniaturization and Field Microscopy",
+    "text": "1.6 Frontiers: Miniaturization and Field Microscopy\nThe Foldscope (Prakash lab, Stanford) illustrates how the core optical principles of microscopy can be implemented at minimal cost (~$0.50) using printed paper optics and a single polymer microlens:\n\n\n\nFoldscope bill of materials and optical layout: printed polymer micro-optics, paper apertures, condenser lens, and LED illumination — total cost ~50 cents. The device is assembled by folding the printed sheet, with paper flexures providing \\(z\\)-focus and \\(xy\\)-panning.\n\n\n\n\n\nFoldscope images: (A) brightfield image of a microstructured surface (bee eye); (B) fluorescence image showing individual fluorescent beads (scale bar 5 µm). The optical performance is surprisingly competitive for a disposable device.\n\n\nLensless on-chip microscopy eliminates the objective entirely, recording holographic diffraction patterns directly on a CMOS sensor for computational reconstruction — enabling very large fields of view at low cost:\n\n\n\nOn-chip lensless microscopy: (a) a microfluidic PDMS chip placed directly on a CMOS sensor illuminated from above; (b) the chip-sensor assembly compared to a coin (5 mm scale bar); (c) SEM image of the PDMS microchannel network (1 mm scale bar). Holographic reconstruction yields wide-field images without any lens.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/01-introduction.html#the-super-resolution-revolution",
+    "href": "lectures/01-introduction.html#the-super-resolution-revolution",
+    "title": "1  Introduction to Optical Microscopy",
+    "section": "1.7 The Super-Resolution Revolution",
+    "text": "1.7 The Super-Resolution Revolution\nThe period 2006–2014 saw a dramatic expansion of what optical microscopy can resolve, through approaches that exploit fluorophore photophysics to circumvent the diffraction limit:\n\n\n\nHistorical timeline of microscopy milestones: from 16th century light microscopy through electron microscopy (1933), fluorescence microscopy (1990s), to today’s super-resolution methods. Each advance opened new scales of biological organization.\n\n\nSTED (Stimulated Emission Depletion, Hell) uses a depletion laser to shrink the effective PSF. PALM/STORM (Betzig, Moerner) use stochastic single-molecule localization. Both achieve lateral resolutions of 20–60 nm:\n\n\n\nSTED vs. confocal comparison: the same fluorescent bead imaged by confocal (261 nm FWHM, blue) and STED (62 nm FWHM, red). STED achieves a &gt;4× improvement in lateral resolution using the same fluorophore and objective.\n\n\nThe 2014 Nobel Prize in Chemistry was awarded to Eric Betzig, Stefan W. Hell, and William E. Moerner for the development of super-resolved fluorescence microscopy:\n\n\n\n2014 Nobel Prize in Chemistry: Eric Betzig (PALM/single-molecule localization), Stefan W. Hell (STED/RESOLFT), and William E. Moerner (single-molecule detection and optical control of fluorescence).\n\n\n\n\n\n\n\n\nNoteCourse overview\n\n\n\nThis course covers the full chain from photons to biological insight: fluorescence principles and fluorophore photophysics → labeling strategies → the microscope optical path → digital detection → advanced techniques (confocal, TIRF, super-resolution, FRAP, FRET, RICM) → two-photon microscopy. The unifying theme throughout is understanding what each measurement actually measures, and what its fundamental limits are.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Optical Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html",
+    "href": "lectures/02-fluorescence-principles.html",
+    "title": "2  Principles of Fluorescence",
+    "section": "",
+    "text": "2.1 Electronic Energy Levels\nThe optical properties of fluorescent molecules are rooted in their electronic structure. In polyatomic molecules, each electronic state (\\(S_0\\), \\(S_1\\), \\(S_2\\), …) is described by a potential energy surface as a function of nuclear coordinates. The ground state \\(S_0\\) and first excited singlet \\(S_1\\) each support a ladder of vibrational sub-levels.\nThe Franck-Condon principle governs which vibrational transitions are favored upon absorption: electronic transitions are fast (\\(\\sim 10^{-15}\\) s) compared to nuclear motion, so the nuclear geometry is frozen during the transition. The most probable transitions are those with maximum overlap between the vibrational wavefunctions of the initial and final states.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#electronic-energy-levels",
+    "href": "lectures/02-fluorescence-principles.html#electronic-energy-levels",
+    "title": "2  Principles of Fluorescence",
+    "section": "",
+    "text": "Potential energy curves for the ground (\\(X^1\\Sigma_g^+\\)) and excited (\\(B'\\Sigma_u^+\\)) states of a diatomic molecule, illustrating the vibrational quantization within each electronic manifold.\n\n\n\n\n\n\nFranck-Condon diagram showing the vibrational structure of \\(S_0\\) and \\(S_1\\) states, with absorption (blue) and emission (red) transitions. The displacement between the two potential minima leads to a Stokes shift.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#the-first-fluorophore-quinine",
+    "href": "lectures/02-fluorescence-principles.html#the-first-fluorophore-quinine",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.2 The First Fluorophore: Quinine",
+    "text": "2.2 The First Fluorophore: Quinine\nQuinine, present in tonic water, is a classic example of a naturally fluorescent molecule. Under UV illumination it emits strongly in the blue, making it one of the first fluorescent substances to be systematically studied.\n\n\n\nTonic water (Canada Dry) under white light (left) and UV illumination (right), demonstrating the blue fluorescence of quinine.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#the-fluorescence-phenomenon",
+    "href": "lectures/02-fluorescence-principles.html#the-fluorescence-phenomenon",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.3 The Fluorescence Phenomenon",
+    "text": "2.3 The Fluorescence Phenomenon\nThe full photophysical picture of an organic fluorophore involves several competing pathways from the excited state:\n\n\n\nJablonski diagram showing the main photophysical pathways: absorption to \\(S_2\\)/\\(S_1\\), rapid internal conversion to \\(S_1\\) (\\(10^{-12}\\) s), fluorescence emission (\\(h\\nu_F\\)), intersystem crossing to \\(T_1\\), and phosphorescence (\\(h\\nu_P\\)).\n\n\nThe key processes and their characteristic timescales are:\n\nAbsorption: \\(\\sim 10^{-15}\\) s\nInternal conversion (\\(S_2 \\to S_1\\), vibrational relaxation): \\(\\sim 10^{-12}\\) s\n\nFluorescence (\\(S_1 \\to S_0\\)): \\(\\sim 10^{-8}\\) s\nIntersystem crossing (\\(S_1 \\to T_1\\)): \\(\\sim 10^{-8}\\) s\nPhosphorescence (\\(T_1 \\to S_0\\)): \\(10^{-4}\\) to \\(10^{-2}\\) s",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#molecular-spectra-and-energy-quantization",
+    "href": "lectures/02-fluorescence-principles.html#molecular-spectra-and-energy-quantization",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.4 Molecular Spectra and Energy Quantization",
+    "text": "2.4 Molecular Spectra and Energy Quantization\nThe vibrational structure of both \\(S_0\\) and \\(S_1\\) determines the shape of the absorption and emission spectra. Each vibronic transition (\\(0\\to n\\) in absorption, \\(n\\to 0\\) in emission) contributes a band to the spectrum.\n\n\n\nJablonski diagram with explicit vibrational sub-levels and characteristic timescales for each transition pathway.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#a-case-study-anthracene",
+    "href": "lectures/02-fluorescence-principles.html#a-case-study-anthracene",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.5 A Case Study: Anthracene",
+    "text": "2.5 A Case Study: Anthracene\nAnthracene is a canonical example because its vibrational structure is clearly resolved in both absorption and emission spectra at room temperature. The mirror symmetry between the two spectra reflects the similarity of the \\(S_0\\) and \\(S_1\\) potential energy surfaces.\n\n\n\nAbsorption and fluorescence emission spectra of anthracene showing the vibronic progression (0-0, 0-1, 0-2 bands), with the corresponding Jablonski diagram. The mirror symmetry between absorption and emission is characteristic of a rigid aromatic fluorophore.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#stokes-shift",
+    "href": "lectures/02-fluorescence-principles.html#stokes-shift",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.6 Stokes Shift",
+    "text": "2.6 Stokes Shift\nA fundamental consequence of vibrational relaxation within \\(S_1\\) before emission is that the fluorescence spectrum is always red-shifted relative to the absorption spectrum. This is the Stokes shift.\n\\[\\Delta\\nu_{\\text{Stokes}} = \\tilde{\\nu}_{\\text{abs,max}} - \\tilde{\\nu}_{\\text{em,max}}\\]\n\n\n\nAbsorption (purple) and emission (green) spectra illustrating the Stokes shift — the spectral gap between the excitation and emission maxima.\n\n\nThe Stokes shift is critical for fluorescence microscopy: it allows the excitation light to be efficiently separated from the fluorescence signal using optical filters, since they occur at different wavelengths.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#two-level-system-description",
+    "href": "lectures/02-fluorescence-principles.html#two-level-system-description",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.7 Two-Level System Description",
+    "text": "2.7 Two-Level System Description\nThe kinetics of \\(S_1\\) depopulation can be modeled as a pseudo-first-order process, treating the excited state as species \\(A\\) and the ground state (or non-fluorescent products) as species \\(B\\):\n\\[A \\underset{k_-}{\\overset{k_+}{\\rightleftharpoons}} B\\]\nThe excited-state population decays exponentially:\n\\[x(t) = x(0)\\, e^{-(k_+ + k_-)t}\\]\nThis is exactly first-order relaxation kinetics. The fluorescence lifetime \\(\\tau\\) is defined as:\n\\[\\tau = \\frac{1}{k_r + k_{nr}}\\]\nwhere \\(k_r\\) is the radiative rate constant and \\(k_{nr}\\) is the sum of all non-radiative rates.\n\n\n\nFirst-order relaxation kinetics of the two-level model. The displacement from equilibrium decays as a single exponential, with rate \\(k_+ + k_-\\).\n\n\nThe simplified two-level Jablonski diagram makes explicit the competition between radiative (\\(\\Gamma = k_r\\)) and non-radiative (\\(k_{nr}\\)) decay pathways from \\(S_1\\):\n\n\n\nSimplified two-level Jablonski diagram: absorption (\\(h\\nu_A\\)) promotes the molecule to the upper vibrational levels of \\(S_1\\); after rapid relaxation (\\(10^{-12}\\) s) the molecule decays either by emitting fluorescence (\\(h\\nu_F\\), rate \\(\\Gamma\\)) or via non-radiative pathways (\\(k_{nr}\\)).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/02-fluorescence-principles.html#fluorophore-efficiency-brightness",
+    "href": "lectures/02-fluorescence-principles.html#fluorophore-efficiency-brightness",
+    "title": "2  Principles of Fluorescence",
+    "section": "2.8 Fluorophore Efficiency: Brightness",
+    "text": "2.8 Fluorophore Efficiency: Brightness\nThe quantum yield \\(\\phi\\) quantifies the fraction of absorbed photons that are re-emitted as fluorescence:\n\\[\\phi = \\frac{k_r}{k_r + k_{nr}} = \\frac{\\Gamma}{\\Gamma + k_{nr}}\\]\nThe brightness \\(B\\) of a fluorophore combines the quantum yield with the absorption cross-section \\(\\sigma\\) (or molar extinction coefficient \\(\\varepsilon\\)):\n\\[B = \\varepsilon \\cdot \\phi\\]\nA high brightness requires both efficient light absorption (\\(\\varepsilon\\)) and efficient emission (\\(\\phi\\)). Rhodamine B (shown below), for example, has \\(\\varepsilon \\approx 10^5\\,\\mathrm{M^{-1}cm^{-1}}\\) and \\(\\phi \\approx 0.7\\) in ethanol, making it one of the brightest common fluorophores.\n\n\n\nStructural formula of Rhodamine B, a xanthene dye widely used as a reference fluorophore for its high brightness.\n\n\n\n\n\n\n\n\nNoteKey relationships\n\n\n\n\\[\\tau = \\frac{1}{k_r + k_{nr}} \\qquad \\phi = k_r \\cdot \\tau \\qquad B = \\varepsilon \\cdot \\phi\\]\nThese three parameters fully characterize the photophysical performance of a fluorophore. Note that a long lifetime does not necessarily imply high quantum yield — what matters is the ratio \\(k_r / (k_r + k_{nr})\\).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Principles of Fluorescence</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html",
+    "href": "lectures/03-fluorophores.html",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "",
+    "text": "3.1 Common Molecular Fluorophores\nThe choice of fluorophore determines the spectral window, brightness, photostability, and compatibility with other labels in a multicolor experiment. The figure below maps a large panel of commonly used fluorophores according to their emission wavelength and brightness (\\(\\varepsilon \\cdot \\phi\\)), from UV-excitable probes (DAPI, Hoechst) through the visible range (fluorescein/FITC, rhodamines, BODIPY, cyanines) to near-infrared dyes (Cy5, Cy7, IRDye 700DX).\nThree workhorse fluorophores span most routine applications: DAPI (UV, nucleus staining), FITC/fluorescein (green, amine-reactive), and Texas Red (red, amine-reactive). Their absorption and emission spectra illustrate the spectral separation needed for multicolor imaging.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#common-molecular-fluorophores",
+    "href": "lectures/03-fluorophores.html#common-molecular-fluorophores",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "",
+    "text": "Brightness (\\(\\varepsilon \\times \\phi\\), M\\(^{-1}\\)cm\\(^{-1}\\)) vs. emission wavelength for a broad panel of fluorophores, from intrinsically fluorescent amino acids (phenylalanine, tyrosine, tryptophan) to high-performance synthetic dyes. Structures are shown for each compound.\n\n\n\n\n\n\nAbsorption (left) and emission (right) spectra of three commonly used fluorophores — DAPI, FITC, and Texas Red — illustrating the spectral coverage from UV to red and the large Stokes shifts involved.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#physicochemical-environment-ph-effects",
+    "href": "lectures/03-fluorophores.html#physicochemical-environment-ph-effects",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.2 Physicochemical Environment: pH Effects",
+    "text": "3.2 Physicochemical Environment: pH Effects\nMany fluorophores are sensitive to their local physicochemical environment. Fluorescein is a canonical example: its fluorescence intensity is strongly pH-dependent because protonation of the phenolic hydroxyl disrupts the conjugated system responsible for absorption and emission.\n\n\n\nAbsorption (A) and fluorescence emission (B, \\(\\lambda_{ex} = 488\\) nm) spectra of fluorescein as a function of pH (5.0 to 9.0). Both the extinction coefficient and quantum yield decrease sharply below pH 7.\n\n\nThis sensitivity is exploited in biosensors and to monitor intracellular pH, but is a confound in quantitative imaging if the local pH is not controlled or known.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#a-lipophilic-fluorophore-nile-red",
+    "href": "lectures/03-fluorophores.html#a-lipophilic-fluorophore-nile-red",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.3 A Lipophilic Fluorophore: Nile Red",
+    "text": "3.3 A Lipophilic Fluorophore: Nile Red\nNile Red is a solvatochromic fluorophore — its emission wavelength shifts strongly with the polarity of its local environment. It is essentially non-fluorescent in water but highly fluorescent in hydrophobic environments (lipid droplets, cell membranes), making it a selective membrane and lipid probe without the need for covalent conjugation.\n\n\n\nSeries of Nile Red solutions in solvents of decreasing polarity (top: visible color; bottom: fluorescence under UV), illustrating the dramatic solvatochromism — the emission shifts from red-orange in polar solvents to yellow-green in apolar environments.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#collisional-quenching-chloride-ions",
+    "href": "lectures/03-fluorophores.html#collisional-quenching-chloride-ions",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.4 Collisional Quenching: Chloride Ions",
+    "text": "3.4 Collisional Quenching: Chloride Ions\nFluorescence can be quenched by dynamic (collisional) energy transfer to a quencher molecule present in solution. Cl\\(^-\\) ions are efficient quenchers of certain fluorophores (e.g., lucigenin, SPQ) via charge-transfer interactions. The Stern-Volmer equation describes this:\n\\[\\frac{F_0}{F} = 1 + k_q \\tau_0 [Q] = 1 + K_{SV}[Q]\\]\nwhere \\(K_{SV}\\) is the Stern-Volmer constant, \\(k_q\\) the bimolecular quenching rate, and \\(\\tau_0\\) the unquenched lifetime.\n\n\n\nDemonstration of collisional quenching: quinine fluorescence (blue) is quenched by Cl\\(^-\\) ions — the glass on the right contains added NaCl, visibly reducing fluorescence intensity under UV excitation.\n\n\n\n\n\nMechanism of collisional quenching: the excited fluorophore undergoes bimolecular energy transfer to the quencher upon collision, returning to the ground state without photon emission.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#targeting-fluorescence-to-specific-structures",
+    "href": "lectures/03-fluorophores.html#targeting-fluorescence-to-specific-structures",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.5 Targeting Fluorescence to Specific Structures",
+    "text": "3.5 Targeting Fluorescence to Specific Structures\nMost biological structures are not intrinsically fluorescent — specific labeling strategies are required. Two broad approaches exist: non-covalent targeting (exploiting specific affinity) and covalent conjugation (chemical attachment of a fluorophore to a biomolecule).\n\n3.5.1 Intercalating and Affinity Dyes\nSome fluorophores report on specific molecular environments through non-covalent interactions. Ethidium bromide (EtBr) intercalates between DNA base pairs via \\(\\pi\\)-stacking, with a fluorescence enhancement of several orders of magnitude upon intercalation — making it a classic DNA stain in gel electrophoresis and imaging. DPH (1,6-diphenyl-1,3,5-hexatriene) inserts into lipid bilayers and is essentially non-fluorescent in water, providing intrinsic membrane selectivity.\n\n\n\nEthidium bromide (EtBr, top) and DPH (bottom) as examples of affinity-based fluorescent probes. EtBr intercalates in double-stranded DNA (Ex/Em: 518/605 nm); DPH partitions into lipid bilayers.\n\n\n\n\n3.5.2 Immunolabeling with IgG\nAntibody-based labeling is the most versatile approach for targeting fluorescence to specific proteins. An IgG antibody (MW \\(\\approx 150\\,\\mathrm{kDa}\\), \\(\\sim 1500\\) amino acids) consists of two heavy chains and two light chains; antigen recognition occurs at the variable Fab domains (region 1), while the Fc domain (region 2) is constant.\n\n\n\nSchematic of an IgG antibody showing the two heavy chains (dark blue) and two light chains (green/light blue), with the antigen-binding Fab domains (1), the Fc domain (2), the hypervariable CDR loops (3), the Fc region (4), the variable light chain domain (5), and the hinge region (6).\n\n\nTwo immunolabeling strategies are used in practice:\nDirect labeling: a fluorescent primary antibody binds directly to the antigen (1 step, simpler, less signal amplification).\nIndirect labeling: a non-fluorescent primary antibody with high specificity binds first; a fluorescent secondary antibody directed against the Fc of the primary is then added. This amplifies signal (multiple secondary antibodies per primary) and allows reuse of the same fluorescent secondary across many primaries from the same host species.\n\n\n\nSummary of direct and indirect immunolabeling strategies, highlighting the use of antibodies from different host species to achieve orthogonal multi-target staining.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#covalent-conjugation-chemistry",
+    "href": "lectures/03-fluorophores.html#covalent-conjugation-chemistry",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.6 Covalent Conjugation Chemistry",
+    "text": "3.6 Covalent Conjugation Chemistry\nTo produce fluorescent antibodies or other labeled biomolecules, fluorophores must be covalently attached. Two amino acid side chains are the primary conjugation targets: lysine (K, primary amine \\(-\\)NH\\(_2\\)) and cysteine (C, thiol \\(-\\)SH).\n\n\n\nThe two main conjugation targets in proteins — lysine (amine) and cysteine (thiol) — and the corresponding reactive fluorophore chemistries: FITC (isothiocyanate, reacts with NH\\(_2\\) to form a thiourea bond) and BODIPY maleimide (reacts with SH to form a thioether bond).\n\n\nThe isothiocyanate reaction (FITC + \\(-\\)NH\\(_2\\) → thiourea) is efficient at pH 8–9 and widely used for antibody labeling. Maleimide chemistry (\\(-\\)SH + maleimide → thioether) is more selective since free cysteines are rarer than lysines in most proteins, and can be exploited for site-specific labeling if a unique cysteine is engineered in.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#labeling-stoichiometry-and-self-quenching",
+    "href": "lectures/03-fluorophores.html#labeling-stoichiometry-and-self-quenching",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.7 Labeling Stoichiometry and Self-Quenching",
+    "text": "3.7 Labeling Stoichiometry and Self-Quenching\nIncreasing the number of fluorophores per protein does not linearly increase fluorescence — above a threshold, fluorophores on the same molecule undergo self-quenching via FRET between identical dyes (homo-FRET) or collisional quenching. For an IgG antibody, fluorescence is maximized at approximately 5–8 fluorophores per antibody depending on the dye.\n\n\n\nConjugate fluorescence as a function of fluorophore-to-protein ratio (mol:mol) for four fluorophore families on IgG antibodies. Fluorescence peaks around 5–8 equivalents, then decreases due to self-quenching. Oregon Green variants outperform FITC due to lower susceptibility to self-quenching.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#fret-förster-resonance-energy-transfer",
+    "href": "lectures/03-fluorophores.html#fret-förster-resonance-energy-transfer",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.8 FRET: Förster Resonance Energy Transfer",
+    "text": "3.8 FRET: Förster Resonance Energy Transfer\nWhen two fluorophores are in close proximity (typically 1–10 nm) and the emission spectrum of the donor overlaps with the absorption spectrum of the acceptor, non-radiative energy transfer can occur. This is FRET (Förster Resonance Energy Transfer), first described by Perrin (1900) and quantified by Förster (1946).\nThe FRET efficiency \\(E\\) depends on the donor-acceptor distance \\(r\\):\n\\[E = \\frac{1}{1 + (r/R_0)^6}\\]\nwhere \\(R_0\\) is the Förster radius (typically 2–7 nm), defined as the distance at which \\(E = 50\\%\\).\nThe spectral overlap integral \\(J\\) between donor emission and acceptor absorption is the key molecular parameter:\n\\[J = \\int F_D(\\lambda)\\, \\varepsilon_A(\\lambda)\\, \\lambda^4\\, d\\lambda\\]\n\n\n\nSpectral overlap between the donor emission (\\(\\lambda^{ex}_D\\), \\(\\lambda^{em}_D\\)) and acceptor absorption (\\(\\lambda^{ex}_A\\), \\(\\lambda^{em}_A\\)) spectra. The shaded overlap region (black) determines the Förster integral \\(J\\) and hence \\(R_0\\).\n\n\nFRET is used as a “molecular ruler” — its \\(r^{-6}\\) distance dependence makes it exquisitely sensitive to nanometer-scale changes in molecular conformation or complex formation.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#photobleaching",
+    "href": "lectures/03-fluorophores.html#photobleaching",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.9 Photobleaching",
+    "text": "3.9 Photobleaching\nPhotobleaching is the irreversible photochemical destruction of a fluorophore upon prolonged illumination, typically via reaction of the excited triplet state with molecular oxygen to form reactive oxygen species that damage the chromophore. It is the primary limitation on the total number of photons that can be collected from a single fluorophore.\nPhotobleaching rates differ dramatically between fluorophore families — cyanines and BODIPY dyes are generally more photostable than fluorescein under typical imaging conditions.\n\n\n\nSequential fluorescence images of a multiply-stained cell (DAPI, blue; mitochondria, red; cytoskeleton, green) showing the differential photobleaching kinetics of the three fluorophores over six successive frames. The red channel bleaches fastest, the green channel most slowly.\n\n\n\n\n\n\n\n\nWarningPhotobleaching in quantitative imaging\n\n\n\nPhotobleaching introduces a systematic bias in time-lapse and multi-acquisition experiments. Always acquire the most photosensitive channel first, minimize illumination intensity, and use antifade reagents (e.g., DABCO, Vectashield, or enzymatic oxygen-scavenging systems for live imaging).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03-fluorophores.html#gfp-an-exception-to-non-fluorescent-life",
+    "href": "lectures/03-fluorophores.html#gfp-an-exception-to-non-fluorescent-life",
+    "title": "3  Fluorophores and Labeling Strategies",
+    "section": "3.10 GFP: An Exception to Non-Fluorescent Life",
+    "text": "3.10 GFP: An Exception to Non-Fluorescent Life\nGreen Fluorescent Protein (GFP), originally isolated from the jellyfish Aequorea victoria by Shimomura (1962), sequenced and cloned by Prasher (1992), and expressed heterologously by Chalfie (1994), revolutionized cell biology. The 2008 Nobel Prize in Chemistry was awarded to Shimomura, Chalfie, and Tsien. GFP is a 238 amino-acid \\(\\beta\\)-barrel protein whose chromophore forms autocatalytically from the tripeptide Ser65-Tyr66-Gly67.\n\n\n\nGFP structure (two orientations of the \\(\\beta\\)-barrel, with the chromophore in cyan at center) and its absorption/emission spectra. The excitation maximum at ~395 nm (minor peak at ~475 nm) and emission at ~509 nm place it in a spectral window close to fluorescein.\n\n\n\n3.10.1 Chromophore Formation\nThe GFP chromophore forms post-translationally by a spontaneous autocatalytic reaction: cyclization of the Ser65-Tyr66-Gly67 sequence, followed by oxidation by molecular O\\(_2\\) (rate-limiting, \\(\\tau \\approx 1\\) h at 37°C). No external cofactors or enzymes are required — only O\\(_2\\).\n\n\n\nMechanism of GFP chromophore maturation from the Ser65-Tyr66-Gly67 tripeptide: cyclization (\\(-\\)H\\(_2\\)O), oxidation by O\\(_2\\) (\\(\\tau \\approx 1\\) h), and deprotonation steps yield the mature conjugated chromophore. The \\(\\beta\\)-barrel protects the chromophore from solvent quenching, accounting for the high quantum yield (\\(\\phi \\approx 0.8\\)). (Heim & Tsien, PNAS 1994)\n\n\n\n\n3.10.2 The Fluorescent Protein Color Palette\nMutagenesis of the chromophore-forming tripeptide and surrounding residues has produced a full palette of fluorescent proteins spanning the visible spectrum. Key engineering axes include shifting emission wavelength, improving brightness, shortening maturation time, and improving photostability.\n\n\n\nSpectra and photophysical properties of the main fluorescent protein variants across the visible spectrum (from cyan to far-red), organized by wavelength class. The table (Shaner et al., Nature Methods, 2005) lists extinction coefficients, quantum yields, brightness, photostability (\\(t_{0.5}\\) bleach), and maturation times.\n\n\n\n\n3.10.3 GFP as a Reporter of Gene Expression\nGenetically encoding GFP downstream of a promoter of interest makes transcriptional activity directly observable by fluorescence — the gene of interest is fused to the GFP sequence, so its expression product is directly fluorescent. This approach is broadly used for:\n\nTracking protein localization in real time\nMeasuring promoter activity\nFollowing cell fate in development and immunology\n\n\n\n\nSchematic of GFP as a reporter gene: the regulatory sequence (promoter) of the gene of interest drives expression of a GFP fusion protein, whose fluorescence intensity directly reports transcriptional activity.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fluorophores and Labeling Strategies</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04-microscope-in-practice.html",
+    "href": "lectures/04-microscope-in-practice.html",
+    "title": "4  The Fluorescence Microscope in Practice",
+    "section": "",
+    "text": "4.1 Operating Principle of Epifluorescence\nIn epifluorescence microscopy, the same objective serves both to illuminate the specimen and to collect the emitted fluorescence. The excitation light and fluorescence travel in opposite directions along the same optical axis, separated by a dichroic mirror and optical filters.\nThe three key optical elements are:\nThe efficiency of this separation depends critically on the Stokes shift of the fluorophore — a large Stokes shift allows steeper filter cut-offs and lower background.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Fluorescence Microscope in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04-microscope-in-practice.html#operating-principle-of-epifluorescence",
+    "href": "lectures/04-microscope-in-practice.html#operating-principle-of-epifluorescence",
+    "title": "4  The Fluorescence Microscope in Practice",
+    "section": "",
+    "text": "Schematic of an epifluorescence microscope: broadband light from the source passes through an excitation filter, reflects off a dichroic mirror down through the objective onto the specimen. Fluorescence emitted upward passes through the dichroic mirror and an emission filter before reaching the detector.\n\n\n\n\nExcitation filter: bandpass filter that selects the excitation wavelength from the broadband source\nDichroic mirror: reflects the excitation wavelength toward the sample, transmits the (red-shifted) emission wavelength toward the detector\nEmission filter (barrier filter): rejects any residual excitation light, transmits only the fluorescence\n\n\n\n\nPrinciple of excitation/emission separation: the exciter filter selects UV/visible excitation light; the barrier filter transmits only the emitted fluorescence. The Stokes shift is what makes this separation physically possible.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Fluorescence Microscope in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04-microscope-in-practice.html#widefield-vs.-laser-scanning",
+    "href": "lectures/04-microscope-in-practice.html#widefield-vs.-laser-scanning",
+    "title": "4  The Fluorescence Microscope in Practice",
+    "section": "4.2 Widefield vs. Laser Scanning",
+    "text": "4.2 Widefield vs. Laser Scanning\nTwo fundamental illumination geometries exist in fluorescence microscopy:\n\n\n\nComparison of widefield (left) and laser scanning (right) microscopy geometries. In widefield, the entire field is illuminated simultaneously and imaged onto a camera. In laser scanning, a focused spot is raster-scanned across the sample and detected point by point.\n\n\nWidefield illumination is faster (full-frame acquisition) but collects out-of-focus fluorescence, degrading contrast in thick samples. Laser scanning trades speed for optical sectioning capability.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Fluorescence Microscope in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04-microscope-in-practice.html#light-sources",
+    "href": "lectures/04-microscope-in-practice.html#light-sources",
+    "title": "4  The Fluorescence Microscope in Practice",
+    "section": "4.3 Light Sources",
+    "text": "4.3 Light Sources\n\n4.3.1 Mercury and Xenon Arc Lamps\nThe traditional light source for widefield epifluorescence is a high-pressure mercury (HBO) or xenon arc lamp. Mercury lamps have strong emission lines at 365, 405, 436, 546, and 579 nm — these happen to match common fluorophore excitation bands reasonably well, but are not tunable. Xenon lamps provide a flatter, more continuous spectrum across the visible range, better for quantitative spectroscopy.\n\n\n4.3.2 Monochromatic Sources: Lasers and LEDs\nModern systems increasingly use monochromatic sources:\n\n\n\nEmission spectra of krypton (top) and argon (bottom) ion lasers, showing the discrete laser lines available for fluorescence excitation. Argon lasers provide strong lines at 488 nm (FITC/GFP) and 514 nm; krypton adds lines at 568 nm and 647 nm.\n\n\nLEDs have largely replaced arc lamps in many applications — they offer fast electronic switching (no mechanical shutters needed), long lifetime, stable output, and narrow enough spectra to reduce the need for excitation filters.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Fluorescence Microscope in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04-microscope-in-practice.html#filter-cubes-and-filter-sets",
+    "href": "lectures/04-microscope-in-practice.html#filter-cubes-and-filter-sets",
+    "title": "4  The Fluorescence Microscope in Practice",
+    "section": "4.4 Filter Cubes and Filter Sets",
+    "text": "4.4 Filter Cubes and Filter Sets\nA filter cube (or filter block) integrates the excitation filter, dichroic mirror, and emission filter into a single interchangeable unit. Most microscopes have a turret carrying 4–6 cubes, allowing rapid switching between fluorescence channels.\n\n\n\nFluorescence filter set configurations: (a) filter block turret with excitation interference filters, dichroic mirror, and emission filter; (b) individual filter components; (c) multiband excitation filter slider and multiband emission filter slider for simultaneous multi-color imaging.\n\n\nFilter specifications are characterized by their center wavelength and bandwidth (e.g., “525/50” means centered at 525 nm with a 50 nm bandpass). Longpass emission filters (e.g., “LP515”) transmit all wavelengths above the cut-on wavelength.\n\n\n\nTransmission spectra of three longpass emission filters (Semrock), showing the steep cut-on edges achievable with modern interference filter technology. The sharp transitions (\\(&lt;5\\) nm) are critical for rejecting excitation light while passing fluorescence with minimal loss.\n\n\n\n\n\n\n\n\nNoteWhy so many filters?\n\n\n\nEach fluorophore requires a matched set of excitation filter, dichroic, and emission filter optimized for its specific excitation and emission peaks. Multicolor experiments require either multiple cubes (sequential acquisition) or multiband dichroics and emission filters (simultaneous acquisition, but with some spectral crosstalk trade-offs).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The Fluorescence Microscope in Practice</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html",
+    "href": "lectures/05-digital-imaging.html",
+    "title": "5  Digital Imaging",
+    "section": "",
+    "text": "5.1 From Photons to Pixels: The Detection Chain\nA fluorescence microscope is a photon counting instrument. Understanding the detection chain — from photon arrival at the sensor to the final pixel value — is essential for interpreting images quantitatively and designing experiments correctly.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#ccd-cameras",
+    "href": "lectures/05-digital-imaging.html#ccd-cameras",
+    "title": "5  Digital Imaging",
+    "section": "5.2 CCD Cameras",
+    "text": "5.2 CCD Cameras\nA scientific CCD (charge-coupled device) camera consists of a photodiode array, thermoelectric cooling (Peltier), and readout electronics. Cooling reduces dark current (thermal electron generation), which is a major noise source in long exposures.\n\n\n\nCross-section of a cooled scientific CCD camera, showing the CCD sensor, thermoelectric cooler (TEC), vacuum seal, and precision readout electronics. Scientific CCDs are monochrome (no Bayer mosaic) to maximize quantum efficiency.\n\n\n\n\n\nMicrograph of a CCD photodiode array integrated circuit, with an inset showing enlarged pixel elements with a Bayer color mosaic filter (used in consumer cameras but not in scientific monochrome CCDs).\n\n\n\n5.2.1 Charge Transfer Principle\nIn a CCD, photoelectrons generated in each pixel are shifted along the sensor column by column to a single readout amplifier, using a sequence of clocked voltage gates on a p-Si substrate:\n\n\n\nSchematic of CCD charge transfer: a positive voltage on one gate (red, +V) accumulates photoelectrons in the potential well beneath it. Sequential clocking of the gates shifts the charge packet laterally toward the readout amplifier.\n\n\nThe key consequence: all pixels share a single amplifier, so read noise is added only once per frame. This gives CCDs an excellent read noise floor (\\(\\sim 2\\)–\\(5\\,e^-\\) for scientific CCDs), critical for low-light fluorescence imaging.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#scmos-cameras",
+    "href": "lectures/05-digital-imaging.html#scmos-cameras",
+    "title": "5  Digital Imaging",
+    "section": "5.3 sCMOS Cameras",
+    "text": "5.3 sCMOS Cameras\nScientific CMOS (complementary metal-oxide-semiconductor) sensors have largely replaced CCDs in modern fluorescence microscopy. Each pixel has its own amplifier, enabling parallel readout of all pixels simultaneously:\n\n\n\nArchitecture of a CMOS sensor: each pixel contains a photodiode and an individual amplifier (photon-to-electron and electron-to-voltage conversion per pixel). Column amplifiers and analog-to-digital conversion deliver the digital image output.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#ccd-vs.-scmos",
+    "href": "lectures/05-digital-imaging.html#ccd-vs.-scmos",
+    "title": "5  Digital Imaging",
+    "section": "5.4 CCD vs. sCMOS",
+    "text": "5.4 CCD vs. sCMOS\n\n\n\nComparison of CCD (left) and CMOS (right) readout architectures. In CCD, charge is shifted sequentially through transfer registers to a single amplifier. In CMOS, each pixel has its own amplifier and is read independently via metal wire interconnects.\n\n\nThe key trade-offs:\n\n\n\n\nCCD\nsCMOS\n\n\n\n\nRead noise\n\\(\\sim 2\\)–\\(5\\,e^-\\)\n\\(\\sim 1\\)–\\(2\\,e^-\\)\n\n\nFrame rate\nModerate\nVery high\n\n\nField of view\nModerate\nLarge\n\n\nDynamic range\nHigh\nHigh\n\n\nCost\nHigher\nDecreasing\n\n\n\nsCMOS cameras now offer superior performance for most applications, with per-pixel noise maps allowing correction of pixel-to-pixel amplifier variation.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#digital-image-bit-depth-and-dynamic-range",
+    "href": "lectures/05-digital-imaging.html#digital-image-bit-depth-and-dynamic-range",
+    "title": "5  Digital Imaging",
+    "section": "5.5 Digital Image: Bit Depth and Dynamic Range",
+    "text": "5.5 Digital Image: Bit Depth and Dynamic Range\nThe analog signal from the amplifier is digitized by an ADC (analog-to-digital converter). The bit depth determines how many gray levels are available:\n\n\n\nIllustration of bit depth and gray levels: from 2-bit (4 gray levels) to 10-bit (1024 gray levels). Scientific cameras typically use 12–16 bits (4096–65536 gray levels), essential for quantitative fluorescence measurements.\n\n\nDynamic range is the ratio of the maximum signal (full-well capacity) to the minimum detectable signal (noise floor). For quantitative imaging, you need sufficient bit depth to sample this range without losing information at either end.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#noise-sources",
+    "href": "lectures/05-digital-imaging.html#noise-sources",
+    "title": "5  Digital Imaging",
+    "section": "5.6 Noise Sources",
+    "text": "5.6 Noise Sources\nThe total noise in a fluorescence image has three main contributions:\nPhoton shot noise (\\(\\sigma_{\\text{shot}} = \\sqrt{N}\\)): fundamental, follows Poisson statistics. Unavoidable — it arises from the quantum nature of light. Signal-to-noise ratio scales as \\(\\sqrt{N}\\), so collecting more photons always helps.\nRead noise (\\(\\sigma_{\\text{read}}\\)): added by the amplifier during readout. Fixed per pixel per frame — reduced by cooling and by sCMOS architecture.\nDark current (\\(i_d\\)): thermally generated electrons accumulated during exposure. Proportional to exposure time; dramatically reduced by Peltier cooling (\\(\\sim 2\\times\\) reduction per 7°C decrease in temperature).\nThe total noise in quadrature: \\[\\sigma_{\\text{total}}^2 = N_{\\text{signal}} + N_{\\text{background}} + \\sigma_{\\text{read}}^2 + i_d \\cdot t\\]",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#objectives-and-numerical-aperture",
+    "href": "lectures/05-digital-imaging.html#objectives-and-numerical-aperture",
+    "title": "5  Digital Imaging",
+    "section": "5.7 Objectives and Numerical Aperture",
+    "text": "5.7 Objectives and Numerical Aperture\nThe objective is the most critical optical element in the microscope. Its numerical aperture (NA) determines both light collection efficiency and lateral resolution:\n\\[\\mathrm{NA} = n \\sin\\mu\\]\nwhere \\(n\\) is the refractive index of the immersion medium and \\(\\mu\\) is the half-angle of the acceptance cone.\n\n\n\nEffect of numerical aperture on light collection and Airy disc size: (a) \\(\\mu = 7°\\), NA = 0.12; (b) \\(\\mu = 20°\\), NA = 0.34; (c) \\(\\mu = 60°\\), NA = 0.87. Higher NA collects more light and produces a smaller Airy disc.\n\n\nLight collection scales as \\(\\mathrm{NA}^2\\), so going from NA 0.5 to NA 1.4 gives nearly \\(8\\times\\) more photons per pixel — a massive practical advantage.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#resolution-the-airy-disc-and-rayleigh-criterion",
+    "href": "lectures/05-digital-imaging.html#resolution-the-airy-disc-and-rayleigh-criterion",
+    "title": "5  Digital Imaging",
+    "section": "5.8 Resolution: The Airy Disc and Rayleigh Criterion",
+    "text": "5.8 Resolution: The Airy Disc and Rayleigh Criterion\nA point source imaged through a circular aperture produces an Airy diffraction pattern — a bright central disc surrounded by concentric rings. Two point sources are considered resolved (Rayleigh criterion) when the central maximum of one coincides with the first minimum of the other:\n\n\n\nThe Airy disc intensity distributions for two point sources: (a) clearly resolved, (b) at the Rayleigh limit, (c) unresolved. The 3D profiles show the intensity distributions and the corresponding top-view Airy patterns.\n\n\nThe lateral resolution (Rayleigh criterion) is:\n\\[R_{xy} = \\frac{1.22\\,\\lambda}{2\\,\\mathrm{NA}} = \\frac{0.61\\,\\lambda}{\\mathrm{NA}}\\]\nFor a typical oil-immersion objective (NA = 1.4) at \\(\\lambda = 500\\,\\mathrm{nm}\\): \\[R_{xy} \\approx \\frac{0.61 \\times 500\\,\\mathrm{nm}}{1.4} \\approx 218\\,\\mathrm{nm}\\]\nThe Airy intensity pattern is formally: \\[I(P) = I_{\\max}\\left[\\frac{J_1(ka\\sin\\theta)}{ka\\sin\\theta}\\right]^2\\]\nwhere \\(J_1\\) is the first-order Bessel function, \\(k = 2\\pi/\\lambda\\), and \\(a\\) is the aperture radius.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#reading-an-objective",
+    "href": "lectures/05-digital-imaging.html#reading-an-objective",
+    "title": "5  Digital Imaging",
+    "section": "5.9 Reading an Objective",
+    "text": "5.9 Reading an Objective\nAll key specifications are encoded on the objective barrel:\n\n\n\nAnnotated diagram of an Olympus Plan Apo 60×/1.40 Oil objective, showing the manufacturer, aberration correction class (Plan Apo), magnification (60×), numerical aperture (1.40), immersion medium (oil), tube length (\\(\\infty\\)), cover slip thickness (0.17 mm), and working distance (0.21 mm).\n\n\nAberration correction classes (in increasing order of correction): - Achromat: corrected for chromatic aberration at 2 wavelengths - Plan: flat-field correction (no field curvature) - Apochromat (Apo): corrected at 3–4 wavelengths, highest chromatic correction - Plan Apo: both flat-field and full chromatic correction — the gold standard for fluorescence",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/05-digital-imaging.html#aberrations",
+    "href": "lectures/05-digital-imaging.html#aberrations",
+    "title": "5  Digital Imaging",
+    "section": "5.10 Aberrations",
+    "text": "5.10 Aberrations\n\n5.10.1 Chromatic Aberration\nDifferent wavelengths focus at different axial positions due to the wavelength dependence of the refractive index. This causes color fringing and z-offset between channels in multicolor imaging.\n\n\n\nAxial chromatic aberration: a single lens focuses blue (450 nm), green (550 nm), and red (650 nm) light at different positions (blur \\(\\approx 0.30\\) mm). An achromat doublet corrects this to a residual blur of \\(\\sim 0.01\\) mm by combining positive and negative elements of different glass types.\n\n\n\n\n5.10.2 Coma\nComa affects off-axis point sources, which appear comet-shaped due to the different contributions of lens zones at different radial distances from the optical axis.\n\n\n\nOff-axis comatic aberration: rays from different lens zones (1–4) converge at different lateral positions, producing a characteristic comet-shaped blur for off-axis point sources.\n\n\n\n\n5.10.3 Astigmatism\nAstigmatism arises when the lens focuses rays in the sagittal and tangential planes at different axial positions. Between the two focal planes lies a “circle of least confusion.”\n\n\n\nAstigmatism aberration: the sagittal and tangential focal planes are separated axially, producing characteristic elongated Airy patterns that rotate 90° between the two foci. The circle of least confusion lies between them.\n\n\n\n\n5.10.4 Field Curvature\nA flat specimen is imaged onto a curved (Petzval) surface, so the center and edges of the field cannot be simultaneously in focus with a simple lens. “Plan” objectives correct this.\n\n\n\nCurvature of field: a flat object is imaged onto the curved Petzval surface by a simple lens. Flat-field (“Plan”) objectives introduce corrective elements to flatten this surface.\n\n\n\n\n\n\n\n\nNotePractical implications for quantitative imaging\n\n\n\nChromatic aberration causes channel-dependent z-offsets — critical to correct for colocalization analyses. Field curvature means intensity is not uniform across the field — always flat-field correct before quantitative measurements. Both are dramatically reduced in Plan Apo objectives.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Digital Imaging</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html",
+    "href": "lectures/06-advanced-techniques.html",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "",
+    "text": "6.1 Limits of Epifluorescence\nStandard widefield epifluorescence illuminates the entire sample volume — including out-of-focus planes. In thick specimens (\\(&gt; 5\\,\\mu\\)m), this generates strong background fluorescence that degrades contrast and signal-to-noise. Three strategies address this: confocal microscopy (optical sectioning by spatial filtering), TIRF microscopy (evanescent field illumination confined to \\(\\sim 100\\) nm), and light-sheet microscopy (orthogonal illumination).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#confocal-microscopy",
+    "href": "lectures/06-advanced-techniques.html#confocal-microscopy",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.2 Confocal Microscopy",
+    "text": "6.2 Confocal Microscopy\n\n6.2.1 Principle\nConfocal microscopy achieves optical sectioning by placing a pinhole at the image plane conjugate to the focal point. Out-of-focus fluorescence, which would otherwise reach the detector in widefield, is geometrically rejected by this pinhole:\n\n\n\nConfocal microscopy principle: (A) a laser focused to a point illuminates the specimen; in-focus emission (B) converges at the detector pinhole and passes to the PMT; out-of-focus emission (C) is defocused at the pinhole plane and largely rejected.\n\n\n\n\n\nLight path in a confocal microscope: laser excitation passes through a source pinhole, reflects off a dichroic mirror, and is focused by the objective. In-focus fluorescence is re-collimated, passes through the dichroic, and focuses at the detector aperture (pinhole) before reaching the photomultiplier. Out-of-focus light is defocused at the pinhole and blocked.\n\n\nThe key consequences of confocal detection:\n\nOptical sectioning: \\(z\\)-resolution \\(\\approx 500\\)–\\(800\\) nm (vs. no \\(z\\)-selectivity in widefield)\nImproved contrast in thick specimens\n3D reconstruction by \\(z\\)-stack acquisition\nSlower than widefield — point-by-point scanning requires \\(\\sim 1\\)–\\(30\\) s per frame\n\n\n\n6.2.2 FLIM: Fluorescence Lifetime Imaging Microscopy\nConfocal systems can measure not only fluorescence intensity but also the fluorescence lifetime \\(\\tau\\) at each pixel. Since \\(\\tau\\) is sensitive to the local molecular environment (viscosity, pH, FRET, protein-protein interactions) independently of fluorophore concentration, FLIM provides information inaccessible from intensity images alone.\n\n\n\nFLIM decay curves: (a) fluorescence lifetime measurements as a function of quencher concentration (Cl\\(^-\\)), showing the shortening of \\(\\tau\\) with increasing [Q]. (b) Equivalent data showing the concentration-dependent decay. The lifetime is extracted by fitting the exponential decay \\(I(t) = I_0 e^{-t/\\tau}\\) at each pixel.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#evanescent-wave-microscopy-tirf",
+    "href": "lectures/06-advanced-techniques.html#evanescent-wave-microscopy-tirf",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.3 Evanescent Wave Microscopy (TIRF)",
+    "text": "6.3 Evanescent Wave Microscopy (TIRF)\n\n6.3.1 Snell-Descartes Law and the Critical Angle\nWhen light travels from a dense medium (\\(n_1\\), e.g. glass, \\(n = 1.518\\)) to a less dense medium (\\(n_2\\), e.g. water, \\(n = 1.33\\)), beyond the critical angle \\(\\theta_c\\) defined by:\n\\[\\sin\\theta_c = \\frac{n_2}{n_1}\\]\ntotal internal reflection (TIR) occurs. Rather than propagating into medium 2, the electromagnetic field decays exponentially as an evanescent wave with a characteristic penetration depth:\n\\[d = \\frac{\\lambda}{4\\pi\\sqrt{n_1^2\\sin^2\\theta - n_2^2}}\\]\nFor typical parameters (\\(\\lambda = 488\\) nm, \\(\\theta = 68°\\)), \\(d \\approx 100\\)–\\(200\\) nm — confining excitation to a thin layer at the glass-water interface.\n\n\n6.3.2 TIRF in Practice: High-NA Objectives\nObjective-based TIRF uses a high-NA oil-immersion objective (NA \\(&gt; 1.38\\)) to launch the laser at angles beyond \\(\\theta_c\\):\n\n\n\nObjective-based TIRF: laser light entering the periphery of a high-NA objective (NA \\(&gt; 1.38\\)) at angles exceeding the critical angle undergoes TIR at the coverslip/medium interface, generating an evanescent field. Light at lower angles (NA \\(&lt; 1.38\\)) is transmitted into the sample.\n\n\n\n\n\nTIRF principle: the evanescent wave excites only fluorophores within \\(\\sim 100\\)–\\(200\\) nm of the coverslip surface (cell membrane, adhesion contacts), while fluorophores deeper in the cell are not excited.\n\n\n\n\n6.3.3 Image Quality\nThe contrast improvement over widefield is dramatic:\n\n\n\nComparison of the same fluorescent bead sample imaged by TIRF (left) and widefield fluorescence (right). TIRF shows sharp, isolated single fluorophore spots against a dark background; widefield shows a bright, diffuse background that obscures individual molecules.\n\n\n\n\n6.3.4 Application: Measuring Ligand-Receptor Binding Kinetics\nTIRF is ideally suited to measure interactions at the membrane. The following example illustrates the use of TIRF to measure the binding kinetics between fluorescent liposomes carrying the glycosphingolipid Le\\(^x\\) and a supported lipid bilayer (SLB) presenting the cognate receptor:\n\n\n\nTIRF-based \\(K_d\\) measurement: (a) fluorescent liposomes docking on an SLB under TIRF illumination; (b) lipid and fluorophore composition of the system; (c) TIRF image showing individual surface-bound liposomes (left) and a single-liposome intensity kymograph showing discrete on/off docking events used to extract residence times and binding rates.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#super-resolution-microscopy",
+    "href": "lectures/06-advanced-techniques.html#super-resolution-microscopy",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.4 Super-Resolution Microscopy",
+    "text": "6.4 Super-Resolution Microscopy\n\n6.4.1 Breaking the Diffraction Limit\nThe Rayleigh criterion (\\(d \\approx 200\\)–\\(300\\) nm for visible light) is a fundamental limit for conventional microscopy. Super-resolution methods circumvent it not by improving optics, but by exploiting the photophysics of individual fluorophores to separate their emission temporally.\n\n\n6.4.2 Localization-Based Super-Resolution (STORM/PALM)\nThe key idea: if only a sparse subset of fluorophores are emitting at any one time, each can be localized with precision far better than the diffraction limit by fitting a Gaussian to its point spread function:\n\\[\\sigma_{\\text{loc}} \\approx \\frac{\\sigma_{\\text{PSF}}}{\\sqrt{N}}\\]\nwhere \\(N\\) is the number of detected photons. With \\(N \\approx 1000\\) photons, localization precision of \\(\\sim 10\\)–\\(20\\) nm is achievable.\n\n\n\ndSTORM/PALM principle: (1) photoswitchable fluorophores stochastically switch between dark and bright states (\\(k_{\\text{on}}\\), \\(k_{\\text{off}}\\)); (2) each active emitter is localized by Gaussian fitting to its diffraction-limited spot; (3) temporal separation ensures that at each frame only a sparse, resolvable subset is active. After thousands of frames, the accumulated localizations build a super-resolved image.\n\n\nThe reconstruction process is analogous to determining positions from a blurred ensemble image:\n\n\n\nIllustration of the reconstruction principle using the Eiffel Tower as an analogy: (left) original blurred image; (center) detected particle positions from individual frames; (right) reconstructed super-resolved image from accumulated localizations.\n\n\n\n\n6.4.3 Example 1: Microtubules\n\n\n\nComparison of widefield (top) and dSTORM (bottom) images of immunolabeled microtubules, with intensity profiles across a single filament. The widefield FWHM is \\(\\sim 350\\) nm (diffraction-limited); dSTORM resolves the hollow microtubule structure with a measured width below 50 nm.\n\n\n\n\n6.4.4 Example 2: Nuclear Pore Proteins\n\n\n\ndSTORM imaging of nuclear pore complexes (NPCs) in Xenopus oocyte nuclei: widefield (top-left) vs. dSTORM (bottom-left) reveal the 8-fold symmetry of individual NPCs (center, scale bar 200 nm). Two-color dSTORM (right) resolves the central pore (WGA-Alexa 488, green) from the periphery (gp210-Alexa 647, red).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#spim-single-plane-illumination-microscopy",
+    "href": "lectures/06-advanced-techniques.html#spim-single-plane-illumination-microscopy",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.5 SPIM: Single Plane Illumination Microscopy",
+    "text": "6.5 SPIM: Single Plane Illumination Microscopy\nSPIM (also called light-sheet microscopy) illuminates the sample with a thin sheet of light oriented perpendicular to the detection axis, exciting fluorescence only in the focal plane of the objective.\n\n\n\nSPIM geometry: the illumination axis and imaging axis are orthogonal. A thin light sheet confined to the \\(xy\\) plane illuminates only the focal plane being imaged, eliminating out-of-focus excitation entirely.\n\n\nKey advantages: very low photobleaching and phototoxicity (only the imaged plane is illuminated), fast 3D imaging (no scanning needed), and suitability for large transparent specimens (embryos, organoids).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#frap-fluorescence-recovery-after-photobleaching",
+    "href": "lectures/06-advanced-techniques.html#frap-fluorescence-recovery-after-photobleaching",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.6 FRAP: Fluorescence Recovery After Photobleaching",
+    "text": "6.6 FRAP: Fluorescence Recovery After Photobleaching\nFRAP measures the lateral diffusion coefficient \\(D\\) of membrane or cytosolic components. A focused high-power laser pulse irreversibly bleaches fluorophores in a small region of interest. Fluorescence recovers as unbleached molecules from the surrounding area diffuse in.\n\n\n\nFRAP on a supported lipid bilayer: (A) uniform fluorescence before bleaching; (B) a circular bleach spot is created; (C-D) fluorescence recovers as unbleached lipids diffuse laterally into the bleached region. The recovery kinetics yield \\(D\\) and the mobile fraction.\n\n\nFor a circular bleach spot of radius \\(r\\), the diffusion coefficient is:\n\\[D = \\frac{r^2}{4 t_{1/2}}\\]\nwhere \\(t_{1/2}\\) is the half-time of fluorescence recovery.\n\n\n\nFRAP applied to a cell: the bleached region (dark) recovers fluorescence as labeled molecules diffuse from the surrounding unbleached area. The mobile fraction is determined from the plateau recovery level relative to the pre-bleach intensity.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/06-advanced-techniques.html#fret-in-practice",
+    "href": "lectures/06-advanced-techniques.html#fret-in-practice",
+    "title": "6  Advanced Fluorescence Techniques",
+    "section": "6.7 FRET in Practice",
+    "text": "6.7 FRET in Practice\nRecall from the fluorophores lecture that FRET efficiency depends on \\(r^{-6}\\). In a biological context, FRET serves as a nanometer-scale proximity sensor: FRET occurs only when donor and acceptor are within \\(\\sim R_0 \\approx 5\\)–\\(10\\) nm.\nThe complete FRET framework — spectral overlap, distance dependence, and dipole orientation:\n\n\n\nFRET in practice: (A) spectral overlap between donor emission and acceptor excitation spectra (shaded area = overlap integral \\(J\\)); (B) FRET efficiency \\(E = R^{-6}/(R^{-6} + R_0^{-6})\\) as a function of distance, with \\(E = 0.5\\) at \\(r = R_0\\); (C) dipole orientation dependence — FRET is maximal when the transition dipoles are parallel and zero when perpendicular.\n\n\n\n6.7.1 Biological Application: Mechanosensing with FRET\nFRET biosensors are increasingly used to report on intracellular forces. In the example below, an integrin-based tension sensor uses a TFP-Venus FRET pair connected by an elastic linker. When force is applied, the linker extends, increasing the TFP-Venus distance and reducing FRET efficiency:\n\n\n\nIntegrin tension sensor: (A) \\(\\alpha_v\\beta_3\\) integrins in adhesion complexes under tension; (B) the sensor construct — TFP and Venus flanking an elastic linker; FRET decreases when force extends the linker; (C) TFP, Venus, and FRET channel images of a cell, with the FRET index map (right) revealing spatial distribution of integrin-transmitted forces.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Advanced Fluorescence Techniques</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html",
+    "href": "lectures/07-ricm.html",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "",
+    "text": "7.1 Principle\nRICM (Reflection Interference Contrast Microscopy) is a label-free technique that images the distance \\(h(x)\\) between a particle or cell membrane and a flat glass substrate, with nanometer axial sensitivity. It exploits the interference between light reflected at the glass-water interface (beam \\(I_0\\)) and light reflected at the bottom surface of the object (beam \\(I_1\\), \\(I_2\\)):\nThe reflected intensity varies as:\n\\[I(x) \\propto I_0 + I_1 - 2\\sqrt{I_0 I_1}\\cos\\left(\\frac{4\\pi n\\, h(x)}{\\lambda} + \\phi_0\\right)\\]\nwhere \\(n\\) is the refractive index of the medium, \\(\\lambda\\) the illumination wavelength, and \\(\\phi_0\\) an offset phase that depends on the Fresnel reflection coefficients. Bright fringes correspond to constructive interference, dark fringes to destructive interference.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#principle",
+    "href": "lectures/07-ricm.html#principle",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "",
+    "text": "RICM geometry: light reflected at the glass surface (\\(I_0\\)) and at the bottom of the particle (\\(I_1\\), \\(I_2\\)) interfere, producing an intensity pattern that encodes the local gap \\(h(x)\\) between the particle and the substrate. The image is formed by the objective below.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#newtons-rings-the-ideal-case",
+    "href": "lectures/07-ricm.html#newtons-rings-the-ideal-case",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.2 Newton’s Rings: The Ideal Case",
+    "text": "7.2 Newton’s Rings: The Ideal Case\nFor a perfect sphere of radius \\(R\\) resting at height \\(h_0\\) above the substrate, \\(h(x) = h_0 + x^2/2R\\), giving concentric circular fringes — Newton’s rings:\n\n\n\nIdeal Newton’s rings pattern from a sphere close to a flat surface: the fringe spacing encodes the local curvature and hence the sphere radius \\(R\\); the central dark spot indicates the region of minimum separation.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#reading-the-fringes",
+    "href": "lectures/07-ricm.html#reading-the-fringes",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.3 Reading the Fringes",
+    "text": "7.3 Reading the Fringes\nThe fringe pattern maps \\(h(x)\\) through the phase of the cosine. Between two consecutive fringes (dark-to-dark or bright-to-bright), \\(h\\) increases by \\(\\lambda/2n \\approx 180\\)–\\(200\\) nm for green light in water. Lateral resolution is limited by the Rayleigh criterion (\\(\\sim 200\\)–\\(300\\) nm), setting the minimum resolvable \\(\\Delta x\\).\n\n\n\nFringe reading: each fringe order \\(N\\) corresponds to a specific \\(h\\) value, allowing \\(h(x)\\) to be read off from the fringe positions. The inset shows the local geometry for extracting the height between two consecutive fringe positions \\(x_{N-1}\\) and \\(x_N\\).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#microscope-setup",
+    "href": "lectures/07-ricm.html#microscope-setup",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.4 Microscope Setup",
+    "text": "7.4 Microscope Setup\nRICM uses reflected-light illumination with a monochromatic source (interference filter on an HBO lamp) and a standard reflected-light microscope with an antiflex objective (with crossed polarizers to suppress specular reflections from the lens surfaces):\n\n\n\nRICM microscope setup: monochromatic light from an HBO lamp passes through a field diaphragm and interference filter, reflects off a beam splitter toward the objective, illuminates the sample (particle on a coverslip), and the reflected light is collected by the same objective and directed to the CCD camera.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#glass-bead-on-glass-a-reference-experiment",
+    "href": "lectures/07-ricm.html#glass-bead-on-glass-a-reference-experiment",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.5 Glass Bead on Glass: A Reference Experiment",
+    "text": "7.5 Glass Bead on Glass: A Reference Experiment\nA glass bead (\\(n \\approx 1.52\\)) sedimenting on a glass coverslip in water generates a clean Newton’s ring pattern that can be quantitatively modeled:\n\n\n\n(a) Cross-section geometry of a glass bead of radius \\(R\\) at height \\(h\\) above the substrate. (b) Experimental RICM image showing Newton’s rings from the glass bead, with clearly resolved fringes (scale bar 10 \\(\\mu\\)m).",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#effect-of-numerical-aperture",
+    "href": "lectures/07-ricm.html#effect-of-numerical-aperture",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.6 Effect of Numerical Aperture",
+    "text": "7.6 Effect of Numerical Aperture\nA key experimental limitation of RICM is that increasing NA increases the range of illumination angles, which averages out the fringe contrast. Higher-order fringes (large \\(h\\)) are more sensitive to this averaging than the central fringes. This sets a practical upper limit on the measurable \\(h\\) — typically \\(\\sim 500\\)–\\(1000\\) nm for standard antiflex objectives.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#wetting-and-contact-angles",
+    "href": "lectures/07-ricm.html#wetting-and-contact-angles",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.7 Wetting and Contact Angles",
+    "text": "7.7 Wetting and Contact Angles\nRICM can directly image the contact line and contact angle of droplets or vesicles on surfaces, giving access to solid-liquid-air surface energies:\n\n\n\nRICM image of a sessile droplet showing the contact angle \\(\\theta_C\\) and the solid-liquid interfacial tension \\(\\gamma_{SL}\\) at the contact line. The fringe pattern in the thin film region near the contact line directly encodes the film profile.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#absolute-height-measurement-the-dual-wavelength-solution",
+    "href": "lectures/07-ricm.html#absolute-height-measurement-the-dual-wavelength-solution",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.8 Absolute Height Measurement: The Dual Wavelength Solution",
+    "text": "7.8 Absolute Height Measurement: The Dual Wavelength Solution\nSingle-wavelength RICM measures \\(h\\) modulo \\(\\lambda/2n\\) — i.e., fringe order ambiguity prevents absolute height determination beyond the first fringe. The dual-wavelength solution uses two illumination wavelengths \\(\\lambda_\\alpha\\) and \\(\\lambda_\\beta\\) simultaneously; the beat period \\(\\Lambda = \\lambda_\\alpha\\lambda_\\beta / |2n(\\lambda_\\alpha - \\lambda_\\beta)|\\) is much larger, extending the unambiguous range to several micrometers.\n\n\n\nDual-wavelength RICM setup: an HBO lamp illuminates the sample simultaneously at \\(\\lambda_\\alpha\\) and \\(\\lambda_\\beta\\) (selected by an interference filter); the two wavelengths are separated by a dichroic mirror and detected on two synchronized CCD cameras. The height map \\(h(x)\\) is extracted from the two phase maps.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#colloidal-interactions-measuring-the-interaction-potential",
+    "href": "lectures/07-ricm.html#colloidal-interactions-measuring-the-interaction-potential",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.9 Colloidal Interactions: Measuring the Interaction Potential",
+    "text": "7.9 Colloidal Interactions: Measuring the Interaction Potential\nFor a colloidal particle near a surface, the equilibrium height distribution \\(P(h)\\) is related to the interaction potential \\(V(h)\\) via Boltzmann:\n\\[P(h) \\propto \\exp\\left(-\\frac{V(h)}{k_BT}\\right)\\]\nRICM measures the instantaneous \\(h(x,t)\\) from the fringe pattern; recording many frames gives \\(P(h)\\) and hence \\(V(h)\\) with \\(k_BT\\) resolution.\n\n\n\nParticle-surface interaction geometry: a charged colloidal particle (\\(-\\)) near a charged glass surface (\\(-\\)) in water experiences electrostatic repulsion, van der Waals attraction, and gravity. The mean height \\(\\langle h \\rangle\\) is set by the balance of these forces.\n\n\n\n\n\nRadial intensity profile of the RICM fringe pattern from a single colloidal particle (data points) and theoretical fit (line). The fit yields the particle radius, height, and the amplitude of the interaction potential.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/07-ricm.html#cell-adhesion",
+    "href": "lectures/07-ricm.html#cell-adhesion",
+    "title": "7  RICM: Reflection Interference Contrast Microscopy",
+    "section": "7.10 Cell Adhesion",
+    "text": "7.10 Cell Adhesion\nRICM was originally developed to study cell adhesion. It directly images the contact zone between a cell and the substrate, without fluorescent labels. Close contact regions appear dark (small \\(h\\), destructive interference for appropriate parameters); non-adherent regions appear bright.\n\n7.10.1 Modeling Cell Adhesion\nThe classic Bell-Evans-Dembo model describes cell adhesion as a competition between specific receptor-ligand bonds in the contact zone and repulsive interactions (glycocalyx, membrane tension) at the periphery:\n\n\n\nBell-Evans-Dembo model of cell-cell adhesion: in the contact region, specific cell-cell bonds (filled circles) bridge the two membranes; free receptors and glycocalyx molecules are excluded laterally. The separation distance in the contact zone is set by the bond length.\n\n\n\n\n7.10.2 Liposomes on Glass\nTense liposomes on glass provide a model system with well-defined mechanics. Their RICM image shows a flat central contact zone surrounded by fringes from the curved membrane:\n\n\n\nRICM image of a tense liposome on glass (left) and corresponding radial intensity profile with fit (right). The flat central dark region indicates close contact; the fringe pattern gives the membrane profile and the contact angle, from which the adhesion energy can be extracted.\n\n\n\n\n7.10.3 Ligand-Receptor Interactions\nFunctionalizing the substrate and the liposome/cell membrane with complementary ligand-receptor pairs allows direct quantification of specific adhesion energies:\n\n\n\nSchematic of a liposome or cell bearing receptors (blue) adhering to a substrate functionalized with ligands (orange triangles). Specific bonds form in the contact zone, bending the membrane inward; RICM images the contact geometry.\n\n\n\n\n7.10.4 Using Membrane Fluctuations\nFor weakly adhered membranes, thermal fluctuations modulate \\(h(x,t)\\). The amplitude of fluctuations \\(\\langle u^2\\rangle^{1/2}\\) is suppressed in the contact zone (bonds restrict membrane motion) and recovers outside it — providing a spatially resolved map of bond density:\n\n\n\nRICM image of a weakly adhered liposome (left) and the fluctuation amplitude profile \\(\\langle u^2\\rangle^{1/2}\\) along a transect (right). Fluctuations are suppressed in the contact zone where bonds are present and enhanced at the free membrane periphery.\n\n\n\n\n\n\n\n\nNoteRICM in practice\n\n\n\nRICM requires no fluorescent labels and gives nanometer-scale axial information in real time. Its main limitations are: (1) fringe order ambiguity (resolved by dual-wavelength or simulation); (2) sensitivity to refractive index inhomogeneities in the sample; (3) restricted to objects close to the substrate (\\(h &lt; 1\\)–\\(2\\,\\mu\\)m for reliable fringe counting). It is most powerful when combined with fluorescence for multi-modal imaging.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>RICM: Reflection Interference Contrast Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html",
+    "href": "lectures/08-two-photon.html",
+    "title": "8  Two-Photon Microscopy",
+    "section": "",
+    "text": "8.1 Principle: Nonlinear Excitation\nTwo-photon excitation (2PE) is a nonlinear optical process in which a fluorophore absorbs two photons simultaneously, each carrying half the energy required for the \\(S_0 \\to S_1\\) transition. The probability of two-photon absorption scales as the square of the instantaneous intensity:\n\\[F_{2PE} \\propto \\sigma_2 \\cdot I^2(t)\\]\nwhere \\(\\sigma_2\\) is the two-photon absorption cross-section (measured in Göppert-Mayer units, \\(1\\,\\mathrm{GM} = 10^{-50}\\,\\mathrm{cm^4\\,s\\,photon^{-1}}\\)) and \\(I\\) is the instantaneous photon flux. This quadratic dependence is the fundamental origin of the technique’s most important properties.\nTo achieve measurable two-photon absorption rates without damaging the sample, it is essential to concentrate the excitation in both space (tight focusing) and time (ultrashort pulses). A mode-locked Ti:sapphire laser delivers pulses of $\\(100–150 fs duration at ~80 MHz repetition rate — concentrating photons into brief bursts while maintaining a modest average power (\\)&lt;100$ mW at the sample):",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#principle-nonlinear-excitation",
+    "href": "lectures/08-two-photon.html#principle-nonlinear-excitation",
+    "title": "8  Two-Photon Microscopy",
+    "section": "",
+    "text": "Pulsed excitation strategy for two-photon microscopy: a CW laser (top) distributes photons uniformly in time, giving a low instantaneous flux. A pulsed laser (bottom) compresses the same average power into very short pulses of duration \\(\\tau\\), dramatically increasing the peak intensity and hence the two-photon excitation probability, while keeping average power (and therefore thermal load) low.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#intrinsic-optical-sectioning",
+    "href": "lectures/08-two-photon.html#intrinsic-optical-sectioning",
+    "title": "8  Two-Photon Microscopy",
+    "section": "8.2 Intrinsic Optical Sectioning",
+    "text": "8.2 Intrinsic Optical Sectioning\nBecause 2PE scales as \\(I^2\\), excitation is confined to the focal volume where the intensity is highest. Out-of-focus planes contribute negligibly — even though light passes through them. This gives intrinsic optical sectioning without a pinhole.\nThe consequence is dramatically visible: in a cuvette of fluorescent dye, one-photon excitation (visible laser) illuminates the entire beam path, while two-photon excitation (near-IR, \\(\\sim 900\\) nm) produces fluorescence only at the focus:\n\n\n\nOne-photon vs. two-photon excitation in a fluorescent dye cuvette under a 4× objective. Left: visible laser excitation — the entire beam path fluoresces. Right: near-IR pulsed excitation at the same objective — fluorescence is confined to the focal point, demonstrating intrinsic 3D confinement from the \\(I^2\\) dependence.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#why-near-infrared",
+    "href": "lectures/08-two-photon.html#why-near-infrared",
+    "title": "8  Two-Photon Microscopy",
+    "section": "8.3 Why Near-Infrared?",
+    "text": "8.3 Why Near-Infrared?\nTwo-photon excitation uses wavelengths roughly twice those used for one-photon excitation — typically 700–1000 nm (near-IR). This has three major practical consequences:\nReduced scattering: biological tissue scatters light with a wavelength dependence of approximately \\(\\lambda^{-4}\\) (Rayleigh) to \\(\\lambda^{-1}\\) (Mie). Near-IR light penetrates far deeper than visible light — enabling imaging hundreds of microns into tissue, compared to $&lt;$50 µm for confocal.\nReduced phototoxicity: near-IR photons are not absorbed by most endogenous chromophores (hemoglobin, flavins, NADH), reducing out-of-focus photodamage.\nNo pinhole needed: all collected fluorescence comes from the focal volume, so non-descanned detection with large-area photomultipliers maximizes signal collection even after scattering.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#imaging-deep-into-tissue",
+    "href": "lectures/08-two-photon.html#imaging-deep-into-tissue",
+    "title": "8  Two-Photon Microscopy",
+    "section": "8.4 Imaging Deep into Tissue",
+    "text": "8.4 Imaging Deep into Tissue\nThe combination of near-IR excitation and intrinsic sectioning makes two-photon microscopy the method of choice for imaging intact tissue, in vivo preparations, and thick specimens where confocal fails:\n\n\n\nTwo-photon fluorescence image of a neuronal axon labeled with a red fluorophore in a thick tissue preparation. The long-range axonal projection and fine axon terminals are resolved deep in the tissue — a preparation inaccessible to one-photon confocal microscopy due to scattering.\n\n\n\n\n\nThree-color two-photon image of a dense cell population in a thick tissue section, showing simultaneous imaging of three spectrally distinct fluorescent labels (magenta, green, cyan) deep in a scattering specimen.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#instrument-configuration",
+    "href": "lectures/08-two-photon.html#instrument-configuration",
+    "title": "8  Two-Photon Microscopy",
+    "section": "8.5 Instrument Configuration",
+    "text": "8.5 Instrument Configuration\nTwo-photon microscopy uses a laser-scanning architecture similar to confocal, but with key differences: no pinhole, non-descanned detection preferred, and a Ti:sapphire (or fiber) pulsed laser source. Fast mechanical shutters control laser exposure and protect live samples:\n\n\n\nShutter systems for live-cell imaging: (a) illumination source shutter (Uniblitz electronic); (b) large-aperture rotary shutter with drive arm, aperture, and anodized housing; (c) filter wheel shutter. Shutters are essential for minimizing photobleaching and phototoxicity in time-lapse experiments.\n\n\nA complete laser-scanning confocal/two-photon system integrates the scan head, microscope body, laser sources, and acquisition computers into a controlled workstation:\n\n\n\nComplete Nikon laser scanning confocal microscope configuration (PCM 2000 scan head on a Nikon E1000 body): argon ion and helium-neon laser sources, DXM 1200 digital camera, confocal scanning head, halogen illuminator, filter cubes, and dual monitors for specimen image and software control.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/08-two-photon.html#two-photon-vs.-confocal-when-to-choose",
+    "href": "lectures/08-two-photon.html#two-photon-vs.-confocal-when-to-choose",
+    "title": "8  Two-Photon Microscopy",
+    "section": "8.6 Two-Photon vs. Confocal: When to Choose",
+    "text": "8.6 Two-Photon vs. Confocal: When to Choose\n\n\n\n\n\n\n\n\n\nConfocal\nTwo-photon\n\n\n\n\nExcitation wavelength\nVisible (405–647 nm)\nNear-IR (700–1000 nm)\n\n\nDepth penetration\n\\(&lt; 100\\,\\mu\\)m in tissue\n\\(&gt; 500\\,\\mu\\)m in tissue\n\n\nSectioning mechanism\nPinhole\n\\(I^2\\) nonlinearity\n\n\nOut-of-focus bleaching\nYes\nMinimal\n\n\nPhototoxicity\nModerate\nLow (out-of-focus)\n\n\nSignal at depth\nDrops quickly\nMuch more robust\n\n\nCost\nLower\nHigher (Ti:Sa laser)\n\n\n\nTwo-photon excitation is the method of choice whenever depth penetration, reduced phototoxicity, or intrinsic third-harmonic generation (THG) for label-free structural imaging are needed. Confocal is generally preferable for thin specimens and multicolor experiments where near-IR two-photon cross-sections are limiting.\n\n\n\n\n\n\nNoteRelation to SHG and THG imaging\n\n\n\nTwo-photon setups naturally enable second harmonic generation (SHG) and third harmonic generation (THG) imaging of non-centrosymmetric structures (collagen fibers, myosin filaments, lipid droplet interfaces) — entirely label-free. These coherent nonlinear signals appear at exactly \\(\\lambda/2\\) or \\(\\lambda/3\\) and are spectrally separable from two-photon fluorescence.",
+    "crumbs": [
+      "Lectures",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two-Photon Microscopy</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html",
+    "href": "tutorials/single-molecule-microscopy.html",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "",
+    "text": "9.1 Why Single-Molecule Imaging Matters\nThis exercise sheet accompanies the article by Unger et al. (1999), which demonstrated that single-molecule fluorescence can be observed with a standard mercury lamp and a cooled CCD camera. The problems are scaffolded step-by-step and cover: dilution and spatial separation, the Rayleigh resolution criterion, Poisson intuition for overlap, photon energy and photon flux, signal-to-noise, and photophysical signatures (blinking and bleaching).",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#why-single-molecule-imaging-matters",
+    "href": "tutorials/single-molecule-microscopy.html#why-single-molecule-imaging-matters",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "",
+    "text": "Concept: Give one reason why measuring at the single-molecule level can reveal information hidden in bulk (ensemble) measurements. Provide a biological example.\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nBulk averaging can hide heterogeneity such as multiple activity states, conformational subpopulations, or time-dependent (dynamic) disorder. Examples: (i) Different turnover rates of individual enzyme molecules (Lu, Xie 1998). (ii) Stepping of single motor proteins (kinesin/myosin) that is smeared out in ensemble assays.\n\n\n\n\nAccessibility: Why is the use of a mercury lamp and a standard CCD (instead of a laser confocal or TIRF with EMCCD) important for democratizing single-molecule studies?\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nBecause it shows that single-molecule sensitivity is attainable with widely available, lower-cost equipment. This reduces the barrier to entry for teaching labs and small groups.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#dilution-and-molecular-separation",
+    "href": "tutorials/single-molecule-microscopy.html#dilution-and-molecular-separation",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.2 Dilution and Molecular Separation",
+    "text": "9.2 Dilution and Molecular Separation\nIn the article, single dye molecules were deposited from very dilute solutions onto cleaned coverslips. Extreme dilution ensures spatial separations large enough to resolve and count molecules individually.\n\nFrom molarity to surface density. Consider \\(1\\,\\mu\\mathrm{L}\\) of a \\(10^{-6}\\,\\mathrm{M}\\) solution spread uniformly over \\(1\\,\\mathrm{cm}^2\\).\n\nHow many molecules are in \\(1\\,\\mu\\mathrm{L}\\) at \\(10^{-6}\\,\\mathrm{M}\\)? (Use \\(N_A=6.02\\times10^{23}\\,\\mathrm{mol}^{-1}\\).)\nWhat area is available per molecule on the surface (in \\(\\mathrm{m}^2\\))?\nEstimate the mean intermolecular spacing by taking the square root of that area (convert to nm).\n\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n\n\\(n = C V = 10^{-6}\\,\\mathrm{mol/L}\\times 10^{-6}\\,\\mathrm{L}=10^{-12}\\,\\mathrm{mol}\\). Molecules: \\(N=nN_A\\approx 6.02\\times10^{11}\\).\nTotal area \\(A=1\\,\\mathrm{cm}^2=1\\times10^{-4}\\,\\mathrm{m}^2\\). Area per molecule: \\(A/N \\approx 1.66\\times10^{-16}\\,\\mathrm{m}^2\\).\nMean spacing \\(\\ell \\approx \\sqrt{A/N}\\approx \\sqrt{1.66\\times10^{-16}}\\approx 1.29\\times10^{-8}\\,\\mathrm{m}=12.9\\,\\mathrm{nm}\\).\n\n\n\n\n\nNow much more dilute: Repeat the calculation for a \\(10^{-12}\\,\\mathrm{M}\\) solution (still \\(1\\,\\mu\\mathrm{L}\\) spread over \\(1\\,\\mathrm{cm}^2\\)).\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nAt \\(10^{-12}\\,\\mathrm{M}\\), \\(n=10^{-18}\\,\\mathrm{mol}\\) and \\(N\\approx 6.02\\times10^{5}\\) molecules. Area per molecule \\(\\approx 1.66\\times10^{-10}\\,\\mathrm{m}^2\\); spacing \\(\\ell\\approx 12.9\\,\\mu\\mathrm{m}\\).",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#resolution-limit-rayleigh-criterion",
+    "href": "tutorials/single-molecule-microscopy.html#resolution-limit-rayleigh-criterion",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.3 Resolution Limit: Rayleigh Criterion",
+    "text": "9.3 Resolution Limit: Rayleigh Criterion\nThe Rayleigh criterion estimates the smallest resolvable distance between two point sources:\n\\[d \\approx \\frac{0.61\\,\\lambda}{NA}\\]\n\nTake \\(\\lambda=550\\,\\mathrm{nm}\\) and \\(NA=1.4\\). Compute \\(d\\).\nCompare \\(d\\) to the mean separations found above. Explain why dilution is essential.\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n\\(d \\approx 0.61\\times 550\\,\\mathrm{nm}/1.4 \\approx 240\\,\\mathrm{nm}\\) (within the typical 200–300 nm diffraction limit).\nAt \\(10^{-6}\\,\\mathrm{M}\\), spacing (\\(\\sim13\\,\\mathrm{nm}\\)) \\(\\ll d\\): unresolved. At \\(10^{-12}\\,\\mathrm{M}\\), spacing (\\(\\sim13\\,\\mu\\mathrm{m}\\)) \\(\\gg d\\): well-resolved single emitters.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#overlap-probability-poisson-intuition",
+    "href": "tutorials/single-molecule-microscopy.html#overlap-probability-poisson-intuition",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.4 Overlap Probability: Poisson Intuition",
+    "text": "9.4 Overlap Probability: Poisson Intuition\nAssume each molecule appears as a \\(\\sim 0.5\\,\\mu\\mathrm{m}\\)-diameter fluorescence spot.\n\nUsing the mean spacing \\(\\sim 13\\,\\mu\\mathrm{m}\\) at \\(10^{-12}\\,\\mathrm{M}\\), argue qualitatively that the fraction of overlapping spots is very small (order \\(\\sim 1\\%\\)).\nWhy does reducing concentration further decrease the chance of overlap?\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nThe spot diameter is \\(\\sim 0.5\\,\\mu\\)m, whereas mean spacing is \\(\\sim 13\\,\\mu\\)m; the area ratio \\((0.5/13)^2 \\approx 0.0015 \\approx 0.15\\%\\) suggests a very small overlap probability. Lower concentration increases spacing as \\(\\propto C^{-1/2}\\) (on a surface), reducing overlap probability rapidly.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#photon-energy-and-photon-flux",
+    "href": "tutorials/single-molecule-microscopy.html#photon-energy-and-photon-flux",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.5 Photon Energy and Photon Flux",
+    "text": "9.5 Photon Energy and Photon Flux\n\nEnergy per photon. Use \\(E=\\dfrac{hc}{\\lambda}\\) with \\(h=6.63\\times10^{-34}\\,\\mathrm{J\\cdot s}\\), \\(c=3.00\\times10^8\\,\\mathrm{m/s}\\), and \\(\\lambda=550\\,\\mathrm{nm}\\) to compute the photon energy in joules and in electronvolts (\\(1\\,\\mathrm{eV}=1.6\\times10^{-19}\\,\\mathrm{J}\\)).\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n\\[E=\\frac{6.63\\times10^{-34}\\times 3.00\\times10^8}{550\\times10^{-9}}\\approx 3.61\\times10^{-19}\\,\\mathrm{J} \\approx 2.26\\,\\mathrm{eV}\\]\n\n\n\n\nPhoton flux from irradiance. The mercury lamp gives \\(\\approx 4.8\\times 10^{5}\\,\\mathrm{W/m^2}\\) at the sample. Convert this irradiance into photons\\(\\cdot\\mathrm{m}^{-2}\\cdot\\mathrm{s}^{-1}\\).\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n\\[\\Phi = \\frac{I}{E} \\approx \\frac{4.8\\times10^{5}}{3.61\\times10^{-19}}\\approx 1.33\\times10^{24}\\ \\mathrm{photons\\,m^{-2}\\,s^{-1}}\\]\n\n\n\n\nAbsorptions per second (single molecule). A rhodamine molecule has absorption cross-section \\(\\sigma_a \\approx 4.0\\times10^{-20}\\,\\mathrm{m^2}\\). Estimate its absorbed photons per second.\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\n\\[\\text{Absorptions} \\approx \\Phi\\,\\sigma_a \\approx 1.33\\times10^{24}\\times 4.0\\times10^{-20}\\approx 5.3\\times10^{4}\\ \\mathrm{s^{-1}}\\]\n\n\n\n\nEmitted photons and detected electrons. With quantum yield \\(\\varphi\\approx 0.9\\), objective collection \\(\\approx 31\\%\\), and CCD quantum efficiency \\(\\approx 40\\%\\), estimate detected photoelectrons per second.\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nEmitted: \\(0.9\\times 5.3\\times10^{4}\\approx 4.8\\times10^{4}\\ \\mathrm{s^{-1}}\\)\nCollected by objective: \\(0.31\\times 4.8\\times10^{4}\\approx 1.49\\times10^{4}\\ \\mathrm{s^{-1}}\\)\nDetected (QE 40%): \\(0.4\\times 1.49\\times10^{4}\\approx 6.0\\times10^{3}\\ \\mathrm{e^{-}\\,s^{-1}}\\) per molecule.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#signal-to-noise",
+    "href": "tutorials/single-molecule-microscopy.html#signal-to-noise",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.6 Signal-to-Noise",
+    "text": "9.6 Signal-to-Noise\n\nExplain why both integrated (“astronomy”) S/N and peak-pixel S/N are useful for evaluating single-molecule detectability on CCD images.\nIf background is \\(\\sim 28\\) counts with RMS \\(\\sim 5.9\\) counts per pixel, and a molecule yields \\(\\sim 2500\\) counts/s (integrated), explain qualitatively why S/N is sufficient for detection in \\(\\sim 1\\) s exposures.\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nPeak-pixel S/N reflects the visibility of the brightest pixel(s), important for spot finding; integrated S/N reflects the total certainty over a chosen box. Given \\(\\sim 2500\\) counts/s signal vs background RMS \\(\\sim 6\\) counts/pixel and modest integration over \\(\\sim 25\\) pixels, the signal substantially exceeds noise, enabling reliable detection in \\(\\sim 1\\) s.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  },
+  {
+    "objectID": "tutorials/single-molecule-microscopy.html#blinking-and-photobleaching",
+    "href": "tutorials/single-molecule-microscopy.html#blinking-and-photobleaching",
+    "title": "9  Single-Molecule Fluorescence with Mercury Lamp Illumination",
+    "section": "9.7 Blinking and Photobleaching",
+    "text": "9.7 Blinking and Photobleaching\n\nDefine photobleaching and explain why stepwise (quantized) bleaching supports the single-molecule interpretation.\nWhat does fluorescence blinking (on/off flickering) suggest about the photophysics of individual emitters?\n\n\n\n\n\n\n\nTipCorrection\n\n\n\n\n\nBleaching: irreversible loss of fluorescence due to photochemical damage or transition to a permanent dark state. Single emitters bleach in a single discrete step, unlike the gradual decay observed from ensembles — this is a key signature of single-molecule detection.\nBlinking: stochastic transitions between emissive and non-emissive states (e.g., triplet or radical states), another hallmark of single-molecule behavior invisible in ensemble measurements.\n\n\n\n\nPrimary Reference:\nUnger, M. A.; Kartalov, E.; Chiu, C.-S.; Lester, H. A.; & Quake, S. R. (1999). Single-molecule fluorescence observed with mercury lamp illumination. BioTechniques, 27(5), 1008–1014. DOI: 10.2144/99275rr01.",
+    "crumbs": [
+      "Tutorials",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Single-Molecule Fluorescence with Mercury Lamp Illumination</span>"
+    ]
+  }
+]

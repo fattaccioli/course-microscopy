@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Fluorophores and Labeling Strategies – Fluorescence Microscopy</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lectures/04-microscope-in-practice.html" rel="next">
+<link href="../lectures/02-fluorescence-principles.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-49e51e44f424ea8c7044b429bdbbbfe2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-introduction.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/03-fluorophores.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fluorophores and Labeling Strategies</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Fluorescence Microscopy</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/fattaccioli-teaching/microscopy" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fluorescence Microscopy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Optical Microscopy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/02-fluorescence-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Principles of Fluorescence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/03-fluorophores.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fluorophores and Labeling Strategies</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/04-microscope-in-practice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Fluorescence Microscope in Practice</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/05-digital-imaging.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Digital Imaging</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/06-advanced-techniques.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Advanced Fluorescence Techniques</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/07-ricm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">RICM: Reflection Interference Contrast Microscopy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/08-two-photon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Two-Photon Microscopy</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/single-molecule-microscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Single-Molecule Fluorescence with Mercury Lamp Illumination</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#common-molecular-fluorophores" id="toc-common-molecular-fluorophores" class="nav-link active" data-scroll-target="#common-molecular-fluorophores"><span class="header-section-number">3.1</span> Common Molecular Fluorophores</a></li>
+  <li><a href="#physicochemical-environment-ph-effects" id="toc-physicochemical-environment-ph-effects" class="nav-link" data-scroll-target="#physicochemical-environment-ph-effects"><span class="header-section-number">3.2</span> Physicochemical Environment: pH Effects</a></li>
+  <li><a href="#a-lipophilic-fluorophore-nile-red" id="toc-a-lipophilic-fluorophore-nile-red" class="nav-link" data-scroll-target="#a-lipophilic-fluorophore-nile-red"><span class="header-section-number">3.3</span> A Lipophilic Fluorophore: Nile Red</a></li>
+  <li><a href="#collisional-quenching-chloride-ions" id="toc-collisional-quenching-chloride-ions" class="nav-link" data-scroll-target="#collisional-quenching-chloride-ions"><span class="header-section-number">3.4</span> Collisional Quenching: Chloride Ions</a></li>
+  <li><a href="#targeting-fluorescence-to-specific-structures" id="toc-targeting-fluorescence-to-specific-structures" class="nav-link" data-scroll-target="#targeting-fluorescence-to-specific-structures"><span class="header-section-number">3.5</span> Targeting Fluorescence to Specific Structures</a>
+  <ul class="collapse">
+  <li><a href="#intercalating-and-affinity-dyes" id="toc-intercalating-and-affinity-dyes" class="nav-link" data-scroll-target="#intercalating-and-affinity-dyes"><span class="header-section-number">3.5.1</span> Intercalating and Affinity Dyes</a></li>
+  <li><a href="#immunolabeling-with-igg" id="toc-immunolabeling-with-igg" class="nav-link" data-scroll-target="#immunolabeling-with-igg"><span class="header-section-number">3.5.2</span> Immunolabeling with IgG</a></li>
+  </ul></li>
+  <li><a href="#covalent-conjugation-chemistry" id="toc-covalent-conjugation-chemistry" class="nav-link" data-scroll-target="#covalent-conjugation-chemistry"><span class="header-section-number">3.6</span> Covalent Conjugation Chemistry</a></li>
+  <li><a href="#labeling-stoichiometry-and-self-quenching" id="toc-labeling-stoichiometry-and-self-quenching" class="nav-link" data-scroll-target="#labeling-stoichiometry-and-self-quenching"><span class="header-section-number">3.7</span> Labeling Stoichiometry and Self-Quenching</a></li>
+  <li><a href="#fret-förster-resonance-energy-transfer" id="toc-fret-förster-resonance-energy-transfer" class="nav-link" data-scroll-target="#fret-förster-resonance-energy-transfer"><span class="header-section-number">3.8</span> FRET: Förster Resonance Energy Transfer</a></li>
+  <li><a href="#photobleaching" id="toc-photobleaching" class="nav-link" data-scroll-target="#photobleaching"><span class="header-section-number">3.9</span> Photobleaching</a></li>
+  <li><a href="#gfp-an-exception-to-non-fluorescent-life" id="toc-gfp-an-exception-to-non-fluorescent-life" class="nav-link" data-scroll-target="#gfp-an-exception-to-non-fluorescent-life"><span class="header-section-number">3.10</span> GFP: An Exception to Non-Fluorescent Life</a>
+  <ul class="collapse">
+  <li><a href="#chromophore-formation" id="toc-chromophore-formation" class="nav-link" data-scroll-target="#chromophore-formation"><span class="header-section-number">3.10.1</span> Chromophore Formation</a></li>
+  <li><a href="#the-fluorescent-protein-color-palette" id="toc-the-fluorescent-protein-color-palette" class="nav-link" data-scroll-target="#the-fluorescent-protein-color-palette"><span class="header-section-number">3.10.2</span> The Fluorescent Protein Color Palette</a></li>
+  <li><a href="#gfp-as-a-reporter-of-gene-expression" id="toc-gfp-as-a-reporter-of-gene-expression" class="nav-link" data-scroll-target="#gfp-as-a-reporter-of-gene-expression"><span class="header-section-number">3.10.3</span> GFP as a Reporter of Gene Expression</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fattaccioli-teaching/microscopy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01-introduction.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/03-fluorophores.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fluorophores and Labeling Strategies</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fluorophores and Labeling Strategies</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="common-molecular-fluorophores" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="common-molecular-fluorophores"><span class="header-section-number">3.1</span> Common Molecular Fluorophores</h2>
+<p>The choice of fluorophore determines the spectral window, brightness, photostability, and compatibility with other labels in a multicolor experiment. The figure below maps a large panel of commonly used fluorophores according to their emission wavelength and brightness (<span class="math inline">\(\varepsilon \cdot \phi\)</span>), from UV-excitable probes (DAPI, Hoechst) through the visible range (fluorescein/FITC, rhodamines, BODIPY, cyanines) to near-infrared dyes (Cy5, Cy7, IRDye 700DX).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p032_00.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Brightness (<span class="math inline">\(\varepsilon \times \phi\)</span>, M<span class="math inline">\(^{-1}\)</span>cm<span class="math inline">\(^{-1}\)</span>) vs.&nbsp;emission wavelength for a broad panel of fluorophores, from intrinsically fluorescent amino acids (phenylalanine, tyrosine, tryptophan) to high-performance synthetic dyes. Structures are shown for each compound.</figcaption>
+</figure>
+</div>
+<p>Three workhorse fluorophores span most routine applications: DAPI (UV, nucleus staining), FITC/fluorescein (green, amine-reactive), and Texas Red (red, amine-reactive). Their absorption and emission spectra illustrate the spectral separation needed for multicolor imaging.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p031_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Absorption (left) and emission (right) spectra of three commonly used fluorophores — DAPI, FITC, and Texas Red — illustrating the spectral coverage from UV to red and the large Stokes shifts involved.</figcaption>
+</figure>
+</div>
+</section>
+<section id="physicochemical-environment-ph-effects" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="physicochemical-environment-ph-effects"><span class="header-section-number">3.2</span> Physicochemical Environment: pH Effects</h2>
+<p>Many fluorophores are sensitive to their local physicochemical environment. Fluorescein is a canonical example: its fluorescence intensity is strongly pH-dependent because protonation of the phenolic hydroxyl disrupts the conjugated system responsible for absorption and emission.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p033_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Absorption (A) and fluorescence emission (B, <span class="math inline">\(\lambda_{ex} = 488\)</span> nm) spectra of fluorescein as a function of pH (5.0 to 9.0). Both the extinction coefficient and quantum yield decrease sharply below pH 7.</figcaption>
+</figure>
+</div>
+<p>This sensitivity is exploited in biosensors and to monitor intracellular pH, but is a confound in quantitative imaging if the local pH is not controlled or known.</p>
+</section>
+<section id="a-lipophilic-fluorophore-nile-red" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="a-lipophilic-fluorophore-nile-red"><span class="header-section-number">3.3</span> A Lipophilic Fluorophore: Nile Red</h2>
+<p>Nile Red is a solvatochromic fluorophore — its emission wavelength shifts strongly with the polarity of its local environment. It is essentially non-fluorescent in water but highly fluorescent in hydrophobic environments (lipid droplets, cell membranes), making it a selective membrane and lipid probe without the need for covalent conjugation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p034_01.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Series of Nile Red solutions in solvents of decreasing polarity (top: visible color; bottom: fluorescence under UV), illustrating the dramatic solvatochromism — the emission shifts from red-orange in polar solvents to yellow-green in apolar environments.</figcaption>
+</figure>
+</div>
+</section>
+<section id="collisional-quenching-chloride-ions" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="collisional-quenching-chloride-ions"><span class="header-section-number">3.4</span> Collisional Quenching: Chloride Ions</h2>
+<p>Fluorescence can be quenched by dynamic (collisional) energy transfer to a quencher molecule present in solution. Cl<span class="math inline">\(^-\)</span> ions are efficient quenchers of certain fluorophores (e.g., lucigenin, SPQ) via charge-transfer interactions. The Stern-Volmer equation describes this:</p>
+<p><span class="math display">\[\frac{F_0}{F} = 1 + k_q \tau_0 [Q] = 1 + K_{SV}[Q]\]</span></p>
+<p>where <span class="math inline">\(K_{SV}\)</span> is the Stern-Volmer constant, <span class="math inline">\(k_q\)</span> the bimolecular quenching rate, and <span class="math inline">\(\tau_0\)</span> the unquenched lifetime.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p035_00.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>Demonstration of collisional quenching: quinine fluorescence (blue) is quenched by Cl<span class="math inline">\(^-\)</span> ions — the glass on the right contains added NaCl, visibly reducing fluorescence intensity under UV excitation.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p035_01.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Mechanism of collisional quenching: the excited fluorophore undergoes bimolecular energy transfer to the quencher upon collision, returning to the ground state without photon emission.</figcaption>
+</figure>
+</div>
+</section>
+<section id="targeting-fluorescence-to-specific-structures" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="targeting-fluorescence-to-specific-structures"><span class="header-section-number">3.5</span> Targeting Fluorescence to Specific Structures</h2>
+<p>Most biological structures are not intrinsically fluorescent — specific labeling strategies are required. Two broad approaches exist: <strong>non-covalent targeting</strong> (exploiting specific affinity) and <strong>covalent conjugation</strong> (chemical attachment of a fluorophore to a biomolecule).</p>
+<section id="intercalating-and-affinity-dyes" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="intercalating-and-affinity-dyes"><span class="header-section-number">3.5.1</span> Intercalating and Affinity Dyes</h3>
+<p>Some fluorophores report on specific molecular environments through non-covalent interactions. Ethidium bromide (EtBr) intercalates between DNA base pairs via <span class="math inline">\(\pi\)</span>-stacking, with a fluorescence enhancement of several orders of magnitude upon intercalation — making it a classic DNA stain in gel electrophoresis and imaging. DPH (1,6-diphenyl-1,3,5-hexatriene) inserts into lipid bilayers and is essentially non-fluorescent in water, providing intrinsic membrane selectivity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p039_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Ethidium bromide (EtBr, top) and DPH (bottom) as examples of affinity-based fluorescent probes. EtBr intercalates in double-stranded DNA (Ex/Em: 518/605 nm); DPH partitions into lipid bilayers.</figcaption>
+</figure>
+</div>
+</section>
+<section id="immunolabeling-with-igg" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="immunolabeling-with-igg"><span class="header-section-number">3.5.2</span> Immunolabeling with IgG</h3>
+<p>Antibody-based labeling is the most versatile approach for targeting fluorescence to specific proteins. An IgG antibody (MW <span class="math inline">\(\approx 150\,\mathrm{kDa}\)</span>, <span class="math inline">\(\sim 1500\)</span> amino acids) consists of two heavy chains and two light chains; antigen recognition occurs at the variable Fab domains (region 1), while the Fc domain (region 2) is constant.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p041_00.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>Schematic of an IgG antibody showing the two heavy chains (dark blue) and two light chains (green/light blue), with the antigen-binding Fab domains (1), the Fc domain (2), the hypervariable CDR loops (3), the Fc region (4), the variable light chain domain (5), and the hinge region (6).</figcaption>
+</figure>
+</div>
+<p>Two immunolabeling strategies are used in practice:</p>
+<p><strong>Direct labeling:</strong> a fluorescent primary antibody binds directly to the antigen (1 step, simpler, less signal amplification).</p>
+<p><strong>Indirect labeling:</strong> a non-fluorescent primary antibody with high specificity binds first; a fluorescent secondary antibody directed against the Fc of the primary is then added. This amplifies signal (multiple secondary antibodies per primary) and allows reuse of the same fluorescent secondary across many primaries from the same host species.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p042_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Summary of direct and indirect immunolabeling strategies, highlighting the use of antibodies from different host species to achieve orthogonal multi-target staining.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="covalent-conjugation-chemistry" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="covalent-conjugation-chemistry"><span class="header-section-number">3.6</span> Covalent Conjugation Chemistry</h2>
+<p>To produce fluorescent antibodies or other labeled biomolecules, fluorophores must be covalently attached. Two amino acid side chains are the primary conjugation targets: <strong>lysine</strong> (K, primary amine <span class="math inline">\(-\)</span>NH<span class="math inline">\(_2\)</span>) and <strong>cysteine</strong> (C, thiol <span class="math inline">\(-\)</span>SH).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p043_00.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>The two main conjugation targets in proteins — lysine (amine) and cysteine (thiol) — and the corresponding reactive fluorophore chemistries: FITC (isothiocyanate, reacts with NH<span class="math inline">\(_2\)</span> to form a thiourea bond) and BODIPY maleimide (reacts with SH to form a thioether bond).</figcaption>
+</figure>
+</div>
+<p>The isothiocyanate reaction (FITC + <span class="math inline">\(-\)</span>NH<span class="math inline">\(_2\)</span> → thiourea) is efficient at pH 8–9 and widely used for antibody labeling. Maleimide chemistry (<span class="math inline">\(-\)</span>SH + maleimide → thioether) is more selective since free cysteines are rarer than lysines in most proteins, and can be exploited for site-specific labeling if a unique cysteine is engineered in.</p>
+</section>
+<section id="labeling-stoichiometry-and-self-quenching" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="labeling-stoichiometry-and-self-quenching"><span class="header-section-number">3.7</span> Labeling Stoichiometry and Self-Quenching</h2>
+<p>Increasing the number of fluorophores per protein does not linearly increase fluorescence — above a threshold, fluorophores on the same molecule undergo self-quenching via FRET between identical dyes (homo-FRET) or collisional quenching. For an IgG antibody, fluorescence is maximized at approximately 5–8 fluorophores per antibody depending on the dye.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p047_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Conjugate fluorescence as a function of fluorophore-to-protein ratio (mol:mol) for four fluorophore families on IgG antibodies. Fluorescence peaks around 5–8 equivalents, then decreases due to self-quenching. Oregon Green variants outperform FITC due to lower susceptibility to self-quenching.</figcaption>
+</figure>
+</div>
+</section>
+<section id="fret-förster-resonance-energy-transfer" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="fret-förster-resonance-energy-transfer"><span class="header-section-number">3.8</span> FRET: Förster Resonance Energy Transfer</h2>
+<p>When two fluorophores are in close proximity (typically 1–10 nm) and the emission spectrum of the donor overlaps with the absorption spectrum of the acceptor, non-radiative energy transfer can occur. This is <strong>FRET</strong> (Förster Resonance Energy Transfer), first described by Perrin (1900) and quantified by Förster (1946).</p>
+<p>The FRET efficiency <span class="math inline">\(E\)</span> depends on the donor-acceptor distance <span class="math inline">\(r\)</span>:</p>
+<p><span class="math display">\[E = \frac{1}{1 + (r/R_0)^6}\]</span></p>
+<p>where <span class="math inline">\(R_0\)</span> is the Förster radius (typically 2–7 nm), defined as the distance at which <span class="math inline">\(E = 50\%\)</span>.</p>
+<p>The spectral overlap integral <span class="math inline">\(J\)</span> between donor emission and acceptor absorption is the key molecular parameter:</p>
+<p><span class="math display">\[J = \int F_D(\lambda)\, \varepsilon_A(\lambda)\, \lambda^4\, d\lambda\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p048_00.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Spectral overlap between the donor emission (<span class="math inline">\(\lambda^{ex}_D\)</span>, <span class="math inline">\(\lambda^{em}_D\)</span>) and acceptor absorption (<span class="math inline">\(\lambda^{ex}_A\)</span>, <span class="math inline">\(\lambda^{em}_A\)</span>) spectra. The shaded overlap region (black) determines the Förster integral <span class="math inline">\(J\)</span> and hence <span class="math inline">\(R_0\)</span>.</figcaption>
+</figure>
+</div>
+<p>FRET is used as a “molecular ruler” — its <span class="math inline">\(r^{-6}\)</span> distance dependence makes it exquisitely sensitive to nanometer-scale changes in molecular conformation or complex formation.</p>
+</section>
+<section id="photobleaching" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="photobleaching"><span class="header-section-number">3.9</span> Photobleaching</h2>
+<p>Photobleaching is the irreversible photochemical destruction of a fluorophore upon prolonged illumination, typically via reaction of the excited triplet state with molecular oxygen to form reactive oxygen species that damage the chromophore. It is the primary limitation on the total number of photons that can be collected from a single fluorophore.</p>
+<p>Photobleaching rates differ dramatically between fluorophore families — cyanines and BODIPY dyes are generally more photostable than fluorescein under typical imaging conditions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p050_00.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Sequential fluorescence images of a multiply-stained cell (DAPI, blue; mitochondria, red; cytoskeleton, green) showing the differential photobleaching kinetics of the three fluorophores over six successive frames. The red channel bleaches fastest, the green channel most slowly.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Photobleaching in quantitative imaging
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Photobleaching introduces a systematic bias in time-lapse and multi-acquisition experiments. Always acquire the most photosensitive channel first, minimize illumination intensity, and use antifade reagents (e.g., DABCO, Vectashield, or enzymatic oxygen-scavenging systems for live imaging).</p>
+</div>
+</div>
+</section>
+<section id="gfp-an-exception-to-non-fluorescent-life" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="gfp-an-exception-to-non-fluorescent-life"><span class="header-section-number">3.10</span> GFP: An Exception to Non-Fluorescent Life</h2>
+<p>Green Fluorescent Protein (GFP), originally isolated from the jellyfish <em>Aequorea victoria</em> by Shimomura (1962), sequenced and cloned by Prasher (1992), and expressed heterologously by Chalfie (1994), revolutionized cell biology. The 2008 Nobel Prize in Chemistry was awarded to Shimomura, Chalfie, and Tsien. GFP is a 238 amino-acid <span class="math inline">\(\beta\)</span>-barrel protein whose chromophore forms autocatalytically from the tripeptide Ser65-Tyr66-Gly67.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p052_00.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>GFP structure (two orientations of the <span class="math inline">\(\beta\)</span>-barrel, with the chromophore in cyan at center) and its absorption/emission spectra. The excitation maximum at ~395 nm (minor peak at ~475 nm) and emission at ~509 nm place it in a spectral window close to fluorescein.</figcaption>
+</figure>
+</div>
+<section id="chromophore-formation" class="level3" data-number="3.10.1">
+<h3 data-number="3.10.1" class="anchored" data-anchor-id="chromophore-formation"><span class="header-section-number">3.10.1</span> Chromophore Formation</h3>
+<p>The GFP chromophore forms post-translationally by a spontaneous autocatalytic reaction: cyclization of the Ser65-Tyr66-Gly67 sequence, followed by oxidation by molecular O<span class="math inline">\(_2\)</span> (rate-limiting, <span class="math inline">\(\tau \approx 1\)</span> h at 37°C). No external cofactors or enzymes are required — only O<span class="math inline">\(_2\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p053_00.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Mechanism of GFP chromophore maturation from the Ser65-Tyr66-Gly67 tripeptide: cyclization (<span class="math inline">\(-\)</span>H<span class="math inline">\(_2\)</span>O), oxidation by O<span class="math inline">\(_2\)</span> (<span class="math inline">\(\tau \approx 1\)</span> h), and deprotonation steps yield the mature conjugated chromophore. The <span class="math inline">\(\beta\)</span>-barrel protects the chromophore from solvent quenching, accounting for the high quantum yield (<span class="math inline">\(\phi \approx 0.8\)</span>). (Heim &amp; Tsien, PNAS 1994)</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-fluorescent-protein-color-palette" class="level3" data-number="3.10.2">
+<h3 data-number="3.10.2" class="anchored" data-anchor-id="the-fluorescent-protein-color-palette"><span class="header-section-number">3.10.2</span> The Fluorescent Protein Color Palette</h3>
+<p>Mutagenesis of the chromophore-forming tripeptide and surrounding residues has produced a full palette of fluorescent proteins spanning the visible spectrum. Key engineering axes include shifting emission wavelength, improving brightness, shortening maturation time, and improving photostability.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p054_00.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Spectra and photophysical properties of the main fluorescent protein variants across the visible spectrum (from cyan to far-red), organized by wavelength class. The table (Shaner <em>et al.</em>, <em>Nature Methods</em>, 2005) lists extinction coefficients, quantum yields, brightness, photostability (<span class="math inline">\(t_{0.5}\)</span> bleach), and maturation times.</figcaption>
+</figure>
+</div>
+</section>
+<section id="gfp-as-a-reporter-of-gene-expression" class="level3" data-number="3.10.3">
+<h3 data-number="3.10.3" class="anchored" data-anchor-id="gfp-as-a-reporter-of-gene-expression"><span class="header-section-number">3.10.3</span> GFP as a Reporter of Gene Expression</h3>
+<p>Genetically encoding GFP downstream of a promoter of interest makes transcriptional activity directly observable by fluorescence — the gene of interest is fused to the GFP sequence, so its expression product is directly fluorescent. This approach is broadly used for:</p>
+<ul>
+<li>Tracking protein localization in real time</li>
+<li>Measuring promoter activity</li>
+<li>Following cell fate in development and immunology</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/p055_00.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Schematic of GFP as a reporter gene: the regulatory sequence (promoter) of the gene of interest drives expression of a GFP fusion protein, whose fluorescence intensity directly reports transcriptional activity.</figcaption>
+</figure>
+</div>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lectures/02-fluorescence-principles.html" class="pagination-link" aria-label="Principles of Fluorescence">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Principles of Fluorescence</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lectures/04-microscope-in-practice.html" class="pagination-link" aria-label="The Fluorescence Microscope in Practice">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The Fluorescence Microscope in Practice</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fattaccioli-teaching/microscopy/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
