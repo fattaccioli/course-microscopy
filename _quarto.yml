@@ -34,10 +34,8 @@ format:
     toc-depth: 3
     number-sections: true
     math: mathjax
-    css: styles.css
     code-fold: true
     fig-align: center
-    css: styles.css
     grid:
       sidebar-width: 400px
       body-width: 1600px
