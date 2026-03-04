@@ -37,7 +37,7 @@ format:
     code-fold: true
     fig-align: center
     grid:
-      sidebar-width: 400px
+      sidebar-width: 300x
       body-width: 1600px
       margin-width: 200px
       gutter-width: 2rem
