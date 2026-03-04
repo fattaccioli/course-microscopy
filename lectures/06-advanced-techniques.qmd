@@ -126,3 +126,43 @@ The complete FRET framework — spectral overlap, distance dependence, and dipol
 FRET biosensors are increasingly used to report on intracellular forces. In the example below, an integrin-based tension sensor uses a TFP-Venus FRET pair connected by an elastic linker. When force is applied, the linker extends, increasing the TFP-Venus distance and reducing FRET efficiency:
 
 ![Integrin tension sensor: (A) $\alpha_v\beta_3$ integrins in adhesion complexes under tension; (B) the sensor construct — TFP and Venus flanking an elastic linker; FRET decreases when force extends the linker; (C) TFP, Venus, and FRET channel images of a cell, with the FRET index map (right) revealing spatial distribution of integrin-transmitted forces.](../images/p138_00.png){fig-align="center" width="85%"}
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Pawley, J. (ed.) *Handbook of Biological Confocal Microscopy*, 3rd ed. Springer (2006) — the comprehensive reference on confocal and related techniques.
+- Lakowicz, J. *Principles of Fluorescence Spectroscopy*, 3rd ed. Springer (2006) — Chapters 13–14: FRET theory and applications; Chapter 21: FLIM.
+
+**Key papers — Confocal & FLIM**
+
+- Minsky, M. *Memoir on inventing the confocal scanning microscope*. Scanning (1988). [DOI](https://doi.org/10.1002/sca.4950100403) — the original inventor's account.
+- Becker, W. *Fluorescence lifetime imaging — techniques and applications*. J. Microsc. (2012). [DOI](https://doi.org/10.1111/j.1365-2818.2011.03620.x) — comprehensive FLIM review.
+
+**Key papers — TIRF**
+
+- Axelrod, D. *Total internal reflection fluorescence microscopy in cell biology*. Traffic (2001). [DOI](https://doi.org/10.1034/j.1600-0854.2001.20201.x) — the definitive TIRF review by its inventor.
+
+**Key papers — Super-resolution**
+
+- Betzig et al. *Imaging intracellular fluorescent proteins at nanometer resolution*. Science (2006). [DOI](https://doi.org/10.1126/science.1127344) — PALM.
+- Rust et al. *Sub-diffraction-limit imaging by stochastic optical reconstruction microscopy (STORM)*. Nature Methods (2006). [DOI](https://doi.org/10.1038/nmeth929) — STORM.
+- Heilemann et al. *Subdiffraction-resolution fluorescence imaging with conventional fluorescent probes*. Angew. Chem. (2008). [DOI](https://doi.org/10.1002/anie.200802376) — dSTORM with standard dyes.
+
+**Key papers — FRAP & FRET**
+
+- Axelrod et al. *Mobility measurement by analysis of fluorescence photobleaching recovery kinetics*. Biophys. J. (1976). [DOI](https://doi.org/10.1016/S0006-3495(76)85755-4) — the original FRAP paper.
+- Grashoff et al. *Measuring mechanical tension across vinculin reveals regulation of focal adhesion dynamics*. Nature (2010). [DOI](https://doi.org/10.1038/nature09198) — FRET tension sensor as shown in this chapter.
+
+**Online**
+
+- [iBiology — Super-Resolution Microscopy](https://www.ibiology.org/techniques/super-resolution-microscopy/) — video lectures by Betzig, Hell, Zhuang, and others.
+- [SMLM software comparison](https://srm.epfl.ch/srm/software) — EPFL benchmark of single-molecule localization algorithms.
+- [ThunderSTORM](https://github.com/zitmen/thunderstorm) — Fiji plugin for dSTORM/PALM reconstruction.
+
+**Datasets**
+
+- [SMLM challenge datasets](https://srm.epfl.ch) — benchmark datasets for testing super-resolution reconstruction algorithms.
+- [BBBC — Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org) — annotated fluorescence image datasets for algorithm development.
+:::

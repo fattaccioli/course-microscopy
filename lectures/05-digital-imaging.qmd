@@ -137,3 +137,33 @@ A flat specimen is imaged onto a curved (Petzval) surface, so the center and edg
 ## Practical implications for quantitative imaging
 Chromatic aberration causes channel-dependent z-offsets — critical to correct for colocalization analyses. Field curvature means intensity is not uniform across the field — always flat-field correct before quantitative measurements. Both are dramatically reduced in Plan Apo objectives.
 :::
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Pawley, J. (ed.) *Handbook of Biological Confocal Microscopy*, 3rd ed. Springer (2006) — Chapters 2–4: detectors, noise, and dynamic range.
+- Russ, J. *The Image Processing Handbook*, 7th ed. CRC Press (2016) — comprehensive reference on digital image processing for microscopy.
+
+**Key papers**
+
+- Huang et al. *Video-rate nanoscopy using sCMOS camera-specific single-molecule localization algorithms*. Nature Methods (2013). [DOI](https://doi.org/10.1038/nmeth.2488) — quantitative comparison of sCMOS vs. EMCCD for single-molecule imaging.
+- Waters, J.C. *Accuracy and precision in quantitative fluorescence microscopy*. J. Cell Biol. (2009). [DOI](https://doi.org/10.1083/jcb.200903097) — noise sources, dynamic range, and quantification pitfalls.
+- North, A.J. *Seeing is believing? A beginners' guide to practical pitfalls in image acquisition*. J. Cell Biol. (2006). [DOI](https://doi.org/10.1083/jcb.200507103) — essential practical guide to avoiding common imaging errors.
+
+**Online**
+
+- [MicroscopyU — CCD Cameras](https://www.microscopyu.com/digital-imaging/introduction-to-charge-coupled-devices) — illustrated guide to CCD and sCMOS architecture.
+- [Hamamatsu Learning Center](https://www.hamamatsu.com/us/en/expertise/imaging.html) — technical notes on camera selection, noise, and dynamic range.
+- [iBiology — Quantitative Imaging](https://www.ibiology.org/techniques/quantitative-imaging/) — video lectures on digital image acquisition and analysis.
+
+**Tools**
+
+- [Fiji / ImageJ](https://fiji.sc) — open-source image analysis. Key plugins: Bio-Formats (file import), MTrackJ (tracking), Coloc2 (colocalization).
+- [CellProfiler](https://cellprofiler.org) — automated image analysis pipelines for high-content screening.
+
+**Exercises**
+
+- Download a sample fluorescence image stack from the [Cell Image Library](http://www.cellimagelibrary.org) and measure: mean background, read noise (from dark frames), and signal-to-noise ratio for a labeled structure of interest.
+:::

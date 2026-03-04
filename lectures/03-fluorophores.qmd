@@ -134,3 +134,28 @@ Genetically encoding GFP downstream of a promoter of interest makes transcriptio
 - Following cell fate in development and immunology
 
 ![Schematic of GFP as a reporter gene: the regulatory sequence (promoter) of the gene of interest drives expression of a GFP fusion protein, whose fluorescence intensity directly reports transcriptional activity.](../images/p055_00.png){fig-align="center" width="75%"}
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Lakowicz, J. *Principles of Fluorescence Spectroscopy*, 3rd ed. Springer (2006) — Chapters 3–4: fluorophore photophysics, quenching, environment sensitivity.
+- Haugland, R. *The Molecular Probes Handbook*, 11th ed. Thermo Fisher (2010) — the exhaustive catalog of fluorescent probes and conjugation chemistries. [Available online](https://www.thermofisher.com/uk/en/home/references/molecular-probes-the-handbook.html)
+
+**Key papers**
+
+- Shaner et al. *A guide to choosing fluorescent proteins*. Nature Methods (2005). [DOI](https://doi.org/10.1038/nmeth819) — the benchmark comparison of FP variants, the table shown in this chapter.
+- Tsien, R.Y. *The green fluorescent protein*. Annu. Rev. Biochem. (1998). [DOI](https://doi.org/10.1146/annurev.biochem.67.1.509) — comprehensive review by one of the Nobel laureates.
+- Heim & Tsien. *Engineering green fluorescent protein for improved brightness, longer wavelengths and fluorescence resonance energy transfer*. Curr. Biol. (1996). [DOI](https://doi.org/10.1016/S0960-9822(02)00450-5) — GFP chromophore maturation mechanism.
+- Förster, T. *Zwischenmolekulare Energiewanderung und Fluoreszenz*. Ann. Phys. (1948). [DOI](https://doi.org/10.1002/andp.19484370105) — the original FRET theory paper.
+
+**Online**
+
+- [FPbase — Fluorescent Protein Database](https://www.fpbase.org) — curated database of all fluorescent proteins with spectra, quantum yields, bleaching rates, and FRET pair calculator.
+- [Chroma Spectra Viewer](https://www.chroma.com/spectra-viewer) — filter/laser/fluorophore overlay tool for designing filter sets.
+
+**Datasets**
+
+- [FPbase FRET pairs](https://www.fpbase.org/fret/) — interactive $R_0$ calculator for any donor/acceptor pair.
+:::

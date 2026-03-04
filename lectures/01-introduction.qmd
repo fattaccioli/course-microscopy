@@ -76,3 +76,29 @@ The 2014 Nobel Prize in Chemistry was awarded to Eric Betzig, Stefan W. Hell, an
 ## Course overview
 This course covers the full chain from photons to biological insight: fluorescence principles and fluorophore photophysics → labeling strategies → the microscope optical path → digital detection → advanced techniques (confocal, TIRF, super-resolution, FRAP, FRET, RICM) → two-photon microscopy. The unifying theme throughout is understanding what each measurement actually measures, and what its fundamental limits are.
 :::
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Murphy & Davidson. *Fundamentals of Light Microscopy and Electronic Imaging*, 2nd ed. Wiley (2012) — Chapters 1–2: history, optical path, contrast modes.
+- Inoué & Spring. *Video Microscopy: The Fundamentals*, 2nd ed. Springer (1997) — the definitive reference on widefield and video microscopy.
+
+**Online**
+
+- [MicroscopyU (Nikon)](https://www.microscopyu.com) — excellent interactive tutorials on Köhler illumination, contrast modes, and objective specifications.
+- [Molecular Expressions (FSU)](https://micro.magnet.fsu.edu) — comprehensive optics and microscopy reference with interactive Java applets.
+- [iBiology — Introduction to Light Microscopy](https://www.ibiology.org/techniques/light-microscopy/) — video lectures by leading microscopists.
+
+**Key papers**
+
+- Betzig et al. *Imaging intracellular fluorescent proteins at nanometer resolution*. Science (2006). [DOI](https://doi.org/10.1126/science.1127344) — the PALM paper, Nobel 2014.
+- Hell & Wichmann. *Breaking the diffraction resolution limit by stimulated emission*. Opt. Lett. (1994). [DOI](https://doi.org/10.1364/OL.19.000780) — the STED concept paper.
+- Prakash et al. *Microsopy with a twenty-dollar microscope*. PLoS ONE (2013). [DOI](https://doi.org/10.1371/journal.pone.0111630) — the Foldscope paper.
+
+**Tools**
+
+- [Fiji / ImageJ](https://fiji.sc) — the standard open-source platform for image analysis.
+- [µManager](https://micro-manager.org) — open-source microscope control software.
+:::

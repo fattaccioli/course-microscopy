@@ -24,6 +24,7 @@ book:
     - part: "Tutorials"
       chapters:
         - tutorials/single-molecule-microscopy.qmd
+    - resources.qmd
 
 
 format:

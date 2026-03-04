@@ -1,0 +1,76 @@
+# Resources
+
+A curated set of references, tools, and datasets to complement the course. Resources are also listed at the end of each chapter with more specific pointers.
+
+## Textbooks
+
+- Lakowicz, J. *Principles of Fluorescence Spectroscopy*, 3rd ed. Springer (2006). — The reference on fluorophore photophysics, FRET, FLIM, and quenching.
+- Murphy & Davidson. *Fundamentals of Light Microscopy and Electronic Imaging*, 2nd ed. Wiley (2012). — Clear, practical introduction to the full microscopy chain.
+- Pawley, J. (ed.) *Handbook of Biological Confocal Microscopy*, 3rd ed. Springer (2006). — The comprehensive technical reference; every chapter by a specialist.
+- Valeur & Berberan-Santos. *Molecular Fluorescence: Principles and Applications*, 2nd ed. Wiley-VCH (2012). — Deeper photophysics than Lakowicz; excellent on time-resolved methods.
+- Masters & So (eds.) *Handbook of Biomedical Nonlinear Optical Microscopy*. Oxford University Press (2008). — Two-photon, SHG, THG, CARS.
+
+## Key Review Papers
+
+### Fluorophores & Labeling
+- Shaner et al. *A guide to choosing fluorescent proteins*. Nature Methods (2005). [DOI](https://doi.org/10.1038/nmeth819)
+- Tsien, R.Y. *The green fluorescent protein*. Annu. Rev. Biochem. (1998). [DOI](https://doi.org/10.1146/annurev.biochem.67.1.509)
+
+### Confocal & TIRF
+- Axelrod, D. *Total internal reflection fluorescence microscopy in cell biology*. Traffic (2001). [DOI](https://doi.org/10.1034/j.1600-0854.2001.20201.x)
+
+### Super-Resolution
+- Betzig et al. *Imaging intracellular fluorescent proteins at nanometer resolution*. Science (2006). [DOI](https://doi.org/10.1126/science.1127344)
+- Rust et al. *Sub-diffraction-limit imaging by stochastic optical reconstruction microscopy (STORM)*. Nature Methods (2006). [DOI](https://doi.org/10.1038/nmeth929)
+- Hell & Wichmann. *Breaking the diffraction resolution limit by stimulated emission*. Opt. Lett. (1994). [DOI](https://doi.org/10.1364/OL.19.000780)
+
+### FRAP & FRET
+- Axelrod et al. *Mobility measurement by analysis of fluorescence photobleaching recovery kinetics*. Biophys. J. (1976). [DOI](https://doi.org/10.1016/S0006-3495(76)85755-4)
+- Förster, T. *Zwischenmolekulare Energiewanderung und Fluoreszenz*. Ann. Phys. (1948). [DOI](https://doi.org/10.1002/andp.19484370105)
+
+### RICM
+- Limozin & Sengupta. *Quantitative reflection interference contrast microscopy (RICM) in soft matter and cell adhesion*. ChemPhysChem (2009). [DOI](https://doi.org/10.1002/cphc.200900601)
+
+### Two-Photon
+- Denk, Strickler & Webb. *Two-photon laser scanning fluorescence microscopy*. Science (1990). [DOI](https://doi.org/10.1126/science.2321027)
+- Helmchen & Denk. *Deep tissue two-photon microscopy*. Nature Methods (2005). [DOI](https://doi.org/10.1038/nmeth818)
+
+## Online Resources & Tools
+
+### Spectra & Filter Design
+- [FPbase Spectra Viewer](https://www.fpbase.org/spectra/) — absorption/emission spectra for any fluorophore; overlay laser lines and filters.
+- [Semrock Searchlight](https://searchlight.semrock.com) — the most complete filter database; design filter sets with your hardware.
+- [Thermo Fisher SpectraViewer](https://www.thermofisher.com/order/fluorescence-spectraviewer) — fluorophore/filter/laser overlay.
+- [Chroma Spectra Viewer](https://www.chroma.com/spectra-viewer) — alternative filter design tool.
+
+### Fluorescent Protein Database
+- [FPbase](https://www.fpbase.org) — curated database of all fluorescent proteins: spectra, quantum yields, bleaching rates, FRET pair calculator, microscope simulator.
+
+### Learning
+- [MicroscopyU (Nikon)](https://www.microscopyu.com) — illustrated tutorials on every aspect of optical microscopy.
+- [Molecular Expressions (FSU)](https://micro.magnet.fsu.edu) — optics and microscopy reference with interactive applets.
+- [iBiology Microscopy Series](https://www.ibiology.org/techniques/microscopy/) — video lectures by leading microscopists (Betzig, Zhuang, Webb, Bhattacharya, and others).
+- [EMBL EIPP Courses](https://www.embl.org/groups/eipp/) — advanced image processing and analysis courses; materials available online.
+
+### Image Analysis Software
+- [Fiji / ImageJ](https://fiji.sc) — the standard open-source platform; essential plugins: Bio-Formats, MTrackJ, Coloc2, ThunderSTORM (dSTORM reconstruction).
+- [CellProfiler](https://cellprofiler.org) — automated pipeline-based image analysis for high-content data.
+- [µManager](https://micro-manager.org) — open-source microscope control software.
+- [napari](https://napari.org) — Python-based n-dimensional image viewer; increasingly the standard for large datasets.
+
+### Super-Resolution Analysis
+- [SMLM challenge](https://srm.epfl.ch) — benchmark datasets and software comparison for single-molecule localization.
+- [ThunderSTORM](https://github.com/zitmen/thunderstorm) — Fiji plugin for PALM/STORM/dSTORM reconstruction.
+
+## Datasets
+
+- [Cell Image Library](http://www.cellimagelibrary.org) — curated fluorescence microscopy images and movies with biological annotations.
+- [BBBC — Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org) — annotated image sets for algorithm benchmarking.
+- [SMLM benchmark datasets](https://srm.epfl.ch) — simulated and experimental single-molecule localization datasets.
+- [Allen Cell Image Collection](https://www.allencell.org) — 3D fluorescence images of hiPSC cells with labeled organelles.
+
+## Practical Guides
+
+- Waters, J.C. *Accuracy and precision in quantitative fluorescence microscopy*. J. Cell Biol. (2009). [DOI](https://doi.org/10.1083/jcb.200903097)
+- North, A.J. *Seeing is believing? A beginners' guide to practical pitfalls in image acquisition*. J. Cell Biol. (2006). [DOI](https://doi.org/10.1083/jcb.200507103)
+- Haugland, R. *The Molecular Probes Handbook*, 11th ed. [Available online](https://www.thermofisher.com/uk/en/home/references/molecular-probes-the-handbook.html)

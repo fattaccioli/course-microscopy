@@ -68,3 +68,36 @@ Two-photon excitation is the method of choice whenever depth penetration, reduce
 ## Relation to SHG and THG imaging
 Two-photon setups naturally enable **second harmonic generation** (SHG) and **third harmonic generation** (THG) imaging of non-centrosymmetric structures (collagen fibers, myosin filaments, lipid droplet interfaces) — entirely label-free. These coherent nonlinear signals appear at exactly $\lambda/2$ or $\lambda/3$ and are spectrally separable from two-photon fluorescence.
 :::
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Pawley, J. (ed.) *Handbook of Biological Confocal Microscopy*, 3rd ed. Springer (2006) — Chapter 28: two-photon microscopy; Chapter 38: nonlinear microscopy.
+- Masters & So (eds.) *Handbook of Biomedical Nonlinear Optical Microscopy*. Oxford University Press (2008) — comprehensive reference on 2PE, SHG, THG, and CARS microscopy.
+
+**Key papers — Foundations**
+
+- Denk, Strickler & Webb. *Two-photon laser scanning fluorescence microscopy*. Science (1990). [DOI](https://doi.org/10.1126/science.2321027) — the paper that introduced 2PE microscopy to biology; essential reading.
+- Göppert-Mayer, M. *Über Elementarakte mit zwei Quantensprüngen*. Ann. Phys. (1931). [DOI](https://doi.org/10.1002/andp.19314010303) — the theoretical prediction of two-photon absorption, 30 years before the laser made it experimentally accessible.
+
+**Key papers — Applications and deep imaging**
+
+- Helmchen & Denk. *Deep tissue two-photon microscopy*. Nature Methods (2005). [DOI](https://doi.org/10.1038/nmeth818) — the definitive review of why and how 2PE penetrates deep tissue; covers scattering, pulse dispersion, and in vivo imaging.
+- Svoboda & Yasuda. *Principles of two-photon excitation microscopy and its applications to neuroscience*. Neuron (2006). [DOI](https://doi.org/10.1016/j.neuron.2006.05.019) — excellent practical guide with neuroscience applications.
+
+**Key papers — SHG/THG**
+
+- Campagnola & Loew. *Second-harmonic imaging microscopy for visualizing biomolecular arrays in cells, tissues and organisms*. Nature Biotechnology (2003). [DOI](https://doi.org/10.1038/nbt894) — label-free SHG imaging of collagen and myosin.
+
+**Online**
+
+- [iBiology — Two-Photon Microscopy](https://www.ibiology.org/techniques/two-photon-microscopy/) — video lectures by Watt Webb (inventor) and others.
+- [Coherent — Ultrafast lasers for microscopy](https://www.coherent.com/applications/microscopy) — technical notes on Ti:sapphire and fiber laser selection for 2PE.
+- [Spectra-Physics — Two-photon microscopy guide](https://www.spectra-physics.com) — practical guide to laser selection, pulse width, and dispersion compensation.
+
+**Exercises**
+
+- Estimate the two-photon excitation rate for a fluorescein molecule ($\sigma_2 \approx 38\,\mathrm{GM}$ at 800 nm) at the focus of a 100× / 1.4 NA objective with 10 mW average power and 100 fs pulses at 80 MHz. Compare with the one-photon rate under CW illumination at the same average power.
+:::

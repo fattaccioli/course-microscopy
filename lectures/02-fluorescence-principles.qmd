@@ -96,3 +96,27 @@ $$\tau = \frac{1}{k_r + k_{nr}} \qquad \phi = k_r \cdot \tau \qquad B = \varepsi
 
 These three parameters fully characterize the photophysical performance of a fluorophore. Note that a long lifetime does not necessarily imply high quantum yield — what matters is the ratio $k_r / (k_r + k_{nr})$.
 :::
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Lakowicz, J. *Principles of Fluorescence Spectroscopy*, 3rd ed. Springer (2006) — Chapters 1–2: Jablonski diagrams, lifetimes, quantum yields. The definitive reference.
+- Valeur & Berberan-Santos. *Molecular Fluorescence: Principles and Applications*, 2nd ed. Wiley-VCH (2012) — excellent companion with more photophysical depth.
+
+**Key papers**
+
+- Kasha, M. *Characterization of electronic transitions in complex molecules*. Discuss. Faraday Soc. (1950). [DOI](https://doi.org/10.1039/df9500900014) — original statement of Kasha's rule (internal conversion to S₁ before emission).
+- Strickler & Berg. *Relationship between absorption intensity and fluorescence lifetime of molecules*. J. Chem. Phys. (1962). [DOI](https://doi.org/10.1063/1.1733166) — quantitative relationship between ε, φ, and τ.
+
+**Online**
+
+- [FPbase Spectra Viewer](https://www.fpbase.org/spectra/) — interactive visualization of absorption/emission spectra for hundreds of fluorophores; overlay multiple dyes.
+- [Thermo Fisher Fluorescence SpectraViewer](https://www.thermofisher.com/order/fluorescence-spectraviewer) — filter and laser line overlay tool, essential for designing multicolor experiments.
+- [MicroscopyU — Fluorescence Fundamentals](https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy) — clear illustrated guide to Jablonski diagrams and the Stokes shift.
+
+**Problem set**
+
+- See Tutorial: *Single-molecule fluorescence* — exercises on photon budgets, quantum yield, and signal-to-noise directly build on this chapter.
+:::

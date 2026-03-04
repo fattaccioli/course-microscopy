@@ -54,3 +54,28 @@ Filter specifications are characterized by their center wavelength and bandwidth
 ## Why so many filters?
 Each fluorophore requires a matched set of excitation filter, dichroic, and emission filter optimized for its specific excitation and emission peaks. Multicolor experiments require either multiple cubes (sequential acquisition) or multiband dichroics and emission filters (simultaneous acquisition, but with some spectral crosstalk trade-offs).
 :::
+
+::: {.callout-tip}
+## Resources for this chapter
+
+**Textbooks**
+
+- Murphy & Davidson. *Fundamentals of Light Microscopy and Electronic Imaging*, 2nd ed. Wiley (2012) — Chapters 4–6: illumination, filter sets, objective specifications.
+- Pawley, J. (ed.) *Handbook of Biological Confocal Microscopy*, 3rd ed. Springer (2006) — Chapter 7: lenses and apertures; Chapter 35: practical confocal microscopy.
+
+**Key papers**
+
+- Stuurman & Vale. *High-throughput fluorescence microscopy*. Cold Spring Harb. Protoc. (2016). [DOI](https://doi.org/10.1101/pdb.top077982) — practical guide to setting up and optimizing a fluorescence microscope.
+- Waters, J.C. *Accuracy and precision in quantitative fluorescence microscopy*. J. Cell Biol. (2009). [DOI](https://doi.org/10.1083/jcb.200903097) — essential reading before doing any quantitative imaging.
+
+**Online**
+
+- [MicroscopyU — Köhler Illumination](https://www.microscopyu.com/tutorials/kohler) — interactive tutorial on setting up Köhler illumination correctly.
+- [Semrock Spectra Viewer](https://searchlight.semrock.com) — the most complete filter database; design and compare filter sets with your exact laser lines and fluorophores.
+- [Chroma Filter Selector](https://www.chroma.com/spectra-viewer) — alternative filter design tool.
+- [iBiology — Microscope Hardware](https://www.ibiology.org/techniques/microscope-hardware/) — video lectures on light sources, detectors, and filter cubes.
+
+**Tools**
+
+- [µManager](https://micro-manager.org) — open-source microscope control; supports most major hardware via device adapters.
+:::
